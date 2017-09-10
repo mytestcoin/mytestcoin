@@ -1,4 +1,4 @@
-Sibcoin Core staging tree
+Mytestcoin Core staging tree
 ===============================
 
 Copyright (c) 2009-2016 Bitcoin Core Developers
@@ -7,12 +7,14 @@ Copyright (c) 2014-2016 Dash Core Developers
 
 Copyright (c) 2014-2016 Sibcoin Core Developers
 
+Copyright (c) 2014-2017 Mytestcoin Core Developers
 
-What is Sibcoin?
+
+What is Mytestcoin?
 ----------------
 
-Sibcoin is an experimental new digital currency that enables anonymous, instant
-payments to anyone, anywhere in the world. Sibcoin uses peer-to-peer technology
+Mytestcoin is an experimental new digital currency that enables anonymous, instant
+payments to anyone, anywhere in the world. Mytestcoin uses peer-to-peer technology
 to operate with no central authority: managing transactions and issuing money
 are carried out collectively by the network. SibCore is the name of open
 source software which enables the use of this currency.
@@ -28,7 +30,7 @@ information or see http://opensource.org/licenses/MIT.
 Building process
 -----------------
 
-**compiling Sibcoin from git**
+**compiling Mytestcoin from git**
 
 Use the autogen script to prepare the build environment.
 
