@@ -1,11 +1,11 @@
 ---
-name: "sibcoin-osx-0.16"
+name: "mytestcoin-osx-0.16"
 enable_cache: true
 suites:
 - "precise"
 architectures:
 - "amd64"
-packages: 
+packages:
 - "g++-multilib"
 - "curl"
 - "git-core"

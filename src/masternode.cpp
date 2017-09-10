@@ -125,7 +125,7 @@ CMasternode::CMasternode(const CMasternodeBroadcast& mnb)
 //
 bool CMasternode::UpdateFromNewBroadcast(CMasternodeBroadcast& mnb)
 {
-    if(mnb.sigTime > sigTime) {    
+    if(mnb.sigTime > sigTime) {
         pubkey2 = mnb.pubkey2;
         sigTime = mnb.sigTime;
         sig = mnb.sig;
@@ -146,7 +146,7 @@ bool CMasternode::UpdateFromNewBroadcast(CMasternodeBroadcast& mnb)
                 mnodeman.mapSeenMasternodePing.insert(make_pair(lastPing.GetHash(), lastPing));
             }
         }
-           
+
         return true;
     }
     return false;
@@ -265,7 +265,7 @@ int64_t CMasternode::GetLastPaid() {
     uint256 hash =  ss.GetHash();
 
     // use a deterministic offset to break a tie -- 2.5 minutes
-    int64_t nOffset = hash.GetCompact(false) % 150; 
+    int64_t nOffset = hash.GetCompact(false) % 150;
 
     if (chainActive.Tip() == NULL) return false;
 
@@ -281,7 +281,7 @@ int64_t CMasternode::GetLastPaid() {
 
         if(masternodePayments.mapMasternodeBlocks.count(BlockReading->nHeight)){
             /*
-                Search for this payee, with at least 2 votes. This will aid in consensus allowing the network 
+                Search for this payee, with at least 2 votes. This will aid in consensus allowing the network
                 to converge on the same payees quickly, then keep the same schedule.
             */
             if(masternodePayments.mapMasternodeBlocks[BlockReading->nHeight].HasPayeeWithVotes(mnpayee, 2)){
@@ -452,8 +452,8 @@ bool CMasternodeBroadcast::CheckAndUpdate(int& nDos)
     }
 
     if(Params().NetworkID() == CBaseChainParams::MAIN) {
-        if(addr.GetPort() != 1945) return false;
-    } else if(addr.GetPort() == 1945) return false;
+        if(addr.GetPort() != 17718) return false;
+    } else if(addr.GetPort() == 17718) return false;
 
     //search existing Masternode list, this is where we update existing Masternodes with new mnb broadcasts
     CMasternode* pmn = mnodeman.Find(vin);

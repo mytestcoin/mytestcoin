@@ -1,5 +1,5 @@
 ---
-name: "sibcoin-dmg-signer"
+name: "mytestcoin-dmg-signer"
 suites:
 - "precise"
 architectures:
