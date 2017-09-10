@@ -1,12 +1,12 @@
 PACKAGE=qt
 $(package)_version=5.2.1
-$(package)_download_path=http://download.qt-project.org/official_releases/qt/5.2/$($(package)_version)/single
+$(package)_download_path=http://download.qt.io/archive/qt/5.2/$($(package)_version)/single
 $(package)_file_name=$(package)-everywhere-opensource-src-$($(package)_version).tar.gz
 $(package)_sha256_hash=84e924181d4ad6db00239d87250cc89868484a14841f77fb85ab1f1dbdcd7da1
 $(package)_dependencies=openssl
 $(package)_linux_dependencies=freetype fontconfig dbus libxcb libX11 xproto libXext
 $(package)_build_subdir=qtbase
-$(package)_qt_libs=corelib network widgets gui plugins testlib printsupport
+$(package)_qt_libs=corelib network widgets gui plugins testlib
 $(package)_patches=mac-qmake.conf fix-xcb-include-order.patch qt5-tablet-osx.patch
 
 define $(package)_set_vars
