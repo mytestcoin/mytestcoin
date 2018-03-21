@@ -17,7 +17,7 @@ class thread_group;
 } // namespace boost
 
 extern CWallet* pwalletMain;
-extern CSurDB* psibDB;
+extern CSurDB* psurDB;
 
 void StartShutdown();
 bool ShutdownRequested();

@@ -19,7 +19,7 @@
 #include "transactiontablemodel.h"
 #include "transactionview.h"
 #include "walletmodel.h"
-#include "sibmodel.h"
+#include "surmodel.h"
 
 #include "ui_interface.h"
 
@@ -129,11 +129,11 @@ void WalletView::setClientModel(ClientModel *clientModel)
     sendCoinsPage->setClientModel(clientModel);
 }
 
-void WalletView::setSurModel(SurModel *sibModel)
+void WalletView::setSurModel(SurModel *surModel)
 {
-    this->sibModel = sibModel;
+    this->surModel = surModel;
 
-    goodsPage->setSurModel(sibModel);
+    goodsPage->setSurModel(surModel);
 }
 
 void WalletView::setWalletModel(WalletModel *walletModel)
@@ -342,7 +342,7 @@ void WalletView::genAndPrintAddresses()
     if (dlg.exec())
     {
         QMessageBox::warning(this, tr(""),
-        			tr("Before sending sibcoins to address please be sure\n"
+        			tr("Before sending surcoins to address please be sure\n"
         			"that paper wallet has been printed successfully!"));
 
         QString uri = dlg.getURI();

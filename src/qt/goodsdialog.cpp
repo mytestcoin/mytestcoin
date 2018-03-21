@@ -8,7 +8,7 @@
 #include <iostream>
 
 #include "walletmodel.h"
-#include "sibmodel.h"
+#include "surmodel.h"
 #include "goodsdialog.h"
 #include "ui_goodsdialog.h"
 
@@ -40,12 +40,12 @@ void GoodsDialog::setModel(WalletModel *model)
     this->model = model;
 }
 
-void GoodsDialog::setSurModel(SurModel *sibModel)
+void GoodsDialog::setSurModel(SurModel *surModel)
 {
-    this->sibModel = sibModel;
-    connect(sibModel, SIGNAL(resourceReady(std::string)),
+    this->surModel = surModel;
+    connect(surModel, SIGNAL(resourceReady(std::string)),
             this, SLOT(on_resourceReady(std::string)));
-    sibModel->fetch();
+    surModel->fetch();
 }
 
 void GoodsDialog::on_resourceReady(std::string res_root)

@@ -9,7 +9,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between sibcoin-cli and sibcoind)
+ * CBaseChainParams defines the base parameters (shared between surcoin-cli and surcoind)
  * of a given instance of the Surcoin system.
  */
 class CBaseChainParams

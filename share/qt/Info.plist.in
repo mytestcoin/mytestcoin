@@ -32,7 +32,7 @@
   <string>Surcoin-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>org.sibfoundation.Surcoin-Qt</string>
+  <string>org.surfoundation.Surcoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,10 +40,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.sibcoin.SurcoinPayment</string>
+      <string>io.surcoin.SurcoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>sibcoin</string>
+        <string>surcoin</string>
       </array>
     </dict>
   </array>
@@ -52,7 +52,7 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.sibcoin.paymentrequest</string>
+      <string>io.surcoin.paymentrequest</string>
       <key>UTTypeDescription</key>
       <string>Surcoin payment request</string>
       <key>UTTypeConformsTo</key>
@@ -62,10 +62,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-sibcoin-payment-request</string>
+        <string>application/x-surcoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>sibcoinpaymentrequest</string>
+          <string>surcoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -78,7 +78,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.sibcoin.paymentrequest</string>
+        <string>io.surcoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

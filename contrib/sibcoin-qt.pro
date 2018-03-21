@@ -5,7 +5,7 @@
 DEFINES += ENABLE_WALLET
 
 TEMPLATE = app
-TARGET = 
+TARGET =
 DEPENDPATH += . \
               src \
               src/compat \
@@ -78,7 +78,7 @@ HEADERS += src/activemasternode.h \
            src/crypter.h \
            src/darksend-relay.h \
            src/darksend.h \
-           src/sibcoin-config.h \
+           src/surcoin-config.h \
            src/db.h \
            src/eccryptoverify.h \
            src/ecwrapper.h \
@@ -131,7 +131,7 @@ HEADERS += src/activemasternode.h \
            src/wallet_ismine.h \
            src/walletdb.h \
            src/compat/sanity.h \
-           src/config/sibcoin-config.h \
+           src/config/surcoin-config.h \
            src/crypto/common.h \
            src/crypto/hmac_sha256.h \
            src/crypto/hmac_sha512.h \
@@ -335,7 +335,7 @@ HEADERS += src/activemasternode.h \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.h \
            src/crypto/aes_helper.c \
            src/qt/bitcoinamountfield.moc \
-           src/qt/sibcoin.moc \
+           src/qt/surcoin.moc \
            src/qt/intro.moc \
            src/qt/overviewpage.moc \
            src/qt/rpcconsole.moc \
@@ -377,9 +377,9 @@ SOURCES += src/activemasternode.cpp \
            src/crypter.cpp \
            src/darksend-relay.cpp \
            src/darksend.cpp \
-           src/sibcoin-cli.cpp \
-           src/sibcoin-tx.cpp \
-           src/sibcoind.cpp \
+           src/surcoin-cli.cpp \
+           src/surcoin-tx.cpp \
+           src/surcoind.cpp \
            src/db.cpp \
            src/eccryptoverify.cpp \
            src/ecwrapper.cpp \
@@ -475,10 +475,10 @@ SOURCES += src/activemasternode.cpp \
            src/qt/coincontroltreewidget.cpp \
            src/qt/csvmodelwriter.cpp \
            src/qt/darksendconfig.cpp \
-           src/qt/sibcoin.cpp \
-           src/qt/sibcoinstrings.cpp \
+           src/qt/surcoin.cpp \
+           src/qt/surcoinstrings.cpp \
            src/qt/editaddressdialog.cpp \
-           src/qt/genandprintdialog.cpp \ 
+           src/qt/genandprintdialog.cpp \
            src/qt/guiutil.cpp \
            src/qt/intro.cpp \
            src/qt/networkstyle.cpp \
@@ -646,9 +646,9 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/helpers/memenv/memenv.cc \
            src/leveldb/helpers/memenv/memenv_test.cc \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.c
-RESOURCES += src/qt/sibcoin.qrc src/qt/sibcoin_locale.qrc
-TRANSLATIONS += src/qt/locale/sibcoin_en.ts \
-                src/qt/locale/sibcoin_ru.ts 
+RESOURCES += src/qt/surcoin.qrc src/qt/surcoin_locale.qrc
+TRANSLATIONS += src/qt/locale/surcoin_en.ts \
+                src/qt/locale/surcoin_ru.ts 
 
 QT += \
     printsupport

@@ -7,7 +7,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/surcoin-config.h"
 #endif
 
 #include "init.h"
@@ -36,7 +36,7 @@
 #include "db.h"
 #include "wallet.h"
 #include "walletdb.h"
-#include "sibdb.h"
+#include "surdb.h"
 #include "keepass.h"
 #endif
 
@@ -60,7 +60,7 @@ using namespace std;
 #ifdef ENABLE_WALLET
 CWallet* pwalletMain = NULL;
 int nWalletBackups = 10;
-CSurDB *psibDB = NULL;
+CSurDB *psurDB = NULL;
 #endif
 bool fFeeEstimatesInitialized = false;
 bool fRestartRequested = false;  // true: restart false: shutdown
@@ -164,15 +164,15 @@ void PrepareShutdown()
     /// for example if the data directory was found to be locked.
     /// Be sure that anything that writes files or flushes caches only does this if the respective
     /// module was initialized.
-    RenameThread("sibcoin-shutoff");
+    RenameThread("surcoin-shutoff");
     mempool.AddTransactionsUpdated(1);
     StopRPCThreads();
     ShutdownRPCMining();
 #ifdef ENABLE_WALLET
     if (pwalletMain)
         bitdb.Flush(false);
-    if (psibDB)
-        psibDB->Close();
+    if (psurDB)
+        psurDB->Close();
     GenerateBitcoins(false, NULL, 0);
 #endif
     StopNode();
@@ -287,7 +287,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += "  -blocknotify=<cmd>     " + _("Execute command when the best block changes (%s in cmd is replaced by block hash)") + "\n";
     strUsage += "  -checkblocks=<n>       " + strprintf(_("How many blocks to check at startup (default: %u, 0 = all)"), 288) + "\n";
     strUsage += "  -checklevel=<n>        " + strprintf(_("How thorough the block verification of -checkblocks is (0-4, default: %u)"), 3) + "\n";
-    strUsage += "  -conf=<file>           " + strprintf(_("Specify configuration file (default: %s)"), "sibcoin.conf") + "\n";
+    strUsage += "  -conf=<file>           " + strprintf(_("Specify configuration file (default: %s)"), "surcoin.conf") + "\n";
     if (mode == HMM_BITCOIND)
     {
 #if !defined(WIN32)
@@ -300,7 +300,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += "  -maxorphantx=<n>       " + strprintf(_("Keep at most <n> unconnectable transactions in memory (default: %u)"), DEFAULT_MAX_ORPHAN_TRANSACTIONS) + "\n";
     strUsage += "  -par=<n>               " + strprintf(_("Set the number of script verification threads (%u to %d, 0 = auto, <0 = leave that many cores free, default: %d)"), -(int)boost::thread::hardware_concurrency(), MAX_SCRIPTCHECK_THREADS, DEFAULT_SCRIPTCHECK_THREADS) + "\n";
 #ifndef WIN32
-    strUsage += "  -pid=<file>            " + strprintf(_("Specify pid file (default: %s)"), "sibcoind.pid") + "\n";
+    strUsage += "  -pid=<file>            " + strprintf(_("Specify pid file (default: %s)"), "surcoind.pid") + "\n";
 #endif
     strUsage += "  -reindex               " + _("Rebuild block chain index from current blk000??.dat files") + " " + _("on startup") + "\n";
 #if !defined(WIN32)
@@ -505,7 +505,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("sibcoin-loadblk");
+    RenameThread("surcoin-loadblk");
 
     // -reindex
     if (fReindex) {
@@ -580,7 +580,7 @@ bool InitSanityCheck(void)
 }
 
 
-/** Initialize sibcoin.
+/** Initialize surcoin.
 
  *  @pre Parameters should be parsed and config file should be read.
  */
@@ -827,7 +827,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     fSendFreeTransactions = GetArg("-sendfreetransactions", false);
 
     std::string strWalletFile = GetArg("-wallet", "wallet.dat");
-    std::string strSurFile = GetArg("-sibstore", "sib.dat");
+    std::string strSurFile = GetArg("-surstore", "sur.dat");
 #endif // ENABLE_WALLET
 
     fIsBareMultisigStd = GetArg("-permitbaremultisig", true) != 0;
@@ -1320,7 +1320,7 @@ bool AppInit2(boost::thread_group& threadGroup)
                 strErrors << _("Error loading wallet.dat") << "\n";
         }
 
-        psibDB = new CSurDB(strSurFile, "cr+");
+        psurDB = new CSurDB(strSurFile, "cr+");
 
         if (GetBoolArg("-upgradewallet", fFirstRun))
         {
@@ -1538,7 +1538,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         }
     }
 
-    // ivansib: control to run budget synchonizing. Disable by default
+    // sur-off: control to run budget synchonizing. Disable by default
     fEnableBudgetSync = GetArg("-enablebudgetsync", false);
 
     fEnableDarksend = GetBoolArg("-enabledarksend", false);
@@ -1554,7 +1554,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         nDarksendRounds = 99999;
     }
 
-    nAnonymizeDarkcoinAmount = GetArg("-anonymizesibcoinamount", 0);
+    nAnonymizeDarkcoinAmount = GetArg("-anonymizesurcoinamount", 0);
     if(nAnonymizeDarkcoinAmount > 999999) nAnonymizeDarkcoinAmount = 999999;
     if(nAnonymizeDarkcoinAmount < 2) nAnonymizeDarkcoinAmount = 2;
 

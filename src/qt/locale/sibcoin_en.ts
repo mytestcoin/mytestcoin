@@ -298,8 +298,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-57"/>
-        <source>Surcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</source>
-        <translation>Surcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</translation>
+        <source>Surcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your surcoins from being stolen by malware infecting your computer.</source>
+        <translation>Surcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your surcoins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -399,8 +399,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Request payments (generates QR codes and sibcoin: URIs)</source>
-        <translation>Request payments (generates QR codes and sibcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and surcoin: URIs)</source>
+        <translation>Request payments (generates QR codes and surcoin: URIs)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -420,8 +420,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Show links to services that accept sibcoins</source>
-        <translation type="unfinished">Show links to services that accept sibcoins</translation>
+        <source>Show links to services that accept surcoins</source>
+        <translation type="unfinished">Show links to services that accept surcoins</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -631,8 +631,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>&amp;Print sibcoins...</source>
-        <translation>&amp;Print sibcoins...</translation>
+        <source>&amp;Print surcoins...</source>
+        <translation>&amp;Print surcoins...</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -641,13 +641,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>&amp;Load sibcoins...</source>
-        <translation>&amp;Load sibcoins...</translation>
+        <source>&amp;Load surcoins...</source>
+        <translation>&amp;Load surcoins...</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Load sibcoins from paper</source>
-        <translation>Load sibcoins from paper</translation>
+        <source>Load surcoins from paper</source>
+        <translation>Load surcoins from paper</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -656,8 +656,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Open a sibcoin: URI or payment request</source>
-        <translation>Open a sibcoin: URI or payment request</translation>
+        <source>Open a surcoin: URI or payment request</source>
+        <translation>Open a surcoin: URI or payment request</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1833,9 +1833,9 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/sibcoin/</source>
+https://www.transifex.com/projects/p/surcoin/</source>
         <translation>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/sibcoin/</translation>
+https://www.transifex.com/projects/p/surcoin/</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -2240,8 +2240,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-400"/>
-        <source>Cannot start sibcoin: click-to-pay handler</source>
-        <translation>Cannot start sibcoin: click-to-pay handler</translation>
+        <source>Cannot start surcoin: click-to-pay handler</source>
+        <translation>Cannot start surcoin: click-to-pay handler</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -3185,7 +3185,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+30"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for sibcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for surcoin transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3520,8 +3520,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Surcoin network.</source>
-        <translation>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Surcoin network.</translation>
+        <source>A message that was attached to the surcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Surcoin network.</source>
+        <translation>A message that was attached to the surcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Surcoin network.</translation>
     </message>
     <message>
         <location line="+426"/>
@@ -4515,14 +4515,14 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+64"/>
-        <source>Before sending sibcoins to address please be sure
+        <source>Before sending surcoins to address please be sure
 that paper wallet has been printed successfully!</source>
-        <translation>Before sending sibcoins to address please be sure
+        <translation>Before sending surcoins to address please be sure
 that paper wallet has been printed successfully!</translation>
     </message>
 </context>
 <context>
-    <name>sibcoin-core</name>
+    <name>surcoin-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation type="obsolete">Bind to given address and always listen on it. Use [host]:port notation for IPv6</translation>

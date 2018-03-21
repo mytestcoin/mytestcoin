@@ -95,7 +95,7 @@ Issue the following:
 Make note of the hash (which is your collaterla_output) and index.
 
 ### Enter your MasterNode details into your masternode.conf file
-[From the sibcoin github repo](https://github.com/ivansib/sibcoin/blob/master/doc/masternode_conf.md)
+[From the surcoin github repo](https://github.com/mytestcoin/blob/master/doc/masternode_conf.md)
 
 The new masternode.conf format consists of a space seperated text file. Each line consisting of an alias, IP address followed by port, masternode private key, collateral output transaction id and collateral output index, donation address and donation percentage (the latter two are optional and should be in format "address:percentage").
 
@@ -108,24 +108,24 @@ alias ipaddress:port masternode_private_key collateral_output collateral_output_
 Example:
 
 ```
-mn01 127.0.0.1:1945 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0
-mn02 127.0.0.2:1945 93WaAb3htPJEV8E9aQcN23Jt97bPex7YvWfgMDTUdWJvzmrMqey aa9f1034d973377a5e733272c3d0eced1de22555ad45d6b24abadff8087948d4 0 7gnwGHt17heGpG9Crfeh4KGpYNFugPhJdh:25
+mn01 127.0.0.1:17786 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0
+mn02 127.0.0.2:17786 93WaAb3htPJEV8E9aQcN23Jt97bPex7YvWfgMDTUdWJvzmrMqey aa9f1034d973377a5e733272c3d0eced1de22555ad45d6b24abadff8087948d4 0 7gnwGHt17heGpG9Crfeh4KGpYNFugPhJdh:25
 ```
 
-## What about the sibcoin.conf file?
+## What about the surcoin.conf file?
 
-If you are using a masternode.conf file you no longer need the sibcoin.conf file. The exception is if you need custom settings (thanks oblox).
+If you are using a masternode.conf file you no longer need the surcoin.conf file. The exception is if you need custom settings (thanks oblox).
 
-## Update sibcoin.conf on server
+## Update surcoin.conf on server
 
-If you generated a new masternode private key, you will need to update the remote sibcoin.conf files.
+If you generated a new masternode private key, you will need to update the remote surcoin.conf files.
 
 Shut down the daemon and then edit the file.
 
-```sudo nano .sibcoin/sibcoin.conf```
+```sudo nano .surcoin/surcoin.conf```
 
 ### Edit the masternodeprivkey
-If you generated a new masternode private key, you will need to update the masternodeprivkey value in your remote sibcoin.conf file.
+If you generated a new masternode private key, you will need to update the masternodeprivkey value in your remote surcoin.conf file.
 
 ## Start your MasterNodes
 
@@ -135,7 +135,7 @@ If your remote server is not running, start your remote daemon as you normally w
 
 I usually confirm that remote is on the correct block by issuing:
 
-```sibcoind getinfo```
+```surcoind getinfo```
 
 And compare with the official explorer at http://explorer.dashpay.io/chain/Dash
 

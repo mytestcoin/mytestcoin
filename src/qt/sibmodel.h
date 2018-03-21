@@ -6,7 +6,7 @@
 #ifndef SURMODEL_H
 #define	SURMODEL_H
 
-#include "sibdb.h"
+#include "surdb.h"
 
 #include <QObject>
 
@@ -22,7 +22,7 @@ class SurModel : public QObject
     Q_OBJECT
 
 public:
-    explicit SurModel(CSurDB *sibdb, QObject *parent = 0);
+    explicit SurModel(CSurDB *surdb, QObject *parent = 0);
     ~SurModel();
 
     void fetch();
@@ -40,7 +40,7 @@ private:
     };
 
     QString res_prefix;
-    CSurDB *sibDB;
+    CSurDB *surDB;
     QNetworkAccessManager* net_manager;
     QByteArray rccData;
     QString rccMD5;

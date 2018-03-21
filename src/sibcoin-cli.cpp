@@ -25,7 +25,7 @@ std::string HelpMessageCli()
     string strUsage;
     strUsage += _("Options:") + "\n";
     strUsage += "  -?                     " + _("This help message") + "\n";
-    strUsage += "  -conf=<file>           " + strprintf(_("Specify configuration file (default: %s)"), "sibcoin.conf") + "\n";
+    strUsage += "  -conf=<file>           " + strprintf(_("Specify configuration file (default: %s)"), "surcoin.conf") + "\n";
     strUsage += "  -datadir=<dir>         " + _("Specify data directory") + "\n";
     strUsage += "  -testnet               " + _("Use the test network") + "\n";
     strUsage += "  -regtest               " + _("Enter regression test mode, which uses a special chain in which blocks can be "
@@ -71,9 +71,9 @@ static bool AppInitRPC(int argc, char* argv[])
         std::string strUsage = _("Surcoin Core RPC client version") + " " + FormatFullVersion() + "\n";
         if (!mapArgs.count("-version")) {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  sibcoin-cli [options] <command> [params]  " + _("Send command to Surcoin Core") + "\n" +
-                  "  sibcoin-cli [options] help                " + _("List commands") + "\n" +
-                  "  sibcoin-cli [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  surcoin-cli [options] <command> [params]  " + _("Send command to Surcoin Core") + "\n" +
+                  "  surcoin-cli [options] help                " + _("List commands") + "\n" +
+                  "  surcoin-cli [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessageCli();
         }

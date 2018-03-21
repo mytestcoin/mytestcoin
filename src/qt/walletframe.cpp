@@ -37,9 +37,9 @@ void WalletFrame::setClientModel(ClientModel *clientModel)
     this->clientModel = clientModel;
 }
 
-void WalletFrame::setSurModel(SurModel *sibModel)
+void WalletFrame::setSurModel(SurModel *surModel)
 {
-    this->sibModel = sibModel;
+    this->surModel = surModel;
 }
 
 bool WalletFrame::addWallet(const QString& name, WalletModel *walletModel)
@@ -51,7 +51,7 @@ bool WalletFrame::addWallet(const QString& name, WalletModel *walletModel)
     walletView->setBitcoinGUI(gui);
     walletView->setClientModel(clientModel);
     walletView->setWalletModel(walletModel);
-    walletView->setSurModel(sibModel);
+    walletView->setSurModel(surModel);
     walletView->showOutOfSyncWarning(bOutOfSync);
 
      /* TODO we should goto the currently selected page once dynamically adding wallets is supported */

@@ -42,9 +42,9 @@ QString BitcoinUnits::id(int unit)
 {
     switch(unit)
     {
-        case SUR: return QString("sib");
-        case mSUR: return QString("msib");
-        case uSUR: return QString::fromUtf8("usib");
+        case SUR: return QString("sur");
+        case mSUR: return QString("msur");
+        case uSUR: return QString::fromUtf8("usur");
         default: return QString("???");
     }
 }

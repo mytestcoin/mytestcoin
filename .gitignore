@@ -6,10 +6,10 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/sibcoin
-src/sibcoind
-src/sibcoin-cli
-src/sibcoin-tx
+src/surcoin
+src/surcoind
+src/surcoin-cli
+src/surcoin-tx
 src/test/test_dash
 src/qt/test/test_dash-qt
 
@@ -34,8 +34,8 @@ config.log
 config.status
 configure
 libtool
-src/config/sibcoin-config.h
-src/config/sibcoin-config.h.in
+src/config/surcoin-config.h
+src/config/surcoin-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -79,7 +79,7 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-sibcoin-qt
+surcoin-qt
 Surcoin-Qt.app
 
 # Unit-tests
@@ -92,7 +92,7 @@ qrc_*.cpp
 
 # Dev resources
 src/qt/res_dev
-src/qt/sibcoin_dev.qrc
+src/qt/surcoin_dev.qrc
 
 # Qt creator
 *.pro.user
@@ -122,7 +122,7 @@ qa/pull-tester/test.*/*
 .cproject
 .project
 /doc/doxygen/
-/src/sibcoind
-/src/sibcoin-cli
-/src/sibcoin-config.h
-/src/sibcoin-config.h.in
+/src/surcoind
+/src/surcoin-cli
+/src/surcoin-config.h
+/src/surcoin-config.h.in

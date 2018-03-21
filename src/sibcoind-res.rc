@@ -19,10 +19,10 @@ BEGIN
             VALUE "CompanyName",        "Surcoin"
             VALUE "FileDescription",    "Surcoind (OSS daemon/client for Surcoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "sibcoind"
+            VALUE "InternalName",       "surcoind"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "sibcoind.exe"
+            VALUE "OriginalFilename",   "surcoind.exe"
             VALUE "ProductName",        "Surcoind"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END

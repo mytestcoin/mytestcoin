@@ -28,7 +28,7 @@ public:
     ~WalletFrame();
 
     void setClientModel(ClientModel *clientModel);
-    void setSurModel(SurModel *sibModel);
+    void setSurModel(SurModel *surModel);
 
     bool addWallet(const QString& name, WalletModel *walletModel);
     bool setCurrentWallet(const QString& name);
@@ -43,7 +43,7 @@ private:
     QStackedWidget *walletStack;
     BitcoinGUI *gui;
     ClientModel *clientModel;
-    SurModel *sibModel;
+    SurModel *surModel;
     QMap<QString, WalletView*> mapWalletViews;
 
     bool bOutOfSync;

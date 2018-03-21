@@ -22,7 +22,7 @@
 #ifdef ENABLE_WALLET
 #include "walletframe.h"
 #include "walletmodel.h"
-#include "sibmodel.h"
+#include "surmodel.h"
 #endif // ENABLE_WALLET
 
 #ifdef Q_OS_MAC
@@ -67,7 +67,7 @@ const QString BitcoinGUI::DEFAULT_WALLET = "~Default";
 BitcoinGUI::BitcoinGUI(const NetworkStyle *networkStyle, QWidget *parent) :
     QMainWindow(parent),
     clientModel(0),
-    sibModel(0),
+    surModel(0),
     walletFrame(0),
     unitDisplayControl(0),
     labelEncryptionIcon(0),
@@ -287,7 +287,7 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
     tabGroup->addAction(sendCoinsAction);
 
     receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and sibcoin: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and surcoin: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -309,7 +309,7 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
     tabGroup->addAction(historyAction);
 
     goodsAction = new QAction(QIcon(":/icons/shopping_cart"), tr("&Goods&&&Services"), this);
-    goodsAction->setStatusTip(tr("Show links to services that accept sibcoins"));
+    goodsAction->setStatusTip(tr("Show links to services that accept surcoins"));
     goodsAction->setToolTip(goodsAction->statusTip());
     goodsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -389,16 +389,16 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
     usedReceivingAddressesAction = new QAction(QIcon(":/icons/address-book"), tr("&Receiving addresses..."), this);
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
-    genAndPrintAddressesAction = new QAction(QIcon(":/icons/cash_icon"), tr("&Print sibcoins..."), this);
+    genAndPrintAddressesAction = new QAction(QIcon(":/icons/cash_icon"), tr("&Print surcoins..."), this);
     genAndPrintAddressesAction->setIconVisibleInMenu(true);
     genAndPrintAddressesAction->setStatusTip(tr("Generate address and print"));
 
-    loadFromPaperAction = new QAction(QIcon(":/icons/import"), tr("&Load sibcoins..."), this);
+    loadFromPaperAction = new QAction(QIcon(":/icons/import"), tr("&Load surcoins..."), this);
     loadFromPaperAction->setIconVisibleInMenu(true);
-    loadFromPaperAction->setStatusTip(tr("Load sibcoins from paper"));
+    loadFromPaperAction->setStatusTip(tr("Load surcoins from paper"));
 
     openAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_FileIcon), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a sibcoin: URI or payment request"));
+    openAction->setStatusTip(tr("Open a surcoin: URI or payment request"));
 
     showHelpMessageAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
@@ -563,9 +563,9 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 }
 
 
-void BitcoinGUI::setSurModel(SurModel *sibModel)
+void BitcoinGUI::setSurModel(SurModel *surModel)
 {
-    this->sibModel = sibModel;
+    this->surModel = surModel;
 }
 
 #ifdef ENABLE_WALLET
@@ -574,7 +574,7 @@ bool BitcoinGUI::addWallet(const QString& name, WalletModel *walletModel)
     if(!walletFrame)
         return false;
     setWalletActionsEnabled(true);
-    walletFrame->setSurModel(sibModel);
+    walletFrame->setSurModel(surModel);
     return walletFrame->addWallet(name, walletModel);
 }
 

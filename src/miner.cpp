@@ -578,7 +578,7 @@ void static BitcoinMiner(CWallet *pwallet)
 {
     LogPrintf("SurcoinMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("sibcoin-miner");
+    RenameThread("surcoin-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);

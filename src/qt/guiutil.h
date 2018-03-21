@@ -105,10 +105,10 @@ namespace GUIUtil
 
     // Open debug.log
     void openDebugLogfile();
-	
-    // Open sibcoin.conf
-    void openConfigfile();	
-    
+
+    // Open surcoin.conf
+    void openConfigfile();
+
     // Browse backup folder
     void showBackups();
 
@@ -182,7 +182,7 @@ namespace GUIUtil
 
     /** Load global CSS theme */
     QString loadStyleSheet();
-    
+
     /* Convert QString to OS specific boost path through UTF-8 */
     boost::filesystem::path qstringToBoostPath(const QString &path);
 
@@ -197,7 +197,7 @@ namespace GUIUtil
 
     /* Format a CNodeCombinedStats.dPingTime into a user-readable string or display N/A, if 0*/
     QString formatPingTime(double dPingTime);
-    
+
 #if defined(Q_OS_MAC) && QT_VERSION >= 0x050000
     // workaround for Qt OSX Bug:
     // https://bugreports.qt-project.org/browse/QTBUG-15631
@@ -211,7 +211,7 @@ namespace GUIUtil
 #else
     typedef QProgressBar ProgressBar;
 #endif
-    
+
 } // namespace GUIUtil
 
 #endif // BITCOIN_QT_GUIUTIL_H

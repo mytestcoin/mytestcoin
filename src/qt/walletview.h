@@ -46,7 +46,7 @@ public:
     */
     void setClientModel(ClientModel *clientModel);
 
-    void setSurModel(SurModel *sibModel);
+    void setSurModel(SurModel *surModel);
 
     /** Set the wallet model.
         The wallet model represents a bitcoin wallet, and offers access to the list of transactions, address book and sending
@@ -61,7 +61,7 @@ public:
 private:
     ClientModel *clientModel;
     WalletModel *walletModel;
-    SurModel *sibModel;
+    SurModel *surModel;
 
     OverviewPage *overviewPage;
     QWidget *transactionsPage;

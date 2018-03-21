@@ -10,7 +10,7 @@
 
 #include <string>
 
-/** Access to the wallet database (sib.dat) */
+/** Access to the wallet database (sur.dat) */
 class CSurDB : public CDB
 {
 public:

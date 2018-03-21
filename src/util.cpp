@@ -7,7 +7,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/surcoin-config.h"
 #endif
 
 #include "util.h"
@@ -399,7 +399,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "sibcoin";
+    const char* pszModule = "surcoin";
 #endif
     if (pex)
         return strprintf(
@@ -423,7 +423,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\Surcoin
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\Surcoin
     // Mac: ~/Library/Application Support/Surcoin
-    // Unix: ~/.sibcoin
+    // Unix: ~/.surcoin
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "Surcoin";
@@ -441,7 +441,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "Surcoin";
 #else
     // Unix
-    return pathRet / ".sibcoin";
+    return pathRet / ".surcoin";
 #endif
 #endif
 }
@@ -488,7 +488,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "sibcoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "surcoin.conf"));
     if (!pathConfigFile.is_complete())
         pathConfigFile = GetDataDir(false) / pathConfigFile;
 
@@ -507,7 +507,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()){
-        // Create empty sibcoin.conf if it does not exist
+        // Create empty surcoin.conf if it does not exist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
         if (configFile != NULL)
             fclose(configFile);
@@ -519,7 +519,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override sibcoin.conf
+        // Don't overwrite existing settings so command line settings override surcoin.conf
         string strKey = string("-") + it->string_key;
         if (mapSettingsRet.count(strKey) == 0)
         {
@@ -536,7 +536,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 #ifndef WIN32
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "sibcoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "surcoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }

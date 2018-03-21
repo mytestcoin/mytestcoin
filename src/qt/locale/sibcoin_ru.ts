@@ -305,7 +305,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-57"/>
-        <source>Surcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</source>
+        <source>Surcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your surcoins from being stolen by malware infecting your computer.</source>
         <translation>Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего бумажника не может полностью защитить ваши SUR от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
     </message>
     <message>
@@ -406,8 +406,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Request payments (generates QR codes and sibcoin: URIs)</source>
-        <translation>Запросить платежи (создать QR-коды и sibcoin: URI)</translation>
+        <source>Request payments (generates QR codes and surcoin: URIs)</source>
+        <translation>Запросить платежи (создать QR-коды и surcoin: URI)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -426,7 +426,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Show links to services that accept sibcoins</source>
+        <source>Show links to services that accept surcoins</source>
         <translation type="unfinished">Где принимают SUR</translation>
     </message>
     <message>
@@ -637,7 +637,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>&amp;Print sibcoins...</source>
+        <source>&amp;Print surcoins...</source>
         <translation>&amp;Распечатать SUR...</translation>
     </message>
     <message>
@@ -647,12 +647,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>&amp;Load sibcoins...</source>
+        <source>&amp;Load surcoins...</source>
         <translation>&amp;Загрузить SUR...</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Load sibcoins from paper</source>
+        <source>Load surcoins from paper</source>
         <translation>Загрузить SUR с бумажного носителя</translation>
     </message>
     <message>
@@ -662,8 +662,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Open a sibcoin: URI or payment request</source>
-        <translation>Открыть sibcoin: URI или запрос платежа</translation>
+        <source>Open a surcoin: URI or payment request</source>
+        <translation>Открыть surcoin: URI или запрос платежа</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1846,9 +1846,9 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/sibcoin/</source>
+https://www.transifex.com/projects/p/surcoin/</source>
         <translation>Нет Вашего языка или перевод неполон? Помогите нам сделать перевод лучше:
-https://www.transifex.com/projects/p/sibcoin/</translation>
+https://www.transifex.com/projects/p/surcoin/</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -2257,7 +2257,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-400"/>
-        <source>Cannot start sibcoin: click-to-pay handler</source>
+        <source>Cannot start surcoin: click-to-pay handler</source>
         <translation>Не удаётся запустить обработчик &quot;SurCoin&quot; click-to-pay</translation>
     </message>
     <message>
@@ -3202,7 +3202,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+30"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for sibcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for surcoin transactions than the network can process.</source>
         <translation>Оплата минимальной комиссии это нормально, но только до тех пор пока объем транзакций невелик. &lt;br /&gt;Имейте ввиду, что в случае роста количества транзакций это может привести к очень длительному времени подтверждения, например несколько дней или вообще никогда.</translation>
     </message>
     <message>
@@ -3539,8 +3539,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Surcoin network.</source>
-        <translation>К sibcoin: URI было прикреплено сообщение, которое будет сохранено вместе с транзакцией для вашего сведения. Обратите внимание: сообщение не будет отправлено через сеть &quot;SurCoin&quot;.</translation>
+        <source>A message that was attached to the surcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Surcoin network.</source>
+        <translation>К surcoin: URI было прикреплено сообщение, которое будет сохранено вместе с транзакцией для вашего сведения. Обратите внимание: сообщение не будет отправлено через сеть &quot;SurCoin&quot;.</translation>
     </message>
     <message>
         <location line="+426"/>
@@ -4533,14 +4533,14 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+64"/>
-        <source>Before sending sibcoins to address please be sure
+        <source>Before sending surcoins to address please be sure
 that paper wallet has been printed successfully!</source>
         <translation>Перед переводом SUR на сгенерированный адрес убедитесь,
 что бумажный кошелек успешно распечатан!</translation>
     </message>
 </context>
 <context>
-    <name>sibcoin-core</name>
+    <name>surcoin-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Привязаться к указанному адресу и всегда прослушивать только его. Используйте [хост]:порт для IPv6</translation>
@@ -4930,10 +4930,10 @@ that paper wallet has been printed successfully!</source>
         <translation>Этот продукт включает ПО, разработанное проектом OpenSSL Project для использования в OpenSSL Toolkit &lt;https://www.openssl.org/&gt;, криптографическое ПО, написанное Eric Young и ПО для работы с UPnP, написанное Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use sibcoind, or the -server option to sibcoin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use surcoind, or the -server option to surcoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=sibcoinrpc
+rpcuser=surcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4941,10 +4941,10 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s &quot;Surcoin Alert&quot; admin@foo.com
 </source>
-        <translation>Для использования sibcoind или опции -server с sibcoin-qt, вы должны установить опцию rpcpassword в конфигурационном файле:
+        <translation>Для использования surcoind или опции -server с surcoin-qt, вы должны установить опцию rpcpassword в конфигурационном файле:
 %s
 Рекомендуется использовать следующий случайный пароль:
-rpcuser=sibcoinrpc
+rpcuser=surcoinrpc
 rpcpassword=%s
 (вам не нужно запоминать этот пароль)
 Имя и пароль ДОЛЖНЫ различаться.

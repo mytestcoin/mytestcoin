@@ -25,7 +25,7 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Surcoin (http://www.sibcoin.io/),
+ * This is the developer documentation of the reference client for an experimental new digital currency called Surcoin (http://www.surcoin.io/),
  * which enables instant payments to anyone, anywhere in the world. Surcoin uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
@@ -67,7 +67,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/sibcoin.conf are parsed in qt/sibcoin.cpp's main()
+    // If Qt is used, parameters/surcoin.conf are parsed in qt/surcoin.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
@@ -82,7 +82,7 @@ bool AppInit(int argc, char* argv[])
         else
         {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  sibcoind [options]                     " + _("Start Surcoin Core Daemon") + "\n";
+                  "  surcoind [options]                     " + _("Start Surcoin Core Daemon") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -121,12 +121,12 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "sibcoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "surcoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)
         {
-            fprintf(stderr, "Error: There is no RPC client functionality in sibcoind anymore. Use the sibcoin-cli utility instead.\n");
+            fprintf(stderr, "Error: There is no RPC client functionality in surcoind anymore. Use the surcoin-cli utility instead.\n");
             exit(1);
         }
 #ifndef WIN32
@@ -190,7 +190,7 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    // Connect sibcoind signal handlers
+    // Connect surcoind signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? 0 : 1);

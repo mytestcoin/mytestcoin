@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/surcoin-config.h"
 #endif
 
 #include "bitcoingui.h"
@@ -25,7 +25,7 @@
 #ifdef ENABLE_WALLET
 #include "paymentserver.h"
 #include "walletmodel.h"
-#include "sibmodel.h"
+#include "surmodel.h"
 #endif
 #include "masternodeconfig.h"
 
@@ -95,7 +95,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("sibcoin-core", psz).toStdString();
+    return QCoreApplication::translate("surcoin-core", psz).toStdString();
 }
 
 static QString GetLangTerritory()
@@ -146,11 +146,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in sibcoin.qrc)
+    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in surcoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in sibcoin.qrc)
+    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in surcoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -252,14 +252,14 @@ private:
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer;
     WalletModel *walletModel;
-    SurModel *sibModel;
+    SurModel *surModel;
 #endif
     int returnValue;
 
     void startThread();
 };
 
-#include "sibcoin.moc"
+#include "surcoin.moc"
 
 BitcoinCore::BitcoinCore():
     QObject()
@@ -346,7 +346,7 @@ BitcoinApplication::BitcoinApplication(int &argc, char **argv):
 #ifdef ENABLE_WALLET
     paymentServer(0),
     walletModel(0),
-    sibModel(0),
+    surModel(0),
 #endif
     returnValue(0)
 {
@@ -451,8 +451,8 @@ void BitcoinApplication::requestShutdown()
     window->removeAllWallets();
     delete walletModel;
     walletModel = 0;
-    delete sibModel;
-    sibModel = 0;
+    delete surModel;
+    surModel = 0;
 #endif
     delete clientModel;
     clientModel = 0;
@@ -481,10 +481,10 @@ void BitcoinApplication::initializeResult(int retval)
 #ifdef ENABLE_WALLET
         if(pwalletMain)
         {
-            sibModel = new SurModel(psibDB);
+            surModel = new SurModel(psurDB);
             walletModel = new WalletModel(pwalletMain, optionsModel);
 
-            window->setSurModel(sibModel);
+            window->setSurModel(surModel);
             window->addWallet(BitcoinGUI::DEFAULT_WALLET, walletModel);
             window->setCurrentWallet(BitcoinGUI::DEFAULT_WALLET);
 
@@ -506,7 +506,7 @@ void BitcoinApplication::initializeResult(int retval)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // sibcoin: URIs or payment requests:
+        // surcoin: URIs or payment requests:
         connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                          window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
         connect(window, SIGNAL(receivedURI(QString)),
@@ -558,8 +558,8 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
 
-    Q_INIT_RESOURCE(sibcoin);
-    Q_INIT_RESOURCE(sibcoin_locale);
+    Q_INIT_RESOURCE(surcoin);
+    Q_INIT_RESOURCE(surcoin_locale);
 
     BitcoinApplication app(argc, argv);
 #if QT_VERSION > 0x050100
@@ -603,7 +603,7 @@ int main(int argc, char *argv[])
     // User language is set up: pick a data directory
     Intro::pickDataDirectory();
 
-    /// 6. Determine availability of data directory and parse sibcoin.conf
+    /// 6. Determine availability of data directory and parse surcoin.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!boost::filesystem::is_directory(GetDataDir(false)))
     {
@@ -661,7 +661,7 @@ int main(int argc, char *argv[])
         exit(0);
 
     // Start up the payment server early, too, so impatient users that click on
-    // sibcoin: links repeatedly have their payment requests routed to this process:
+    // surcoin: links repeatedly have their payment requests routed to this process:
     app.createPaymentServer();
 #endif
 

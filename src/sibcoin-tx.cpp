@@ -47,10 +47,10 @@ static bool AppInitRawTx(int argc, char* argv[])
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Surcoin Core sibcoin-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("Surcoin Core surcoin-tx utility version") + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  sibcoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded sibcoin transaction") + "\n" +
-              "  sibcoin-tx [options] -create [commands]   " + _("Create hex-encoded sibcoin transaction") + "\n" +
+              "  surcoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded surcoin transaction") + "\n" +
+              "  surcoin-tx [options] -create [commands]   " + _("Create hex-encoded surcoin transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

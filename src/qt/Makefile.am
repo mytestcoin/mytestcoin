@@ -1,49 +1,49 @@
-include $(top_srcdir)/src/Makefile.include
+surinclude $(top_srcdir)/src/Makefile.include
 
 AM_CPPFLAGS += -I$(top_srcdir)/src \
   -I$(top_builddir)/src/qt \
   -I$(top_builddir)/src/qt/forms \
   $(PROTOBUF_CFLAGS) \
   $(QR_CFLAGS)
-bin_PROGRAMS = sibcoin-qt
+bin_PROGRAMS = surcoin-qt
 noinst_LIBRARIES = libdashqt.a
 SUBDIRS = . $(BUILD_TEST_QT)
 DIST_SUBDIRS = . test
 
-# sibcoin qt core #
+# surcoin qt core #
 #QT_TS = \
-#  locale/sibcoin_bar.ts \
-#  locale/sibcoin_bg.ts \
-#  locale/sibcoin_ca.ts \
-#  locale/sibcoin_cmn.ts \
-#  locale/sibcoin_cs.ts \
-#  locale/sibcoin_da.ts \
-#  locale/sibcoin_de.ts \
-#  locale/sibcoin_el.ts \
-#  locale/sibcoin_en.ts \
-#  locale/sibcoin_eo.ts \
-#  locale/sibcoin_es.ts \
-#  locale/sibcoin_fi.ts \
-#  locale/sibcoin_fr.ts \
-#  locale/sibcoin_hu_HU.ts \
-#  locale/sibcoin_it.ts \
-#  locale/sibcoin_lv_LV.ts \
-#  locale/sibcoin_nb.ts \
-#  locale/sibcoin_nl.ts \
-#  locale/sibcoin_pl.ts \
-#  locale/sibcoin_pt.ts \
-#  locale/sibcoin_pt_BR.ts \
-#  locale/sibcoin_ru.ts \
-#  locale/sibcoin_sk.ts \
-#  locale/sibcoin_sv.ts \
-#  locale/sibcoin_tr.ts \
-#  locale/sibcoin_vi.ts \
-#  locale/sibcoin_zh_CN.ts \
-#  locale/sibcoin_zh_HK.ts
+#  locale/surcoin_bar.ts \
+#  locale/surcoin_bg.ts \
+#  locale/surcoin_ca.ts \
+#  locale/surcoin_cmn.ts \
+#  locale/surcoin_cs.ts \
+#  locale/surcoin_da.ts \
+#  locale/surcoin_de.ts \
+#  locale/surcoin_el.ts \
+#  locale/surcoin_en.ts \
+#  locale/surcoin_eo.ts \
+#  locale/surcoin_es.ts \
+#  locale/surcoin_fi.ts \
+#  locale/surcoin_fr.ts \
+#  locale/surcoin_hu_HU.ts \
+#  locale/surcoin_it.ts \
+#  locale/surcoin_lv_LV.ts \
+#  locale/surcoin_nb.ts \
+#  locale/surcoin_nl.ts \
+#  locale/surcoin_pl.ts \
+#  locale/surcoin_pt.ts \
+#  locale/surcoin_pt_BR.ts \
+#  locale/surcoin_ru.ts \
+#  locale/surcoin_sk.ts \
+#  locale/surcoin_sv.ts \
+#  locale/surcoin_tr.ts \
+#  locale/surcoin_vi.ts \
+#  locale/surcoin_zh_CN.ts \
+#  locale/surcoin_zh_HK.ts
 
 QT_TS = \
-  locale/sibcoin_en.ts \
-  locale/sibcoin_ru.ts
+  locale/surcoin_en.ts \
+  locale/surcoin_ru.ts
 
 
 
@@ -103,7 +103,7 @@ QT_MOC_CPP = \
   moc_rpcconsole.cpp \
   moc_sendcoinsdialog.cpp \
   moc_sendcoinsentry.cpp \
-  moc_sibmodel.cpp \
+  moc_surmodel.cpp \
   moc_signverifymessagedialog.cpp \
   moc_splashscreen.cpp \
   moc_trafficgraphwidget.cpp \
@@ -122,13 +122,13 @@ BITCOIN_MM = \
   macnotificationhandler.mm
 
 QT_MOC = \
-  sibcoin.moc \
+  surcoin.moc \
   intro.moc \
   overviewpage.moc \
   rpcconsole.moc
 
-QT_QRC_CPP = qrc_sibcoin.cpp
-QT_QRC = sibcoin.qrc
+QT_QRC_CPP = qrc_surcoin.cpp
+QT_QRC = surcoin.qrc
 
 PROTOBUF_CC = paymentrequest.pb.cc
 PROTOBUF_H = paymentrequest.pb.h
@@ -170,7 +170,7 @@ BITCOIN_QT_H = \
   rpcconsole.h \
   sendcoinsdialog.h \
   sendcoinsentry.h \
-  sibmodel.h \
+  surmodel.h \
   signverifymessagedialog.h \
   splashscreen.h \
   trafficgraphwidget.h \
@@ -239,7 +239,7 @@ RES_ICONS = \
 
 
 BITCOIN_QT_CPP = \
-  sibcoin.cpp \
+  surcoin.cpp \
   bitcoinaddressvalidator.cpp \
   bitcoinamountfield.cpp \
   bitcoingui.cpp \
@@ -278,7 +278,7 @@ BITCOIN_QT_CPP += \
   receivecoinsdialog.cpp \
   receiverequestdialog.cpp \
   recentrequeststablemodel.cpp \
-  sibmodel.cpp \
+  surmodel.cpp \
   sendcoinsdialog.cpp \
   sendcoinsentry.cpp \
   signverifymessagedialog.cpp \
@@ -313,7 +313,7 @@ RES_CSS = \
 
 RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
-SURCOIN_RC = res/sibcoin-qt-res.rc
+SURCOIN_RC = res/surcoin-qt-res.rc
 
 libdashqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
@@ -330,23 +330,23 @@ BUILT_SOURCES = $(nodist_libdashqt_a_SOURCES)
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# sibcoin-qt binary #
-sibcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+# surcoin-qt binary #
+surcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms
-sibcoin_qt_SOURCES = sibcoin.cpp
+surcoin_qt_SOURCES = surcoin.cpp
 if TARGET_DARWIN
-  sibcoin_qt_SOURCES += $(BITCOIN_MM)
+  surcoin_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  sibcoin_qt_SOURCES += $(SURCOIN_RC)
+  surcoin_qt_SOURCES += $(SURCOIN_RC)
 endif
-sibcoin_qt_LDADD = libdashqt.a $(LIBBITCOIN_SERVER)
+surcoin_qt_LDADD = libdashqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-sibcoin_qt_LDADD += $(LIBBITCOIN_WALLET)
+surcoin_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
-sibcoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
+surcoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
-sibcoin_qt_LDFLAGS = $(QT_LDFLAGS)
+surcoin_qt_LDFLAGS = $(QT_LDFLAGS)
 
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
@@ -357,15 +357,15 @@ QT_QM=$(QT_TS:.ts=.qm)
 .PHONY: FORCE
 .SECONDARY: $(QT_QM)
 
-sibcoinstrings.cpp: FORCE
-	$(MAKE) -C $(top_srcdir)/src qt/sibcoinstrings.cpp
+surcoinstrings.cpp: FORCE
+	$(MAKE) -C $(top_srcdir)/src qt/surcoinstrings.cpp
 
-translate: sibcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: surcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/sibcoi_en.ts
+	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/surcoi_en.ts
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_QM) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(RES_CSS) $(PROTOBUF_H)
-	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name sibcoin -o $(abs_builddir)/$@ $< || \
+	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name surcoin -o $(abs_builddir)/$@ $< || \
 	  echo error: could not build $@
 	$(SED) -e '/^\*\*.*Created:/d' $@ > $@.n && mv $@{.n,}
 	$(SED) -e '/^\*\*.*by:/d' $@  > $@.n && mv $@{.n,}

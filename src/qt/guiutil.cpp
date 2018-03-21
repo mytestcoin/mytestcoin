@@ -126,8 +126,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no sibcoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("sibcoin"))
+    // return if URI is not valid or is no surcoin: URI
+    if(!uri.isValid() || uri.scheme() != QString("surcoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -187,13 +187,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert sibcoin:// to sibcoin:
+    // Convert surcoin:// to surcoin:
     //
-    //    Cannot handle this later, because sibcoin:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because surcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("sibcoin://", Qt::CaseInsensitive))
+    if(uri.startsWith("surcoin://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 11, "sibcoin:");
+        uri.replace(0, 11, "surcoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -201,7 +201,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("sibcoin:%1").arg(info.address);
+    QString ret = QString("surcoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -394,7 +394,7 @@ void openConfigfile()
 {
     boost::filesystem::path pathConfig = GetConfigFile();
 
-    /* Open sibcoin.conf with the associated application */
+    /* Open surcoin.conf with the associated application */
     if (boost::filesystem::exists(pathConfig))
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 }
@@ -674,7 +674,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "sibcoin.desktop";
+    return GetAutostartDir() / "surcoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -712,7 +712,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a sibcoin.desktop file to the autostart directory:
+        // Write a surcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         optionFile << "Name=Surcoin\n";
@@ -734,7 +734,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
 {
-    // loop through the list of startup items and try to find the sibcoin app
+    // loop through the list of startup items and try to find the surcoin app
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, NULL);
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
@@ -768,7 +768,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add sibcoin app to startup item list
+        // add surcoin app to startup item list
         LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, bitcoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {

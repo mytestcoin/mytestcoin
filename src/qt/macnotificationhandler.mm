@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"net.sibcoin.Surcoin-Qt";
+        return @"net.surcoin.Surcoin-Qt";
     } else {
         return [self __bundleIdentifier];
     }

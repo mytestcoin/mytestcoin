@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/sibcoin-config.h"
+#include "config/surcoin-config.h"
 #endif
 
 #include "optionsmodel.h"
@@ -141,7 +141,7 @@ void OptionsModel::Init()
     if (settings.contains("nDarksendRounds"))
         SoftSetArg("-darksendrounds", settings.value("nDarksendRounds").toString().toStdString());
     if (settings.contains("nAnonymizeSurcoinAmount"))
-        SoftSetArg("-anonymizesibcoinamount", settings.value("nAnonymizeSurcoinAmount").toString().toStdString());
+        SoftSetArg("-anonymizesurcoinamount", settings.value("nAnonymizeSurcoinAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }

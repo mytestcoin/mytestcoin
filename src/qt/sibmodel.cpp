@@ -3,7 +3,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "sibmodel.h"
+#include "surmodel.h"
 #include "util.h"
 
 #include <QNetworkRequest>
@@ -18,18 +18,18 @@
 const int MAX_GOODS_URLS = 2;
 
 const QString GOODS_URLS[MAX_GOODS_URLS] = {
-		"http://sibcoin.net/goods/",
+		"http://surcoin.net/goods/",
 		"http://chervonec.com/goods/"
 };
 
-const QString goods_data = "sibcoin.rcc";
-const QString goods_md5 = "sibcoin.md5";
+const QString goods_data = "surcoin.rcc";
+const QString goods_md5 = "surcoin.md5";
 
 
-SurModel::SurModel(CSurDB *sibdb, QObject *parent) :
+SurModel::SurModel(CSurDB *surdb, QObject *parent) :
     QObject(parent),
     res_prefix("/dev"),
-    sibDB(sibdb),
+    surDB(surdb),
     net_manager(0),
     state(ST_INIT),
 	try_idx(0)
@@ -58,7 +58,7 @@ bool SurModel::registerRes() {
     file.close();
 
     if (!QResource::registerResource(file.fileName(), res_prefix)) {
-        LogPrintf("Can't load sib resource\n");
+        LogPrintf("Can't load sur resource\n");
         return false;
     }
     return true;
@@ -135,8 +135,8 @@ void SurModel::replyFinished(QNetworkReply* p_reply)
 
 bool SurModel::saveResourceWithMD5()
 {
-    return sibDB->WriteName("res_dev", rccData.toBase64().constData())
-        && sibDB->WriteName("res_dev_md5", rccMD5.toStdString());
+    return surDB->WriteName("res_dev", rccData.toBase64().constData())
+        && surDB->WriteName("res_dev_md5", rccMD5.toStdString());
 }
 
 bool SurModel::readResourceWithMD5()
@@ -144,8 +144,8 @@ bool SurModel::readResourceWithMD5()
     std::string s_rccMD5;
     std::string s_rccData;
 
-    bool b1 = sibDB->ReadName("res_dev", s_rccData);
-    bool b2 = sibDB->ReadName("res_dev_md5", s_rccMD5);
+    bool b1 = surDB->ReadName("res_dev", s_rccData);
+    bool b2 = surDB->ReadName("res_dev_md5", s_rccMD5);
 
     LogPrintf("read md5 from DB: %s\n", s_rccMD5.c_str());
 

@@ -19,10 +19,10 @@ BEGIN
             VALUE "CompanyName",        "Surcoin"
             VALUE "FileDescription",    "Surcoin-cli (OSS RPC client for Dash)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "sibcoin-cli"
+            VALUE "InternalName",       "surcoin-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "sibcoin-cli.exe"
+            VALUE "OriginalFilename",   "surcoin-cli.exe"
             VALUE "ProductName",        "Surcoin-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END

@@ -10,7 +10,7 @@ port. See [Tor Project FAQ:TBBSocksPort](https://www.torproject.org/docs/faq.htm
 for how to properly configure Tor.
 
 
-1. Run sibcoin behind a Tor proxy
+1. Run surcoin behind a Tor proxy
 ----------------------------------
 
 The first step is running Surcoin behind a Tor proxy. This will already make all
@@ -37,31 +37,31 @@ outgoing connections be anonymized, but more is possible.
 An example how to start the client if the Tor proxy is running on local host on
 port 9050 and only allows .onion nodes to connect:
 
-	./sibcoind -onion=127.0.0.1:9050 -onlynet=tor -listen=0 -addnode=ssapp53tmftyjmjb.onion
+	./surcoind -onion=127.0.0.1:9050 -onlynet=tor -listen=0 -addnode=ssapp53tmftyjmjb.onion
 
 In a typical situation, this suffices to run behind a Tor proxy:
 
-	./sibcoind -proxy=127.0.0.1:9050
+	./surcoind -proxy=127.0.0.1:9050
 
 
-2. Run a sibcoin hidden server
+2. Run a surcoin hidden server
 -------------------------------
 
 If you configure your Tor system accordingly, it is possible to make your node also
 reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equivalent
 config file):
 
-	HiddenServiceDir /var/lib/tor/sibcoin-service/
+	HiddenServiceDir /var/lib/tor/surcoin-service/
 	HiddenServicePort 1945 127.0.0.1:1945
 	HiddenServicePort 11945 127.0.0.1:11945
 
 The directory can be different of course, but (both) port numbers should be equal to
-your sibcoind's P2P listen port (1945 by default).
+your surcoind's P2P listen port (1945 by default).
 
-	-externalip=X   You can tell sibcoin about its publicly reachable address using
+	-externalip=X   You can tell surcoin about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
 	                configuration, you can find your onion address in
-	                /var/lib/tor/sibcoin-service/hostname. Onion addresses are given
+	                /var/lib/tor/surcoin-service/hostname. Onion addresses are given
 	                preference for your node to advertize itself with, for connections
 	                coming from unroutable addresses (such as 127.0.0.1, where the
 	                Tor proxy typically runs).
@@ -78,23 +78,23 @@ your sibcoind's P2P listen port (1945 by default).
 
 In a typical situation, where you're only reachable via Tor, this should suffice:
 
-	./sibcoind -proxy=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -listen
+	./surcoind -proxy=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -listen
 
 (obviously, replace the Onion address with your own). If you don't care too much
 about hiding your node, and want to be reachable on IPv4 as well, additionally
 specify:
 
-	./sibcoind ... -discover
+	./surcoind ... -discover
 
 and open port 1945 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
 
-	./sibcoind -onion=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -discover
+	./surcoind -onion=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -discover
 
 
-3. List of known sibcoin Tor relays
+3. List of known surcoin Tor relays
 ------------------------------------
 
 * [dashie7ghp67.onion](http://dashie7ghp67.onion/)

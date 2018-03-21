@@ -1,6 +1,6 @@
 Mac OS X Build Instructions and Notes
 ====================================
-This guide will show you how to build sibcoind (headless client) for OSX.
+This guide will show you how to build surcoind (headless client) for OSX.
 
 Notes
 -----
@@ -58,19 +58,19 @@ The rest of these commands are run inside brew interactive mode:
 /private/tmp/berkeley-db4-UGpd0O $ exit
 ```
 
-After exiting, you'll get a warning that the install is keg-only, which means it wasn't symlinked to `/usr/local`.  You don't need it to link it to build sibcoin, but if you want to, here's how:
+After exiting, you'll get a warning that the install is keg-only, which means it wasn't symlinked to `/usr/local`.  You don't need it to link it to build surcoin, but if you want to, here's how:
 
     $ brew link --force berkeley-db4
 
 
-### Building `sibcoind`
+### Building `surcoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/ivansib/sib16.git
-        cd sibcoin
+        git clone https://github.com/mytestcoin/mytestcoin.git
+        cd surcoin
 
-2.  Build sibcoind:
+2.  Build surcoind:
 
         ./autogen.sh
         ./configure
@@ -102,11 +102,11 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 
 Creating a release build
 ------------------------
-You can ignore this section if you are building `sibcoind` for your own use.
+You can ignore this section if you are building `surcoind` for your own use.
 
-sibcoind/sibcoin-cli binaries are not included in the Surcoin-Qt.app bundle.
+surcoind/surcoin-cli binaries are not included in the Surcoin-Qt.app bundle.
 
-If you are building `sibcoind` or `Surcoin-Qt` for others, your build machine should be set up
+If you are building `surcoind` or `Surcoin-Qt` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -121,14 +121,14 @@ bundle is packaged and signed to create the .dmg disk image that is distributed.
 Running
 -------
 
-It's now available at `./sibcoind`, provided that you are still in the `src`
+It's now available at `./surcoind`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./sibcoind` to get the filename where it should be put, or just try these
+Run `./surcoind` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=sibcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Surcoin/sibcoin.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Surcoin/sibcoin.conf"
+    echo -e "rpcuser=surcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Surcoin/surcoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Surcoin/surcoin.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
@@ -139,6 +139,6 @@ you can monitor its process by looking at the debug.log file, like this:
 Other commands:
 -------
 
-    ./sibcoind -daemon # to start the sibcoin daemon.
-    ./sibcoin-cli --help  # for a list of command-line options.
-    ./sibcoin-cli help    # When the daemon is running, to get a list of RPC commands
+    ./surcoind -daemon # to start the surcoin daemon.
+    ./surcoin-cli --help  # for a list of command-line options.
+    ./surcoin-cli help    # When the daemon is running, to get a list of RPC commands

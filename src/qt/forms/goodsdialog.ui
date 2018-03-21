@@ -28,7 +28,7 @@
       </sizepolicy>
      </property>
      <property name="pixmap">
-      <pixmap resource="../sibcoin.qrc">:/images/about</pixmap>
+      <pixmap resource="../surcoin.qrc">:/images/about</pixmap>
      </property>
     </widget>
    </item>
@@ -75,7 +75,7 @@ p, li { white-space: pre-wrap; }
   </layout>
  </widget>
  <resources>
-  <include location="../sibcoin.qrc"/>
+  <include location="../surcoin.qrc"/>
  </resources>
  <connections/>
 </ui>

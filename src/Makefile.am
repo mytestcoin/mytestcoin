@@ -62,15 +62,15 @@ bin_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += sibcoind
+  bin_PROGRAMS += surcoind
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += sibcoin-cli sibcoin-tx
+  bin_PROGRAMS += surcoin-cli surcoin-tx
 endif
 
 .PHONY: FORCE
-# sibcoin core #
+# surcoin core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addrman.h \
@@ -141,7 +141,7 @@ BITCOIN_CORE_H = \
   timedata.h \
   tinyformat.h \
   txdb.h \
-  sibdb.h \
+  surdb.h \
   txmempool.h \
   ui_interface.h \
   uint256.h \
@@ -183,7 +183,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between dsibcoind and sibcoin-qt
+# server: shared between dsurcoind and surcoin-qt
 libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS)
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
@@ -211,12 +211,12 @@ libbitcoin_server_a_SOURCES = \
   script/sigcache.cpp \
   timedata.cpp \
   txdb.cpp \
-  sibdb.cpp \
+  surdb.cpp \
   txmempool.cpp \
   $(JSON_H) \
   $(BITCOIN_CORE_H)
 
-# wallet: shared between sibcoind and sibcoin-qt, but only linked
+# wallet: shared between surcoind and surcoin-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CFLAGS = -fPIC
 libbitcoin_wallet_a_CPPFLAGS = $(BITCOIN_INCLUDES)
@@ -247,7 +247,7 @@ libbitcoin_wallet_a_SOURCES = \
   bip/crypto.c \
   bip/bip38.cpp \
   $(BIP_H) \
-  $(BITCOIN_CORE_H) 
+  $(BITCOIN_CORE_H)
 
 # crypto primitives library
 crypto_libbitcoin_crypto_a_CFLAGS = -fPIC
@@ -303,7 +303,7 @@ univalue_libbitcoin_univalue_a_SOURCES = \
   univalue/univalue_escapes.h \
   univalue/univalue.h
 
-# common: shared between sibcoind, and sibcoin-qt and non-server tools
+# common: shared between surcoind, and surcoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_common_a_SOURCES = \
   allocators.cpp \
@@ -358,7 +358,7 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 libbitcoin_util_a_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-# cli: shared between sibcoin-cli and sibcoin-qt
+# cli: shared between surcoin-cli and surcoin-qt
 libbitcoin_cli_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
@@ -368,7 +368,7 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-sibcoind_LDADD = \
+surcoind_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UNIVALUE) \
@@ -379,36 +379,36 @@ sibcoind_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_WALLET
-sibcoind_LDADD += libbitcoin_wallet.a
+surcoind_LDADD += libbitcoin_wallet.a
 endif
-sibcoind_SOURCES = sibcoind.cpp
+surcoind_SOURCES = surcoind.cpp
 #
 
 if TARGET_WINDOWS
-sibcoind_SOURCES += sibcoind-res.rc
+surcoind_SOURCES += surcoind-res.rc
 endif
 
-sibcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
-sibcoind_CPPFLAGS = $(BITCOIN_INCLUDES)
-sibcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+surcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
+surcoind_CPPFLAGS = $(BITCOIN_INCLUDES)
+surcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 
-# sibcoin-cli binary #
-sibcoin_cli_LDADD = \
+# surcoin-cli binary #
+surcoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBBITCOIN_UTIL) \
   $(BOOST_LIBS) \
   $(SSL_LIBS) \
   $(CRYPTO_LIBS)
 
-sibcoin_cli_SOURCES = \
-  sibcoin-cli.cpp
+surcoin_cli_SOURCES = \
+  surcoin-cli.cpp
 
-sibcoin_cli_CPPFLAGS = $(BITCOIN_INCLUDES)
+surcoin_cli_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
 
-# sibcoin-tx binary #
-sibcoin_tx_LDADD = \
+# surcoin-tx binary #
+surcoin_tx_LDADD = \
   $(LIBBITCOIN_UNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -417,15 +417,15 @@ sibcoin_tx_LDADD = \
   $(BOOST_LIBS) \
   $(CRYPTO_LIBS)
 
-sibcoin_tx_SOURCES = sibcoin-tx.cpp
-sibcoin_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
+surcoin_tx_SOURCES = surcoin-tx.cpp
+surcoin_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
 #
-sibcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+surcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-sibcoin_cli_SOURCES += sibcoin-cli-res.rc
+surcoin_cli_SOURCES += surcoin-cli-res.rc
 endif
-sibcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+surcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h

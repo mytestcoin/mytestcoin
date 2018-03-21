@@ -85,7 +85,7 @@ private:
 public:
     // critical section to protect the inner data structures
     mutable CCriticalSection cs;
-    
+
     // keep track of the scanning errors I've seen
     map<uint256, CBudgetProposal> mapProposals;
     map<uint256, CFinalizedBudget> mapFinalizedBudgets;
@@ -258,7 +258,7 @@ public:
 
     //check to see if we should vote on this
     void AutoCheck();
-    //total sib paid out by this budget
+    //total sur paid out by this budget
     CAmount GetTotalPayout();
     //vote on this finalized budget as a masternode
     void SubmitVote();

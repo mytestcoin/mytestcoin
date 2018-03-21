@@ -1,5 +1,5 @@
 ---
-name: "mytestcoin-dmg-signer"
+name: "surcoin-dmg-signer"
 suites:
 - "precise"
 architectures:
@@ -10,7 +10,7 @@ packages:
 reference_datetime: "2016-01-01 00:00:00"
 remotes: []
 files:
-- "sibcoin-osx-unsigned.tar.gz"
+- "surcoin-osx-unsigned.tar.gz"
 - "signature.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
@@ -28,8 +28,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=sibcoin-osx-unsigned.tar.gz
-  SIGNED=sibcoin-osx-signed.dmg
+  UNSIGNED=surcoin-osx-unsigned.tar.gz
+  SIGNED=surcoin-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   ./detached-sig-apply.sh ${UNSIGNED} signature.tar.gz
