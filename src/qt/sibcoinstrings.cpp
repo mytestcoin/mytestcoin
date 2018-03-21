@@ -77,10 +77,10 @@ QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
-"Fees (in SIB/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in SUR/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
-"Fees (in SIB/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in SUR/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -168,10 +168,10 @@ QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Unable to locate enough Darksend denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Unable to locate enough Darksend non-denominated funds for this transaction "
-"that are not equal 1000 SIB."),
+"that are not equal 1000 SUR."),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Unable to locate enough funds for this transaction that are not equal 1000 "
-"SIB."),
+"SUR."),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -273,7 +273,7 @@ QT_TRANSLATE_NOOP("sibcoin-core", "Error: Wallet locked, unable to create transa
 QT_TRANSLATE_NOOP("sibcoin-core", "Error: You already have pending entries in the Darksend pool"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Failed to listen on any port. Use -listen=0 if you want this."),
 QT_TRANSLATE_NOOP("sibcoin-core", "Failed to read block"),
-QT_TRANSLATE_NOOP("sibcoin-core", "Fee (in SIB/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("sibcoin-core", "Fee (in SUR/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("sibcoin-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Found enough users, signing ( waiting %s )"),
@@ -306,7 +306,7 @@ QT_TRANSLATE_NOOP("sibcoin-core", "Invalid private key."),
 QT_TRANSLATE_NOOP("sibcoin-core", "Invalid script detected."),
 QT_TRANSLATE_NOOP("sibcoin-core", "KeePassHttp id for the established association"),
 QT_TRANSLATE_NOOP("sibcoin-core", "KeePassHttp key for AES encrypted communication with KeePass"),
-QT_TRANSLATE_NOOP("sibcoin-core", "Keep N SIB anonymized (default: %u)"),
+QT_TRANSLATE_NOOP("sibcoin-core", "Keep N SUR anonymized (default: %u)"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Last Darksend was too recent."),
 QT_TRANSLATE_NOOP("sibcoin-core", "Last successful Darksend action was too recent."),

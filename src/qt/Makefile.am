@@ -310,10 +310,10 @@ RES_IMAGES = \
 
 RES_CSS = \
   res/css/drkblue.css
-  
+
 RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
-SIBCOIN_RC = res/sibcoin-qt-res.rc
+SURCOIN_RC = res/sibcoin-qt-res.rc
 
 libdashqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
@@ -338,7 +338,7 @@ if TARGET_DARWIN
   sibcoin_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  sibcoin_qt_SOURCES += $(SIBCOIN_RC)
+  sibcoin_qt_SOURCES += $(SURCOIN_RC)
 endif
 sibcoin_qt_LDADD = libdashqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
@@ -362,7 +362,7 @@ sibcoinstrings.cpp: FORCE
 
 translate: sibcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/sibcoi_en.ts  
+	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/sibcoi_en.ts
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_QM) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(RES_CSS) $(PROTOBUF_H)
 	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name sibcoin -o $(abs_builddir)/$@ $< || \

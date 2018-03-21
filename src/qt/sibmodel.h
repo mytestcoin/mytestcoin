@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SIBMODEL_H
-#define	SIBMODEL_H
+#ifndef SURMODEL_H
+#define	SURMODEL_H
 
 #include "sibdb.h"
 
@@ -62,4 +62,4 @@ private:
 
 };
 
-#endif	/* SIBMODEL_H */
+#endif	/* SURMODEL_H */

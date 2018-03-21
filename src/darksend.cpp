@@ -1970,10 +1970,10 @@ int CDarksendPool::GetDenominations(const std::vector<CTxOut>& vout, bool fSingl
 
     // Function returns as follows:
     //
-    // bit 0 - 100SIB+1 ( bit on if present )
-    // bit 1 - 10SIB+1
-    // bit 2 - 1SIB+1
-    // bit 3 - .1SIB+1
+    // bit 0 - 100SUR+1 ( bit on if present )
+    // bit 1 - 10SUR+1
+    // bit 2 - 1SUR+1
+    // bit 3 - .1SUR+1
 
     return denom;
 }

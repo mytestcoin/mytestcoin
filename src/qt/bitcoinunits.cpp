@@ -19,9 +19,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(SIB);
-    unitlist.append(mSIB);
-    unitlist.append(uSIB);
+    unitlist.append(SUR);
+    unitlist.append(mSUR);
+    unitlist.append(uSUR);
     return unitlist;
 }
 
@@ -29,9 +29,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case SIB:
-    case mSIB:
-    case uSIB:
+    case SUR:
+    case mSUR:
+    case uSUR:
         return true;
     default:
         return false;
@@ -42,9 +42,9 @@ QString BitcoinUnits::id(int unit)
 {
     switch(unit)
     {
-        case SIB: return QString("sib");
-        case mSIB: return QString("msib");
-        case uSIB: return QString::fromUtf8("usib");
+        case SUR: return QString("sib");
+        case mSUR: return QString("msib");
+        case uSUR: return QString::fromUtf8("usib");
         default: return QString("???");
     }
 }
@@ -55,9 +55,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case SIB: return QString("SIB");
-            case mSIB: return QString("mSIB");
-            case uSIB: return QString::fromUtf8("μSIB");
+            case SUR: return QString("SUR");
+            case mSUR: return QString("mSUR");
+            case uSUR: return QString::fromUtf8("μSUR");
             default: return QString("???");
         }
     }
@@ -65,9 +65,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case SIB: return QString("tSIB");
-            case mSIB: return QString("mtSIB");
-            case uSIB: return QString::fromUtf8("μtSIB");
+            case SUR: return QString("tSUR");
+            case mSUR: return QString("mtSUR");
+            case uSUR: return QString::fromUtf8("μtSUR");
             default: return QString("???");
         }
     }
@@ -79,9 +79,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case SIB: return QString("Sur");
-            case mSIB: return QString("Milli-Sur (1 / 1" THIN_SP_UTF8 "000)");
-            case uSIB: return QString("Micro-Sur (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case SUR: return QString("Sur");
+            case mSUR: return QString("Milli-Sur (1 / 1" THIN_SP_UTF8 "000)");
+            case uSUR: return QString("Micro-Sur (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -89,9 +89,9 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case SIB: return QString("TestSur");
-            case mSIB: return QString("Milli-TestSur (1 / 1" THIN_SP_UTF8 "000)");
-            case uSIB: return QString("Micro-TestSur (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case SUR: return QString("TestSur");
+            case mSUR: return QString("Milli-TestSur (1 / 1" THIN_SP_UTF8 "000)");
+            case uSUR: return QString("Micro-TestSur (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -101,9 +101,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case SIB:  return 100000000;
-    case mSIB: return 100000;
-    case uSIB: return 100;
+    case SUR:  return 100000000;
+    case mSUR: return 100000;
+    case uSUR: return 100;
     default:   return 100000000;
     }
 }
@@ -112,9 +112,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case SIB: return 8;
-    case mSIB: return 5;
-    case uSIB: return 2;
+    case SUR: return 8;
+    case mSUR: return 5;
+    case uSUR: return 2;
     default: return 0;
     }
 }

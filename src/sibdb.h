@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SIBDB_H
-#define	SIBDB_H
+#ifndef SURDB_H
+#define	SURDB_H
 
 #include "db.h"
 
@@ -23,4 +23,4 @@ public:
     bool EraseName(const std::string& key);
 
 };
-#endif	/* SIBDB_H */
+#endif	/* SURDB_H */

@@ -6,7 +6,7 @@
     <message>
         <location filename="../forms/ui_aboutdialog.h" line="+129"/>
         <source>About Surcoin Core</source>
-        <translation>О программе: &quot;SurCoin&quot; (SIB)</translation>
+        <translation>О программе: &quot;SurCoin&quot; (SUR)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -94,12 +94,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="+47"/>
         <source>Choose the address to send coins to</source>
-        <translation>Выберите адрес для отправки на него червонцев</translation>
+        <translation>Выберите адрес для отправки на него SUR</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Choose the address to receive coins with</source>
-        <translation>Выберите адрес для получения червонцев</translation>
+        <translation>Выберите адрес для получения SUR</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -289,7 +289,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SIBCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SURCOINS&lt;/b&gt;!</source>
         <translation>Внимание: если Вы зашифруете бумажник и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ ЧЕРВОНЦЫ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -306,7 +306,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-57"/>
         <source>Surcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</source>
-        <translation>Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего бумажника не может полностью защитить ваши червонцы от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
+        <translation>Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего бумажника не может полностью защитить ваши SUR от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -367,7 +367,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location filename="../bitcoingui.cpp" line="+111"/>
         <location line="+808"/>
         <source>Surcoin Core</source>
-        <translation>SurCoin Core (SIB)</translation>
+        <translation>SurCoin Core (SUR)</translation>
     </message>
     <message>
         <location line="-799"/>
@@ -397,7 +397,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Send coins to a Surcoin address</source>
-        <translation>Отправить червонцы на указанный адрес</translation>
+        <translation>Отправить SUR на указанный адрес</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -427,7 +427,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Show links to services that accept sibcoins</source>
-        <translation type="unfinished">Где принимают червонцы</translation>
+        <translation type="unfinished">Где принимают SUR</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -442,7 +442,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+3"/>
         <source>&amp;About Surcoin Core</source>
-        <translation>О &amp;кошельке &quot;SurCoin&quot; (SIB)</translation>
+        <translation>О &amp;кошельке &quot;SurCoin&quot; (SUR)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -638,7 +638,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>&amp;Print sibcoins...</source>
-        <translation>&amp;Распечатать червонцы...</translation>
+        <translation>&amp;Распечатать SUR...</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -648,12 +648,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>&amp;Load sibcoins...</source>
-        <translation>&amp;Загрузить червонцы...</translation>
+        <translation>&amp;Загрузить SUR...</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Load sibcoins from paper</source>
-        <translation>Загрузить червонцы с бумажного носителя</translation>
+        <translation>Загрузить SUR с бумажного носителя</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1210,7 +1210,7 @@ Address: %4
     <message>
         <location filename="../forms/darksendconfig.ui" line="+14"/>
         <source>Configure Darksend</source>
-        <translation>Настройте анонимизацию червонцев</translation>
+        <translation>Настройте анонимизацию SUR</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1234,28 +1234,28 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 1000 SIB</source>
-        <translation>Использовать 2 отдельных мастерноды для перемешивания средств вплоть до 1000 червонцев</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 SUR</source>
+        <translation>Использовать 2 отдельных мастерноды для перемешивания средств вплоть до 1000 SUR</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 1000 SIB</source>
-        <translation>Использовать 8 отдельных мастерноды для перемешивания средств вплоть до 1000 червонцев</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 SUR</source>
+        <translation>Использовать 8 отдельных мастерноды для перемешивания средств вплоть до 1000 SUR</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>This option is the quickest and will cost about ~0.025 SIB to anonymize 1000 SIB</source>
-        <translation>Эта опция наиболее быстрая и будет стоить примерно ~0.025 SIB для анонимизации 1000 SIB</translation>
+        <source>This option is the quickest and will cost about ~0.025 SUR to anonymize 1000 SUR</source>
+        <translation>Эта опция наиболее быстрая и будет стоить примерно ~0.025 SUR для анонимизации 1000 SUR</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 SIB to anonymize 1000 SIB</source>
-        <translation>Эта опция более быстрая и будет стоить примерно ~0.05 SIB для анонимизации 1000 SIB</translation>
+        <source>This option is moderately fast and will cost about 0.05 SUR to anonymize 1000 SUR</source>
+        <translation>Эта опция более быстрая и будет стоить примерно ~0.05 SUR для анонимизации 1000 SUR</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>0.1 SIB per 1000 SIB you anonymize.</source>
-        <translation>0.1 SIB для анонимизации 1000 SIB.</translation>
+        <source>0.1 SUR per 1000 SUR you anonymize.</source>
+        <translation>0.1 SUR для анонимизации 1000 SUR.</translation>
     </message>
     <message>
         <location line="-52"/>
@@ -1272,22 +1272,22 @@ Address: %4
         <location line="+15"/>
         <location line="+15"/>
         <source>Darksend Configuration</source>
-        <translation>Настройки анонимизации червонцев</translation>
+        <translation>Настройки анонимизации SUR</translation>
     </message>
     <message>
         <location line="-29"/>
         <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</source>
-        <translation>Анонимизация червонцев успешно установлена в режим обычной приватности (%1 и 2 раунда). Вы можете изменить это в любое время, используя окно настроек.</translation>
+        <translation>Анонимизация SUR успешно установлена в режим обычной приватности (%1 и 2 раунда). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</source>
-        <translation>Анонимизация червонцев успешно установлена в режим высокой приватности (%1 и 8 раундов). Вы можете изменить это в любое время, используя окно настроек.</translation>
+        <translation>Анонимизация SUR успешно установлена в режим высокой приватности (%1 и 8 раундов). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</source>
-        <translation>Анонимизация червонцев успешно установлена в режим максимально приватности (%1 и 16 раундов). Вы можете изменить это в любое время, используя окно настроек.</translation>
+        <translation>Анонимизация SUR успешно установлена в режим максимально приватности (%1 и 16 раундов). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
 </context>
 <context>
@@ -1506,7 +1506,7 @@ Address: %4
     <message>
         <location filename="../utilitydialog.cpp" line="+34"/>
         <source>Surcoin Core</source>
-        <translation>&quot;SurCoin Core&quot;(SIB)</translation>
+        <translation>&quot;SurCoin Core&quot;(SUR)</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1522,7 +1522,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>About Surcoin Core</source>
-        <translation>О программе: &quot;SurCoin Core&quot; (SIB)</translation>
+        <translation>О программе: &quot;SurCoin Core&quot; (SUR)</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1580,7 +1580,7 @@ Address: %4
     <message>
         <location line="+9"/>
         <source>Welcome to Surcoin Core.</source>
-        <translation>Добро пожаловать в кошелёк сети &quot;SurCoin Core&quot; (SIB).</translation>
+        <translation>Добро пожаловать в кошелёк сети &quot;SurCoin Core&quot; (SUR).</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -1711,7 +1711,7 @@ Address: %4
     <message>
         <location line="+15"/>
         <source>Amount of Surcoin to keep anonymized</source>
-        <translation>Сумма постоянно анонимизированных червонцев</translation>
+        <translation>Сумма постоянно анонимизированных SUR</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -1726,12 +1726,12 @@ Address: %4
     <message>
         <location line="+6"/>
         <source>Whether to show coin control features or not.</source>
-        <translation>Показывать ли функции контроля червонцев или нет.</translation>
+        <translation>Показывать ли функции контроля SUR или нет.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Enable coin &amp;control features</source>
-        <translation>Включить функции &amp;контроля червонцев</translation>
+        <translation>Включить функции &amp;контроля SUR</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1796,7 +1796,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Connect to the Surcoin network through a SOCKS5 proxy.</source>
-        <translation>Подключаться к сети червонца через SOCKS5 прокси.</translation>
+        <translation>Подключаться к сети SUR через SOCKS5 прокси.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1863,7 +1863,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Выберите единицу измерения червонцев при отображении и отправке.</translation>
+        <translation>Выберите единицу измерения SUR при отображении и отправке.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1985,7 +1985,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="-29"/>
         <source>Mined balance that has not yet matured</source>
-        <translation>Баланс добытых червонцев, который ещё не созрел</translation>
+        <translation>Баланс добытых SUR, который ещё не созрел</translation>
     </message>
     <message>
         <location line="-16"/>
@@ -2015,7 +2015,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+20"/>
         <source>Darksend Balance:</source>
-        <translation>Анонимизированных червоцев:</translation>
+        <translation>Анонимизированных SUR:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -2024,8 +2024,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>0 SIB / 0 Rounds</source>
-        <translation>0 червонцев / 0 раундов</translation>
+        <source>0 SUR / 0 Rounds</source>
+        <translation>0 SUR / 0 раундов</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2044,7 +2044,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
         <location line="+10"/>
         <location line="+14"/>
         <source>Darksend</source>
-        <translation>Анонимизация червонцев</translation>
+        <translation>Анонимизация SUR</translation>
     </message>
     <message>
         <location line="-107"/>
@@ -2109,7 +2109,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+19"/>
         <source>Reset the current status of Darksend (can interrupt Darksend if it&apos;s in the process of Mixing, which can cost you money!)</source>
-        <translation>Сбросить текущий статус анонимизации червонцев (можно прервать процесс перемешивания, но это может стоить Вам немного денег!)</translation>
+        <translation>Сбросить текущий статус анонимизации SUR (можно прервать процесс перемешивания, но это может стоить Вам немного денег!)</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2235,12 +2235,12 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+10"/>
         <source>Darksend requires at least %1 to use.</source>
-        <translation>Для анонимизации червонцев требуется минимум %1.</translation>
+        <translation>Для анонимизации SUR требуется минимум %1.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Wallet is locked and user declined to unlock. Disabling Darksend.</source>
-        <translation>Бумажник заблокирован и пользователь отказался его разблокировать. Анонимизация червонцев будет выключена.</translation>
+        <translation>Бумажник заблокирован и пользователь отказался его разблокировать. Анонимизация SUR будет выключена.</translation>
     </message>
 </context>
 <context>
@@ -2393,7 +2393,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location filename="../guiutil.cpp" line="+111"/>
         <source>Enter a Surcoin address (e.g. %1)</source>
-        <translation>Введите адрес сети червонца (напр. %1)</translation>
+        <translation>Введите адрес сети SUR (напр. %1)</translation>
     </message>
     <message>
         <location line="+760"/>
@@ -2869,7 +2869,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+17"/>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Surcoin network.</source>
-        <translation>Необязательное сообщение для добавления в запрос платежа, которое будет отображено при открытии запроса. Это сообщение не будет отправлено вместе с платежом по сети червонца.</translation>
+        <translation>Необязательное сообщение для добавления в запрос платежа, которое будет отображено при открытии запроса. Это сообщение не будет отправлено вместе с платежом по сети SUR.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2885,7 +2885,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="-14"/>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Surcoin network.</source>
-        <translation>Необязательное сообщение для добавления в запрос платежа, которое будет отображено при открытии запроса.&lt;br&gt;Обратите внимание: Это сообщение не будет отправлено вместе с платежом по сети червонца.</translation>
+        <translation>Необязательное сообщение для добавления в запрос платежа, которое будет отображено при открытии запроса.&lt;br&gt;Обратите внимание: Это сообщение не будет отправлено вместе с платежом по сети SUR.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3082,7 +3082,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+76"/>
         <source>Coin Control Features</source>
-        <translation>Функции контроля червонцев</translation>
+        <translation>Функции контроля SUR</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3182,7 +3182,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+78"/>
         <source>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 duffs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Если ручная комиссия установлена как 10 милличервонцев и транзакция занимает всего 250 байт,&lt;br /&gt;тогда комиссия &quot;за килобайт&quot; составит всего 2,5 милличервонцев, в то время как&lt;br /&gt; &quot;всего не менее&quot; будет те же 10 милличервонцев.&lt;br /&gt; Для транзакций размером больше 1кб в обоих случаях будет &quot;за килобайт&quot;.</translation>
+        <translation>Если ручная комиссия установлена как 10 миллиSUR и транзакция занимает всего 250 байт,&lt;br /&gt;тогда комиссия &quot;за килобайт&quot; составит всего 2,5 миллиSUR, в то время как&lt;br /&gt; &quot;всего не менее&quot; будет те же 10 миллиSUR.&lt;br /&gt; Для транзакций размером больше 1кб в обоих случаях будет &quot;за килобайт&quot;.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3192,7 +3192,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+13"/>
         <source>If the custom fee is set to 1000 duffs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 duffs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 duffs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Если ручная комиссия установлена как 10 милличервонцев и транзакция занимает всего 250 байт,&lt;br /&gt;тогда комиссия &quot;за килобайт&quot; составит всего 2,5 милличервонцев, в то время как&lt;br /&gt;&quot;всего не менее&quot; будет те же 10 милличервонцев. Для транзакций размером больше 1КБ в обоих случаях будет &quot;за килобайт&quot;.</translation>
+        <translation>Если ручная комиссия установлена как 10 миллиSUR и транзакция занимает всего 250 байт,&lt;br /&gt;тогда комиссия &quot;за килобайт&quot; составит всего 2,5 миллиSUR, в то время как&lt;br /&gt;&quot;всего не менее&quot; будет те же 10 миллиSUR. Для транзакций размером больше 1КБ в обоих случаях будет &quot;за килобайт&quot;.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3379,7 +3379,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+39"/>
         <source>Confirm send coins</source>
-        <translation>Подтвердите отправку червонцев</translation>
+        <translation>Подтвердите отправку SUR</translation>
     </message>
     <message>
         <location line="-312"/>
@@ -3429,12 +3429,12 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+4"/>
         <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Транзакция была отклонена! Такое может произойти, если некоторые червонцы уже были потрачены, например, если Вы используете одну копию бумажника (wallet.dat), а червонцы были потрачены из другой копии, но не были отмечены как потраченные в этой.</translation>
+        <translation>Транзакция была отклонена! Такое может произойти, если некоторые SUR уже были потрачены, например, если Вы используете одну копию бумажника (wallet.dat), а SUR были потрачены из другой копии, но не были отмечены как потраченные в этой.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Error: The wallet was unlocked only to anonymize coins.</source>
-        <translation>Ошибка: этот бумажник был разблокирован только для анонимизации червонцев.</translation>
+        <translation>Ошибка: этот бумажник был разблокирован только для анонимизации SUR.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3770,7 +3770,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
         <source>Surcoin Core</source>
-        <translation>&quot;SurCoin Core&quot; (SIB)</translation>
+        <translation>&quot;SurCoin Core&quot; (SUR)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4029,7 +4029,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+7"/>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Сгенерированные червонцы должны подождать %1 блоков, прежде чем они могут быть потрачены. Когда Вы сгенерировали этот блок, он был отправлен в сеть для добавления в цепочку блоков. Если он не попадёт в цепочку, его статус изменится на &quot;не принят&quot;, и червонцы будут недействительны. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас.</translation>
+        <translation>Сгенерированные SUR должны подождать %1 блоков, прежде чем они могут быть потрачены. Когда Вы сгенерировали этот блок, он был отправлен в сеть для добавления в цепочку блоков. Если он не попадёт в цепочку, его статус изменится на &quot;не принят&quot;, и SUR будут недействительны. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4186,12 +4186,12 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+2"/>
         <source>Darksend Collateral Payment</source>
-        <translation>Обеспечительный платеж для анонимизации червонцев</translation>
+        <translation>Обеспечительный платеж для анонимизации SUR</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Darksend Make Collateral Inputs</source>
-        <translation>Создание обеспечительных червонцев для анонимизации</translation>
+        <translation>Создание обеспечительных SUR для анонимизации</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4305,7 +4305,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="+1"/>
         <source>Darksend Make Collateral Inputs</source>
-        <translation>Создание обеспечительных червонцев для анонимизации</translation>
+        <translation>Создание обеспечительных SUR для анонимизации</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4476,12 +4476,12 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
         <location line="+9"/>
         <location line="+11"/>
         <source>Send Coins</source>
-        <translation>Отправка червонцев</translation>
+        <translation>Отправка SUR</translation>
     </message>
     <message>
         <location line="-20"/>
-        <source>InstantX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SIB.</source>
-        <translation>InstantX пока не поддерживает отправку таких больших сумм. Транзакции в данный момент ограничены суммой %1 червонцев.</translation>
+        <source>InstantX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SUR.</source>
+        <translation>InstantX пока не поддерживает отправку таких больших сумм. Транзакции в данный момент ограничены суммой %1 SUR.</translation>
     </message>
 </context>
 <context>
@@ -4535,7 +4535,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
         <location line="+64"/>
         <source>Before sending sibcoins to address please be sure
 that paper wallet has been printed successfully!</source>
-        <translation>Перед переводом червонцев на сгенерированный адрес убедитесь,
+        <translation>Перед переводом SUR на сгенерированный адрес убедитесь,
 что бумажный кошелек успешно распечатан!</translation>
     </message>
 </context>
@@ -4551,7 +4551,7 @@ that paper wallet has been printed successfully!</source>
     </message>
     <message>
         <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
-        <translation>При отправке Darksend использует только деноминированные средства, возможно, Вам просто нужно анонимизировать немного больше червонцев.</translation>
+        <translation>При отправке Darksend использует только деноминированные средства, возможно, Вам просто нужно анонимизировать немного больше SUR.</translation>
     </message>
     <message>
         <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly.</source>
@@ -4610,7 +4610,7 @@ that paper wallet has been printed successfully!</source>
         <translation>Не удалось обнаружить достаточных для выполнения этой транзакции номиналов Darksend.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 SIB.</source>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 SUR.</source>
         <translation>Не удалось обнаружить достаточных для выполнения этой транзакции неденоминированных средств, отличающихся от 1000DRK.</translation>
     </message>
     <message>
@@ -4854,12 +4854,12 @@ that paper wallet has been printed successfully!</source>
         <translation>Ошибка: Обнаружен неподдерживаемый аргумент -socks. Выбор версии SOCKS больше невозможен, поддерживаются только прокси версии SOCKS5.</translation>
     </message>
     <message>
-        <source>Fees (in SIB/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Комиссии (в SIB/Kb) меньше этого значения считаются нулевой для ретранслирования транзакции (по умолчанию: %s)</translation>
+        <source>Fees (in SUR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Комиссии (в SUR/Kb) меньше этого значения считаются нулевой для ретранслирования транзакции (по умолчанию: %s)</translation>
     </message>
     <message>
-        <source>Fees (in SIB/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Комиссии (в SIB/Kb) меньше этого значения считаются нулевой (для создания транзакции) (по умолчанию: %s)</translation>
+        <source>Fees (in SUR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Комиссии (в SUR/Kb) меньше этого значения считаются нулевой (для создания транзакции) (по умолчанию: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4907,7 +4907,7 @@ that paper wallet has been printed successfully!</source>
     </message>
     <message>
         <source>Provide liquidity to Darksend by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
-        <translation>Предоставлять ликвидность для Darksend путем редкого участия в перемешивании червонцев на постоянной основе (0-100, по умолчанию: %u, 1=очень часто, высокая комиссия, 100=очень редко, низкая комиссия)</translation>
+        <translation>Предоставлять ликвидность для Darksend путем редкого участия в перемешивании SUR на постоянной основе (0-100, по умолчанию: %u, 1=очень часто, высокая комиссия, 100=очень редко, низкая комиссия)</translation>
     </message>
     <message>
         <source>Require high priority for relaying free or low-fee transactions (default:%u)</source>
@@ -4919,7 +4919,7 @@ that paper wallet has been printed successfully!</source>
     </message>
     <message>
         <source>Set the number of threads for coin generation if enabled (-1 = all cores, default: %d)</source>
-        <translation>Задать число потоков выполнения для генерации червонцев, если таковая включена (-1 = все ядра, по умолчанию: %d)</translation>
+        <translation>Задать число потоков выполнения для генерации SUR, если таковая включена (-1 = все ядра, по умолчанию: %d)</translation>
     </message>
     <message>
         <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
@@ -4954,7 +4954,7 @@ rpcpassword=%s
 </translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 SIB.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 SUR.</source>
         <translation>Не удалось обнаружить достаточных для выполнения этой транзакции средств, отличающихся от 1000DRK.</translation>
     </message>
     <message>
@@ -5072,8 +5072,8 @@ rpcpassword=%s
         <translation>Ошибка: Обнаружен неподдерживаемый параметр -tor, используйте -onion вместо него.</translation>
     </message>
     <message>
-        <source>Fee (in SIB/kB) to add to transactions you send (default: %s)</source>
-        <translation>Комиссии (в SIB/kB), добавляемая к отправляемым Вами транзакциям (по умолчанию: %s)</translation>
+        <source>Fee (in SUR/kB) to add to transactions you send (default: %s)</source>
+        <translation>Комиссии (в SUR/kB), добавляемая к отправляемым Вами транзакциям (по умолчанию: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -5093,7 +5093,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Generate coins (default: %u)</source>
-        <translation>Генерировать червонцы (по умолчанию: %u)</translation>
+        <translation>Генерировать SUR (по умолчанию: %u)</translation>
     </message>
     <message>
         <source>How many blocks to check at startup (default: %u, 0 = all)</source>
@@ -5440,8 +5440,8 @@ rpcpassword=%s
         <translation>Ключ KeePassHttp для зашифрованной коммуникации с KeePass</translation>
     </message>
     <message>
-        <source>Keep N SIB anonymized (default: %u)</source>
-        <translation>Держать N SIB анонимизированными (по умолчанию: %u)</translation>
+        <source>Keep N SUR anonymized (default: %u)</source>
+        <translation>Держать N SUR анонимизированными (по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>

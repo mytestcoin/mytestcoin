@@ -290,7 +290,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
 
 
         if(recipients[0].useInstantX && total > GetSporkValue(SPORK_5_MAX_VALUE)*COIN){
-            emit message(tr("Send Coins"), tr("InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 SIB.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
+            emit message(tr("Send Coins"), tr("InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 SUR.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
                          CClientUIInterface::MSG_ERROR);
             return TransactionCreationFailed;
         }
@@ -299,7 +299,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
         transaction.setTransactionFee(nFeeRequired);
 
         if(recipients[0].useInstantX && newTx->GetValueOut() > GetSporkValue(SPORK_5_MAX_VALUE)*COIN){
-            emit message(tr("Send Coins"), tr("InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 SIB.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
+            emit message(tr("Send Coins"), tr("InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 SUR.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
                          CClientUIInterface::MSG_ERROR);
             return TransactionCreationFailed;
         }
@@ -451,34 +451,34 @@ bool WalletModel::setAddressBook(const CTxDestination& address, const string& st
         return wallet->SetAddressBook(address, strName, strPurpose);
     }
 }
- 
-void WalletModel::encryptKey(const CKey key, const std::string &pwd, 
+
+void WalletModel::encryptKey(const CKey key, const std::string &pwd,
         const std::string &slt, std::vector<unsigned char> &crypted)
 {
     CCrypter crpt;
     SecureString passwd(pwd.c_str());
     std::vector<unsigned char> salt(slt.begin(), slt.end());
-    
+
     crpt.SetKeyFromPassphrase(passwd, salt, 14, 0);
     CKeyingMaterial mat(key.begin(), key.end());
-    crpt.Encrypt(mat, crypted);   
+    crpt.Encrypt(mat, crypted);
 }
 
-void WalletModel::decryptKey(const std::vector<unsigned char> &crypted, const std::string &pwd, 
+void WalletModel::decryptKey(const std::vector<unsigned char> &crypted, const std::string &pwd,
         const std::string &slt, CKey &key)
 {
     CCrypter crpt;
     std::vector<unsigned char> decrypted;
     std::vector<unsigned char> salt(slt.begin(), slt.end());
-    
+
     SecureString passwd(pwd.c_str());
     crpt.SetKeyFromPassphrase(passwd, salt, 14, 0);
-    
+
     CKeyingMaterial mat;
     crpt.Decrypt(crypted, mat);
     key.Set(mat.begin(), mat.end(), true);
 }
- 
+
 bool WalletModel::setWalletEncrypted(bool encrypted, const SecureString &passphrase)
 {
     if(encrypted)

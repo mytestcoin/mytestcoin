@@ -287,8 +287,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SIBCOINS&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SIBCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SURCOINS&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SURCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1221,27 +1221,27 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 1000 SIB</source>
+        <source>Use 2 separate masternodes to mix funds up to 1000 SUR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 1000 SIB</source>
+        <source>Use 8 separate masternodes to mix funds up to 1000 SUR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>This option is the quickest and will cost about ~0.025 SIB to anonymize 1000 SIB</source>
+        <source>This option is the quickest and will cost about ~0.025 SUR to anonymize 1000 SUR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 SIB to anonymize 1000 SIB</source>
+        <source>This option is moderately fast and will cost about 0.05 SUR to anonymize 1000 SUR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>0.1 SIB per 1000 SIB you anonymize.</source>
+        <source>0.1 SUR per 1000 SUR you anonymize.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2011,8 +2011,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>0 SIB / 0 Rounds</source>
-        <translation>0 SIB / 0 Rounds</translation>
+        <source>0 SUR / 0 Rounds</source>
+        <translation>0 SUR / 0 Rounds</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4457,12 +4457,12 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-20"/>
-        <source>InstantX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SIB.</source>
+        <source>InstantX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SUR.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>InstantX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SIB.</source>
+        <source>InstantX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SUR.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4596,8 +4596,8 @@ that paper wallet has been printed successfully!</translation>
         <translation type="obsolete">Unable to locate enough Darksend denominated funds for this transaction.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 SIB.</source>
-        <translation type="obsolete">Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 SIB.</translation>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 SUR.</source>
+        <translation type="obsolete">Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 SUR.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>

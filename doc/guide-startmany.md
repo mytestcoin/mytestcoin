@@ -4,11 +4,11 @@
 There are many ways to setup a wallet to support start-many. This guide will walk through two of them.
 
 1. [Importing an existing wallet (recommended if you are consolidating wallets).](#option1)
-2. [Sending 1,000 SIB to new wallet addresses.](#option2)
+2. [Sending 1,000 SUR to new wallet addresses.](#option2)
 
 ## <a name="option1"></a>Option 1. Importing an existing wallet
 
-This is the way to go if you are consolidating multiple wallets into one that supports start-many. 
+This is the way to go if you are consolidating multiple wallets into one that supports start-many.
 
 ### From your single-instance MasterNode Wallet
 
@@ -56,9 +56,9 @@ Create a new wallet address for each MasterNode.
 
 Close your QT Wallet.
 
-### Send 1,000 SIB to New Addresses
+### Send 1,000 SUR to New Addresses
 
-Just like setting up a standard MN. Send exactly 1,000 SIB to each new address created above.
+Just like setting up a standard MN. Send exactly 1,000 SUR to each new address created above.
 
 ### Create New Masternode Private Keys
 
@@ -78,11 +78,11 @@ Remember... this is local. Make sure your QT is not running.
 
 Create the masternode.conf file in the same directory as your wallet.dat.
 
-Copy the masternode private key and correspondig collateral output transaction that holds the 1K SIB.
+Copy the masternode private key and correspondig collateral output transaction that holds the 1K SUR.
 
-The masternode private key may be an existing key from [Option 1](#option1), or a newly generated key from [Option 2](#option2). 
+The masternode private key may be an existing key from [Option 1](#option1), or a newly generated key from [Option 2](#option2).
 
-*Please note, the masternode priviate key is not the same as a wallet private key. Never put your wallet private key in the masternode.conf file. That is equivalent to putting your 1,000 SIB on the remote server and defeats the purpose of a hot/cold setup.*
+*Please note, the masternode priviate key is not the same as a wallet private key. Never put your wallet private key in the masternode.conf file. That is equivalent to putting your 1,000 SUR on the remote server and defeats the purpose of a hot/cold setup.*
 
 ### Get the collateral output
 
@@ -114,7 +114,7 @@ mn02 127.0.0.2:1945 93WaAb3htPJEV8E9aQcN23Jt97bPex7YvWfgMDTUdWJvzmrMqey aa9f1034
 
 ## What about the sibcoin.conf file?
 
-If you are using a masternode.conf file you no longer need the sibcoin.conf file. The exception is if you need custom settings (thanks oblox). 
+If you are using a masternode.conf file you no longer need the sibcoin.conf file. The exception is if you need custom settings (thanks oblox).
 
 ## Update sibcoin.conf on server
 
@@ -131,7 +131,7 @@ If you generated a new masternode private key, you will need to update the maste
 
 ### Remote
 
-If your remote server is not running, start your remote daemon as you normally would. 
+If your remote server is not running, start your remote daemon as you normally would.
 
 I usually confirm that remote is on the correct block by issuing:
 

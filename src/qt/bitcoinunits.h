@@ -59,9 +59,9 @@ public:
      */
     enum Unit
     {
-        SIB,
-        mSIB,
-        uSIB
+        SUR,
+        mSUR,
+        uSUR
     };
 
     enum SeparatorStyle

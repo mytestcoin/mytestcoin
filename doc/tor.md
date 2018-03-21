@@ -1,4 +1,4 @@
-TOR SUPPORT IN SIBCOIN
+TOR SUPPORT IN SURCOIN
 =======================
 
 It is possible to run Surcoin as a Tor hidden service, and connect to such services.
