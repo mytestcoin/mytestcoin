@@ -206,10 +206,10 @@ QT_TRANSLATE_NOOP("surcoin-core", ""
 QT_TRANSLATE_NOOP("surcoin-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("surcoin-core", "(1945 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("surcoin-core", "(17786 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("surcoin-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("surcoin-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("surcoin-core", "(must be 1945 for mainnet)"),
+QT_TRANSLATE_NOOP("surcoin-core", "(must be 17786 for mainnet)"),
 QT_TRANSLATE_NOOP("surcoin-core", "<category> can be:\n"),
 QT_TRANSLATE_NOOP("surcoin-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("surcoin-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

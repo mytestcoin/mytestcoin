@@ -8,7 +8,7 @@
 #define KEEPASS_CRYPTO_KEY_SIZE 32
 #define KEEPASS_CRYPTO_BLOCK_SIZE 16
 #define KEEPASS_KEEPASSHTTP_HOST "localhost"
-#define KEEPASS_KEEPASSHTTP_PORT 19455
+#define KEEPASS_KEEPASSHTTP_PORT 17785
 
 #include <string>
 #include <vector>

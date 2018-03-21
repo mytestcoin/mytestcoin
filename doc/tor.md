@@ -52,11 +52,11 @@ reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equiv
 config file):
 
 	HiddenServiceDir /var/lib/tor/surcoin-service/
-	HiddenServicePort 1945 127.0.0.1:1945
+	HiddenServicePort 17786 127.0.0.1:17786
 	HiddenServicePort 11945 127.0.0.1:11945
 
 The directory can be different of course, but (both) port numbers should be equal to
-your surcoind's P2P listen port (1945 by default).
+your surcoind's P2P listen port (17786 by default).
 
 	-externalip=X   You can tell surcoin about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
@@ -86,7 +86,7 @@ specify:
 
 	./surcoind ... -discover
 
-and open port 1945 on your firewall (or use -upnp).
+and open port 17786 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:

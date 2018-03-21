@@ -326,7 +326,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += "  -onion=<ip:port>       " + strprintf(_("Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)"), "-proxy") + "\n";
     strUsage += "  -onlynet=<net>         " + _("Only connect to nodes in network <net> (ipv4, ipv6 or onion)") + "\n";
     strUsage += "  -permitbaremultisig    " + strprintf(_("Relay non-P2SH multisig (default: %u)"), 1) + "\n";
-    strUsage += "  -port=<port>           " + strprintf(_("Listen for connections on <port> (default: %u or testnet: %u)"), 1945, 11945) + "\n";
+    strUsage += "  -port=<port>           " + strprintf(_("Listen for connections on <port> (default: %u or testnet: %u)"), 17786, 11945) + "\n";
     strUsage += "  -proxy=<ip:port>       " + _("Connect through SOCKS5 proxy") + "\n";
     strUsage += "  -seednode=<ip>         " + _("Connect to a node to retrieve peer addresses, and disconnect") + "\n";
     strUsage += "  -timeout=<n>           " + strprintf(_("Specify connection timeout in milliseconds (minimum: 1, default: %d)"), DEFAULT_CONNECT_TIMEOUT) + "\n";
@@ -346,7 +346,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += "  -createwalletbackups=<n> " + _("Number of automatic wallet backups (default: 10)") + "\n";
     strUsage += "  -disablewallet           " + _("Do not load the wallet and disable wallet RPC calls") + "\n";
     strUsage += "  -keepass                 " + strprintf(_("Use KeePass 2 integration using KeePassHttp plugin (default: %u)"), 0) + "\n";
-    strUsage += "  -keepassport=<port>      " + strprintf(_("Connect to KeePassHttp on port <port> (default: %u)"), 19455) + "\n";
+    strUsage += "  -keepassport=<port>      " + strprintf(_("Connect to KeePassHttp on port <port> (default: %u)"), 17785) + "\n";
     strUsage += "  -keepasskey=<key>        " + _("KeePassHttp key for AES encrypted communication with KeePass") + "\n";
     strUsage += "  -keepassid=<name>        " + _("KeePassHttp id for the established association") + "\n";
     strUsage += "  -keepassname=<name>      " + _("Name to construct url for KeePass entry that stores the wallet passphrase") + "\n";

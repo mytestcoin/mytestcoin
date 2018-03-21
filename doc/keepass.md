@@ -14,7 +14,7 @@ The implementation is dependent on the following:
 
 The following new options are available for surcoind and surcoin-qt:
  - _-keepass_ Use KeePass 2 integration using KeePassHttp plugin (default: 0)
- - _-keepassport=_ Connect to KeePassHttp on port (default: 19455)
+ - _-keepassport=_ Connect to KeePassHttp on port (default: 17785)
  - _-keepasskey=_ KeePassHttp key for AES encrypted communication with KeePass
  - _-keepassid=_ KeePassHttp id for the established association
  - _-keepassname=_ Name to construct url for KeePass entry that stores the wallet passphrase
