@@ -34,7 +34,7 @@ void SendMoney(const CTxDestination &address, CAmount nValue, CWalletTx& wtxNew,
         throw JSONRPCError(RPC_WALLET_ERROR, strError);
     }
 
-    // Parse Sibcoin address
+    // Parse Surcoin address
     CScript scriptPubKey = GetScriptForDestination(address);
 
     // Create and send the transaction
@@ -84,7 +84,7 @@ Value darksend(const Array& params, bool fHelp)
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Sibcoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Surcoin address");
 
     // Amount
     CAmount nAmount = AmountFromValue(params[1]);
@@ -676,7 +676,7 @@ Value masternodebroadcast(const Array& params, bool fHelp)
             } else {
                 throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Your wallet is locked, passphrase is required");
             }
- 
+
             if(!pwalletMain->Unlock(strWalletPass)){
                 throw JSONRPCError(RPC_WALLET_PASSPHRASE_INCORRECT, "The wallet passphrase entered was incorrect");
             }

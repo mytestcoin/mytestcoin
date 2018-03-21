@@ -91,7 +91,7 @@ GLOBAL sph_echo512_context      z_echo;
 #define ZGROESTL (memcpy(&ctx_groestl, &z_groestl, sizeof(z_groestl)))
 #define ZJH (memcpy(&ctx_jh, &z_jh, sizeof(z_jh)))
 #define ZKECCAK (memcpy(&ctx_keccak, &z_keccak, sizeof(z_keccak)))
-#define ZGOST (memcpy(&ctx_gost, &z_gost, sizeof(z_gost)))        
+#define ZGOST (memcpy(&ctx_gost, &z_gost, sizeof(z_gost)))
 #define ZSKEIN (memcpy(&ctx_skein, &z_skein, sizeof(z_skein)))
 
 /* ----------- Bitcoin Hash ------------------------------------------------- */
@@ -276,7 +276,7 @@ void BIP32Hash(const unsigned char chainCode[32], unsigned int nChild, unsigned 
 //int HMAC_SHA512_Update(HMAC_SHA512_CTX *pctx, const void *pdata, size_t len);
 //int HMAC_SHA512_Final(unsigned char *pmd, HMAC_SHA512_CTX *pctx);
 
-/* ----------- Sibcoin Hash ------------------------------------------------ */
+/* ----------- Surcoin Hash ------------------------------------------------ */
 template<typename T1>
 inline uint256 HashX11(const T1 pbegin, const T1 pend)
 
@@ -286,7 +286,7 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     sph_groestl512_context   ctx_groestl;
     sph_jh512_context        ctx_jh;
     sph_keccak512_context    ctx_keccak;
-    sph_gost512_context      ctx_gost;    
+    sph_gost512_context      ctx_gost;
     sph_skein512_context     ctx_skein;
     sph_luffa512_context     ctx_luffa;
     sph_cubehash512_context  ctx_cubehash;
@@ -320,10 +320,10 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     sph_keccak512_init(&ctx_keccak);
     sph_keccak512 (&ctx_keccak, static_cast<const void*>(&hash[4]), 64);
     sph_keccak512_close(&ctx_keccak, static_cast<void*>(&hash[5]));
-    
+
     sph_gost512_init(&ctx_gost);
     sph_gost512 (&ctx_gost, static_cast<const void*>(&hash[5]), 64);
-    sph_gost512_close(&ctx_gost, static_cast<void*>(&hash[6]));    
+    sph_gost512_close(&ctx_gost, static_cast<void*>(&hash[6]));
 
     sph_luffa512_init(&ctx_luffa);
     sph_luffa512 (&ctx_luffa, static_cast<void*>(&hash[6]), 64);

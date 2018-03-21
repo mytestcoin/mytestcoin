@@ -30,7 +30,7 @@ QT_TRANSLATE_NOOP("sibcoin-core", ""
 "notation for IPv6. This option can be specified multiple times (default: "
 "bind to all interfaces)"),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
-"Cannot obtain a lock on data directory %s. Sibcoin Core is probably already "
+"Cannot obtain a lock on data directory %s. Surcoin Core is probably already "
 "running."),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Change automatic finalized budget voting behavior. mode=auto: Vote for only "
@@ -48,7 +48,7 @@ QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Delete all wallet transactions and only recover those parts of the "
 "blockchain through -rescan on startup"),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
-"Disable all Sibcoin/Dash specific functionality (Masternodes, Darksend, InstantX, "
+"Disable all Surcoin/Dash specific functionality (Masternodes, Darksend, InstantX, "
 "Budgeting) (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Distributed under the MIT software license, see the accompanying file "
@@ -160,9 +160,9 @@ QT_TRANSLATE_NOOP("sibcoin-core", ""
 "If the file does not exist, create it with owner-readable-only file "
 "permissions.\n"
 "It is also recommended to set alertnotify so you are notified of problems;\n"
-"for example: alertnotify=echo %%s | mail -s \"Sibcoin Alert\" admin@foo.com\n"),
+"for example: alertnotify=echo %%s | mail -s \"Surcoin Alert\" admin@foo.com\n"),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
-"Unable to bind to %s on this computer. Sibcoin Core is probably already "
+"Unable to bind to %s on this computer. Surcoin Core is probably already "
 "running."),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Unable to locate enough Darksend denominated funds for this transaction."),
@@ -183,7 +183,7 @@ QT_TRANSLATE_NOOP("sibcoin-core", ""
 "pay if you send a transaction."),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Warning: Please check that your computer's date and time are correct! If "
-"your clock is wrong Sibcoin Core will not work properly."),
+"your clock is wrong Surcoin Core will not work properly."),
 QT_TRANSLATE_NOOP("sibcoin-core", ""
 "Warning: The network does not appear to fully agree! Some miners appear to "
 "be experiencing issues."),
@@ -238,6 +238,7 @@ QT_TRANSLATE_NOOP("sibcoin-core", "Connection options:"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Copyright (C) 2014-%i The Dash Core Developers"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Copyright (C) 2015-%i The Sibcoin Core Developers"),
+QT_TRANSLATE_NOOP("sibcoin-core", "Copyright (C) 2018-%i The Surcoin Core Developers"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Could not parse -rpcbind value %s as network address"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Could not parse masternode.conf"),
@@ -259,7 +260,7 @@ QT_TRANSLATE_NOOP("sibcoin-core", "Error initializing wallet database environmen
 QT_TRANSLATE_NOOP("sibcoin-core", "Error loading block database"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Error loading wallet.dat"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Error loading wallet.dat: Wallet corrupted"),
-QT_TRANSLATE_NOOP("sibcoin-core", "Error loading wallet.dat: Wallet requires newer version of Sibcoin Core"),
+QT_TRANSLATE_NOOP("sibcoin-core", "Error loading wallet.dat: Wallet requires newer version of Surcoin Core"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Error opening block database"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Error reading from database, shutting down."),
 QT_TRANSLATE_NOOP("sibcoin-core", "Error recovering public key."),
@@ -287,7 +288,7 @@ QT_TRANSLATE_NOOP("sibcoin-core", "Incompatible mode."),
 QT_TRANSLATE_NOOP("sibcoin-core", "Incompatible version."),
 QT_TRANSLATE_NOOP("sibcoin-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Information"),
-QT_TRANSLATE_NOOP("sibcoin-core", "Initialization sanity check failed. Sibcoin Core is shutting down."),
+QT_TRANSLATE_NOOP("sibcoin-core", "Initialization sanity check failed. Surcoin Core is shutting down."),
 QT_TRANSLATE_NOOP("sibcoin-core", "Input is not valid."),
 QT_TRANSLATE_NOOP("sibcoin-core", "InstantX options:"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Insufficient funds."),
@@ -423,7 +424,7 @@ QT_TRANSLATE_NOOP("sibcoin-core", "Verifying blocks..."),
 QT_TRANSLATE_NOOP("sibcoin-core", "Verifying wallet..."),
 QT_TRANSLATE_NOOP("sibcoin-core", "Wallet %s resides outside data directory %s"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Wallet is locked."),
-QT_TRANSLATE_NOOP("sibcoin-core", "Wallet needed to be rewritten: restart Sibcoin Core to complete"),
+QT_TRANSLATE_NOOP("sibcoin-core", "Wallet needed to be rewritten: restart Surcoin Core to complete"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Wallet options:"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Wallet window title"),
 QT_TRANSLATE_NOOP("sibcoin-core", "Warning"),

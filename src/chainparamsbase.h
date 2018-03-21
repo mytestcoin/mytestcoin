@@ -10,7 +10,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between sibcoin-cli and sibcoind)
- * of a given instance of the Sibcoin system.
+ * of a given instance of the Surcoin system.
  */
 class CBaseChainParams
 {

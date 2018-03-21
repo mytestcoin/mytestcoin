@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015 The SibCoin developers
+// Copyright (c) 2018 The SurCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -108,7 +109,7 @@ BitcoinGUI::BitcoinGUI(const NetworkStyle *networkStyle, QWidget *parent) :
 
     GUIUtil::restoreWindowGeometry("nWindow", QSize(850, 550), this);
 
-    QString windowTitle = tr("Sibcoin Core") + " - ";
+    QString windowTitle = tr("Surcoin Core") + " - ";
 #ifdef ENABLE_WALLET
     /* if compiled with wallet support, -disablewallet can still disable the wallet */
     enableWallet = !GetBoolArg("-disablewallet", false);
@@ -231,7 +232,7 @@ BitcoinGUI::BitcoinGUI(const NetworkStyle *networkStyle, QWidget *parent) :
 
     // Get restart command-line parameters and handle restart
     connect(rpcConsole, SIGNAL(handleRestart(QStringList)), this, SLOT(handleRestart(QStringList)));
-    
+
     // prevents an open debug window from becoming stuck/unusable on client shutdown
     connect(quitAction, SIGNAL(triggered()), rpcConsole, SLOT(hide()));
 
@@ -275,7 +276,7 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Sibcoin address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a Surcoin address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -317,7 +318,7 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
 #endif
     tabGroup->addAction(goodsAction);
-    
+
 #ifdef ENABLE_WALLET
     // These showNormalIfMinimized are needed because Send Coins and Receive Coins
     // can be triggered from the tray menu, and need to show the GUI to be useful.
@@ -337,8 +338,8 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(networkStyle->getAppIcon(), tr("&About Sibcoin Core"), this);
-    aboutAction->setStatusTip(tr("Show information about Sibcoin Core"));
+    aboutAction = new QAction(networkStyle->getAppIcon(), tr("&About Surcoin Core"), this);
+    aboutAction->setStatusTip(tr("Show information about Surcoin Core"));
     aboutAction->setMenuRole(QAction::AboutRole);
 #if QT_VERSION < 0x050000
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
@@ -348,7 +349,7 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for Sibcoin"));
+    optionsAction->setStatusTip(tr("Modify configuration options for Surcoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(networkStyle->getAppIcon(), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
@@ -364,9 +365,9 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
     unlockWalletAction->setToolTip(tr("Unlock wallet"));
     lockWalletAction = new QAction(tr("&Lock Wallet"), this);
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your Sibcoin addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your Surcoin addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Sibcoin addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Surcoin addresses"));
 
     openInfoAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Information"), this);
     openInfoAction->setStatusTip(tr("Show diagnostic information"));
@@ -395,25 +396,25 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
     loadFromPaperAction = new QAction(QIcon(":/icons/import"), tr("&Load sibcoins..."), this);
     loadFromPaperAction->setIconVisibleInMenu(true);
     loadFromPaperAction->setStatusTip(tr("Load sibcoins from paper"));
-    
+
     openAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_FileIcon), tr("Open &URI..."), this);
     openAction->setStatusTip(tr("Open a sibcoin: URI or payment request"));
 
     showHelpMessageAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the Sibcoin Core help message to get a list with possible Sibcoin command-line options"));
+    showHelpMessageAction->setStatusTip(tr("Show the Surcoin Core help message to get a list with possible Surcoin command-line options"));
 
-    showHelpSibcoinAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Howto"), this);
-    showHelpSibcoinAction->setStatusTip(tr("How to use Sibcoins"));
+    showHelpSurcoinAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Howto"), this);
+    showHelpSurcoinAction->setStatusTip(tr("How to use Surcoins"));
 
-    
+
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
     connect(aboutQtAction, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
     connect(optionsAction, SIGNAL(triggered()), this, SLOT(optionsClicked()));
     connect(toggleHideAction, SIGNAL(triggered()), this, SLOT(toggleHidden()));
     connect(showHelpMessageAction, SIGNAL(triggered()), this, SLOT(showHelpMessageClicked()));
-    connect(showHelpSibcoinAction, SIGNAL(triggered()), this, SLOT(showHelpSibcoinClicked()));
+    connect(showHelpSurcoinAction, SIGNAL(triggered()), this, SLOT(showHelpSurcoinClicked()));
 #ifdef ENABLE_WALLET
     if(walletFrame)
     {
@@ -485,7 +486,7 @@ void BitcoinGUI::createMenuBar()
     }
 
     QMenu *help = appMenuBar->addMenu(tr("&Help"));
-    help->addAction(showHelpSibcoinAction);
+    help->addAction(showHelpSurcoinAction);
     help->addAction(showHelpMessageAction);
     help->addSeparator();
     help->addAction(aboutAction);
@@ -502,7 +503,7 @@ void BitcoinGUI::createToolBars()
         toolbar->addAction(sendCoinsAction);
         toolbar->addAction(receiveCoinsAction);
         toolbar->addAction(historyAction);
-        toolbar->addAction(goodsAction);        
+        toolbar->addAction(goodsAction);
         toolbar->setMovable(false); // remove unused icon in upper left corner
         overviewAction->setChecked(true);
 
@@ -562,7 +563,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 }
 
 
-void BitcoinGUI::setSibModel(SibModel *sibModel)
+void BitcoinGUI::setSurModel(SurModel *sibModel)
 {
     this->sibModel = sibModel;
 }
@@ -573,7 +574,7 @@ bool BitcoinGUI::addWallet(const QString& name, WalletModel *walletModel)
     if(!walletFrame)
         return false;
     setWalletActionsEnabled(true);
-    walletFrame->setSibModel(sibModel);
+    walletFrame->setSurModel(sibModel);
     return walletFrame->addWallet(name, walletModel);
 }
 
@@ -616,7 +617,7 @@ void BitcoinGUI::createTrayIcon(const NetworkStyle *networkStyle)
 {
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
-    QString toolTip = tr("Sibcoin Core client") + " " + networkStyle->getTitleAddText();
+    QString toolTip = tr("Surcoin Core client") + " " + networkStyle->getTitleAddText();
     trayIcon->setToolTip(toolTip);
     trayIcon->setIcon(networkStyle->getAppIcon());
     trayIcon->show();
@@ -705,9 +706,9 @@ void BitcoinGUI::showHelpMessageClicked()
     help->show();
 }
 
-void BitcoinGUI::showHelpSibcoinClicked()
+void BitcoinGUI::showHelpSurcoinClicked()
 {
-    HelpSibcoinDialog *help = new HelpSibcoinDialog(this);
+    HelpSurcoinDialog *help = new HelpSurcoinDialog(this);
     help->setAttribute(Qt::WA_DeleteOnClose);
     help->show();
 }
@@ -777,7 +778,7 @@ void BitcoinGUI::setNumConnections(int count)
     }
     QIcon connectionItem = QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE);
     labelConnectionsIcon->setIcon(connectionItem);
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Sibcoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Surcoin network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count)
@@ -916,7 +917,7 @@ void BitcoinGUI::setNumBlocks(int count)
 
 void BitcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("Sibcoin Core"); // default title
+    QString strTitle = tr("Surcoin Core"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -942,7 +943,7 @@ void BitcoinGUI::message(const QString &title, const QString &message, unsigned 
             break;
         }
     }
-    // Append title to "Sibcoin - "
+    // Append title to "Surcoin - "
     if (!msgType.isEmpty())
         strTitle += " - " + msgType;
 

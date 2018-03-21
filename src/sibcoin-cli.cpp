@@ -68,10 +68,10 @@ static bool AppInitRPC(int argc, char* argv[])
     //
     ParseParameters(argc, argv);
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-help") || mapArgs.count("-version")) {
-        std::string strUsage = _("Sibcoin Core RPC client version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("Surcoin Core RPC client version") + " " + FormatFullVersion() + "\n";
         if (!mapArgs.count("-version")) {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  sibcoin-cli [options] <command> [params]  " + _("Send command to Sibcoin Core") + "\n" +
+                  "  sibcoin-cli [options] <command> [params]  " + _("Send command to Surcoin Core") + "\n" +
                   "  sibcoin-cli [options] help                " + _("List commands") + "\n" +
                   "  sibcoin-cli [options] help <command>      " + _("Get help for a command") + "\n";
 

@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015 The SibCoin developers
+// Copyright (c) 2018 The SurCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -27,19 +28,19 @@ public:
     ~GoodsDialog();
 
     void setModel(WalletModel *model);
-    void setSibModel(SibModel *sibModel);
-    
+    void setSurModel(SurModel *sibModel);
+
 private:
     Ui::GoodsDialog *ui;
     QString header;
     QString coreOptions;
     QString uiOptions;
-    
+
     WalletModel *model;
-    SibModel *sibModel;
-    
+    SurModel *sibModel;
+
     const QString page_name;
-    
+
 public slots:
     void on_resourceReady(std::string res_root);
 
@@ -47,4 +48,3 @@ public slots:
 
 
 #endif	/* GOODSDIALOG_H */
-

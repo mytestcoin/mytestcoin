@@ -5,19 +5,20 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/ui_aboutdialog.h" line="+129"/>
-        <source>About Sibcoin Core</source>
-        <translation type="unfinished">About Sibcoin Core</translation>
+        <source>About Surcoin Core</source>
+        <translation type="unfinished">About Surcoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>&lt;b&gt;Sibcoin Core&lt;/b&gt; version</source>
+        <source>&lt;b&gt;Surcoin Core&lt;/b&gt; version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copyright &amp;copy; 2009-2014 The Bitcoin Core developers.
 Copyright &amp;copy; 2014-YYYY The Dash Core developers.
-Copyright &amp;copy; 2015-YYYY The Sibcoin Core developers.</source>
+Copyright &amp;copy; 2015-YYYY The Sibcoin Core developers.
+Copyright &amp;copy; 2018-YYYY The Surcoin Core developers.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -110,13 +111,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Sibcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your Sibcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <source>These are your Surcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your Surcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Sibcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>These are your Sibcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
+        <source>These are your Surcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>These are your Surcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -297,8 +298,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-57"/>
-        <source>Sibcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</source>
-        <translation>Sibcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</translation>
+        <source>Surcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</source>
+        <translation>Surcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -358,8 +359,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../bitcoingui.cpp" line="+111"/>
         <location line="+808"/>
-        <source>Sibcoin Core</source>
-        <translation>Sibcoin Core</translation>
+        <source>Surcoin Core</source>
+        <translation>Surcoin Core</translation>
     </message>
     <message>
         <location line="-799"/>
@@ -388,8 +389,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Send coins to a Sibcoin address</source>
-        <translation>Send coins to a Sibcoin address</translation>
+        <source>Send coins to a Surcoin address</source>
+        <translation>Send coins to a Surcoin address</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -434,12 +435,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;About Sibcoin Core</source>
-        <translation>&amp;About Sibcoin Core</translation>
+        <source>&amp;About Surcoin Core</source>
+        <translation>&amp;About Surcoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Sibcoin Core</source>
+        <source>Show information about Surcoin Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -460,8 +461,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Modify configuration options for Sibcoin</source>
-        <translation>Modify configuration options for Sibcoin</translation>
+        <source>Modify configuration options for Surcoin</source>
+        <translation>Modify configuration options for Surcoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -525,8 +526,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Sign messages with your Sibcoin addresses to prove you own them</source>
-        <translation>Sign messages with your Sibcoin addresses to prove you own them</translation>
+        <source>Sign messages with your Surcoin addresses to prove you own them</source>
+        <translation>Sign messages with your Surcoin addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -535,8 +536,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Verify messages to ensure they were signed with specified Sibcoin addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Sibcoin addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Surcoin addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Surcoin addresses</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -665,8 +666,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>Show the Sibcoin Core help message to get a list with possible Sibcoin command-line options</source>
-        <translation>Show the Sibcoin Core help message to get a list with possible Sibcoin command-line options</translation>
+        <source>Show the Surcoin Core help message to get a list with possible Surcoin command-line options</source>
+        <translation>Show the Surcoin Core help message to get a list with possible Surcoin command-line options</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -675,8 +676,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>How to use Sibcoins</source>
-        <translation>How to use Sibcoins</translation>
+        <source>How to use Surcoins</source>
+        <translation>How to use Surcoins</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -705,7 +706,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+120"/>
-        <source>Sibcoin Core client</source>
+        <source>Surcoin Core client</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
@@ -717,10 +718,10 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message numerus="yes">
         <location line="-35"/>
-        <source>%n active connection(s) to Sibcoin network</source>
+        <source>%n active connection(s) to Surcoin network</source>
         <translation>
-            <numerusform>%n active connection(s) to Sibcoin network</numerusform>
-            <numerusform>%n active connection(s) to Sibcoin network</numerusform>
+            <numerusform>%n active connection(s) to Surcoin network</numerusform>
+            <numerusform>%n active connection(s) to Surcoin network</numerusform>
         </translation>
     </message>
     <message>
@@ -1262,18 +1263,18 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
-        <translation>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</translation>
+        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</source>
+        <translation>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
-        <translation>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</translation>
+        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</source>
+        <translation>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
-        <translation>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</translation>
+        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</source>
+        <translation>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</translation>
     </message>
 </context>
 <context>
@@ -1325,8 +1326,8 @@ Address: %4
     </message>
     <message>
         <location line="+71"/>
-        <source>The entered address &quot;%1&quot; is not a valid Sibcoin address.</source>
-        <translation>The entered address &quot;%1&quot; is not a valid Sibcoin address.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Surcoin address.</source>
+        <translation>The entered address &quot;%1&quot; is not a valid Surcoin address.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1491,8 +1492,8 @@ Address: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+34"/>
-        <source>Sibcoin Core</source>
-        <translation>Sibcoin Core</translation>
+        <source>Surcoin Core</source>
+        <translation>Surcoin Core</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1507,8 +1508,8 @@ Address: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>About Sibcoin Core</source>
-        <translation type="unfinished">About Sibcoin Core</translation>
+        <source>About Surcoin Core</source>
+        <translation type="unfinished">About Surcoin Core</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1565,18 +1566,18 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Sibcoin Core.</source>
-        <translation>Welcome to Sibcoin Core.</translation>
+        <source>Welcome to Surcoin Core.</source>
+        <translation>Welcome to Surcoin Core.</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Sibcoin Core will store its data.</source>
-        <translation>As this is the first time the program is launched, you can choose where Sibcoin Core will store its data.</translation>
+        <source>As this is the first time the program is launched, you can choose where Surcoin Core will store its data.</source>
+        <translation>As this is the first time the program is launched, you can choose where Surcoin Core will store its data.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Sibcoin Core will download and store a copy of the Sibcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Sibcoin Core will download and store a copy of the Sibcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
+        <source>Surcoin Core will download and store a copy of the Surcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Surcoin Core will download and store a copy of the Surcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1590,8 +1591,8 @@ Address: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+82"/>
-        <source>Sibcoin Core</source>
-        <translation type="unfinished">Sibcoin Core</translation>
+        <source>Surcoin Core</source>
+        <translation type="unfinished">Surcoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1656,13 +1657,13 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically start Sibcoin after logging in to the system.</source>
-        <translation>Automatically start Sibcoin after logging in to the system.</translation>
+        <source>Automatically start Surcoin after logging in to the system.</source>
+        <translation>Automatically start Surcoin after logging in to the system.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Sibcoin on system login</source>
-        <translation>&amp;Start Sibcoin on system login</translation>
+        <source>&amp;Start Surcoin on system login</source>
+        <translation>&amp;Start Surcoin on system login</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1696,8 +1697,8 @@ Address: %4
     </message>
     <message>
         <location line="+15"/>
-        <source>Amount of Sibcoin to keep anonymized</source>
-        <translation>Amount of Sibcoin to keep anonymized</translation>
+        <source>Amount of Surcoin to keep anonymized</source>
+        <translation>Amount of Surcoin to keep anonymized</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -1731,8 +1732,8 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Sibcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Sibcoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Surcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Surcoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1781,7 +1782,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Sibcoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Surcoin network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1826,8 +1827,8 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Sibcoin.</source>
-        <translation>The user interface language can be set here. This setting will take effect after restarting Sibcoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Surcoin.</source>
+        <translation>The user interface language can be set here. This setting will take effect after restarting Surcoin.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1940,8 +1941,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
         <location line="+53"/>
         <location line="+1021"/>
         <location line="+77"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Sibcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Sibcoin network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Surcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Surcoin network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-849"/>
@@ -2266,7 +2267,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Sibcoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Surcoin address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2374,7 +2375,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+111"/>
-        <source>Enter a Sibcoin address (e.g. %1)</source>
+        <source>Enter a Surcoin address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2558,7 +2559,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+149"/>
-        <source>Open the Sibcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Surcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2770,8 +2771,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-35"/>
-        <source>Welcome to the Sibcoin RPC console.</source>
-        <translation>Welcome to the Sibcoin RPC console.</translation>
+        <source>Welcome to the Surcoin RPC console.</source>
+        <translation>Welcome to the Surcoin RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2850,7 +2851,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Sibcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Surcoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2866,7 +2867,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-14"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Sibcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Surcoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3437,8 +3438,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+107"/>
-        <source>Warning: Invalid Sibcoin address</source>
-        <translation>Warning: Invalid Sibcoin address</translation>
+        <source>Warning: Invalid Surcoin address</source>
+        <translation>Warning: Invalid Surcoin address</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3519,8 +3520,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Sibcoin network.</source>
-        <translation>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Sibcoin network.</translation>
+        <source>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Surcoin network.</source>
+        <translation>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Surcoin network.</translation>
     </message>
     <message>
         <location line="+426"/>
@@ -3554,8 +3555,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+96"/>
-        <source>Sibcoin Core is shutting down...</source>
-        <translation>Sibcoin Core is shutting down...</translation>
+        <source>Surcoin Core is shutting down...</source>
+        <translation>Surcoin Core is shutting down...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3624,8 +3625,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Sibcoin address</source>
-        <translation>Sign the message to prove you own this Sibcoin address</translation>
+        <source>Sign the message to prove you own this Surcoin address</source>
+        <translation>Sign the message to prove you own this Surcoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3655,13 +3656,13 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The Sibcoin address the message was signed with (e.g. SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
+        <source>The Surcoin address the message was signed with (e.g. SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Sibcoin address</source>
-        <translation>Verify the message to ensure it was signed with the specified Sibcoin address</translation>
+        <source>Verify the message to ensure it was signed with the specified Surcoin address</source>
+        <translation>Verify the message to ensure it was signed with the specified Surcoin address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3749,8 +3750,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>Sibcoin Core</source>
-        <translation>Sibcoin Core</translation>
+        <source>Surcoin Core</source>
+        <translation>Surcoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3769,8 +3770,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Sibcoin Core developers</source>
-        <translation>The Sibcoin Core developers</translation>
+        <source>The Surcoin Core developers</source>
+        <translation>The Surcoin Core developers</translation>
     </message>
     <message>
         <location filename="../networkstyle.cpp" line="+19"/>
@@ -4527,8 +4528,8 @@ that paper wallet has been printed successfully!</translation>
         <translation type="obsolete">Bind to given address and always listen on it. Use [host]:port notation for IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Sibcoin Core is probably already running.</source>
-        <translation type="obsolete">Cannot obtain a lock on data directory %s. Sibcoin Core is probably already running.</translation>
+        <source>Cannot obtain a lock on data directory %s. Surcoin Core is probably already running.</source>
+        <translation type="obsolete">Cannot obtain a lock on data directory %s. Surcoin Core is probably already running.</translation>
     </message>
     <message>
         <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -4587,8 +4588,8 @@ that paper wallet has been printed successfully!</translation>
         <translation type="obsolete">This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Sibcoin Core is probably already running.</source>
-        <translation type="obsolete">Unable to bind to %s on this computer. Sibcoin Core is probably already running.</translation>
+        <source>Unable to bind to %s on this computer. Surcoin Core is probably already running.</source>
+        <translation type="obsolete">Unable to bind to %s on this computer. Surcoin Core is probably already running.</translation>
     </message>
     <message>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
@@ -4827,8 +4828,8 @@ that paper wallet has been printed successfully!</translation>
         <translation type="obsolete">Information</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Sibcoin Core is shutting down.</source>
-        <translation type="obsolete">Initialization sanity check failed. Sibcoin Core is shutting down.</translation>
+        <source>Initialization sanity check failed. Surcoin Core is shutting down.</source>
+        <translation type="obsolete">Initialization sanity check failed. Surcoin Core is shutting down.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>

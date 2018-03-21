@@ -28,7 +28,7 @@ class SendCoinsRecipient;
 class UnitDisplayStatusBarControl;
 class WalletFrame;
 class WalletModel;
-class SibModel;
+class SurModel;
 
 class CWallet;
 
@@ -62,7 +62,7 @@ public:
         The wallet model represents a bitcoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
-    void setSibModel(SibModel *sibModel);
+    void setSurModel(SurModel *sibModel);
     bool addWallet(const QString& name, WalletModel *walletModel);
     bool setCurrentWallet(const QString& name);
     void removeAllWallets();
@@ -78,7 +78,7 @@ protected:
 
 private:
     ClientModel *clientModel;
-    SibModel *sibModel;
+    SurModel *sibModel;
     WalletFrame *walletFrame;
 
     UnitDisplayStatusBarControl *unitDisplayControl;
@@ -120,8 +120,8 @@ private:
     QAction *showBackupsAction;
     QAction *openAction;
     QAction *showHelpMessageAction;
-    QAction *showHelpSibcoinAction;
-    
+    QAction *showHelpSurcoinAction;
+
     QSystemTrayIcon *trayIcon;
     QMenu *trayIconMenu;
     Notificator *notificator;
@@ -213,7 +213,7 @@ private slots:
     void aboutClicked();
     /** Show help message dialog */
     void showHelpMessageClicked();
-    void showHelpSibcoinClicked();
+    void showHelpSurcoinClicked();
 #ifndef Q_OS_MAC
     /** Handle tray icon clicked */
     void trayIconActivated(QSystemTrayIcon::ActivationReason reason);

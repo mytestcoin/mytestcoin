@@ -2,6 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2014-2015 The SibCoin developers
+// Copyright (c) 2018-2018 The SurCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -59,7 +60,7 @@ using namespace std;
 #ifdef ENABLE_WALLET
 CWallet* pwalletMain = NULL;
 int nWalletBackups = 10;
-CSibDB *psibDB = NULL;
+CSurDB *psibDB = NULL;
 #endif
 bool fFeeEstimatesInitialized = false;
 bool fRestartRequested = false;  // true: restart false: shutdown
@@ -413,7 +414,7 @@ std::string HelpMessage(HelpMessageMode mode)
     }
     strUsage += "  -shrinkdebugfile       " + _("Shrink debug.log file on client startup (default: 1 when no -debug)") + "\n";
     strUsage += "  -testnet               " + _("Use the test network") + "\n";
-    strUsage += "  -litemode=<n>          " + strprintf(_("Disable all Sibcoin/Dash specific functionality (Masternodes, Darksend, InstantX, Budgeting) (0-1, default: %u)"), 0) + "\n";
+    strUsage += "  -litemode=<n>          " + strprintf(_("Disable all Surcoin/Dash specific functionality (Masternodes, Darksend, InstantX, Budgeting) (0-1, default: %u)"), 0) + "\n";
 
     strUsage += "\n" + _("Masternode options:") + "\n";
     strUsage += "  -masternode=<n>            " + strprintf(_("Enable the client to act as a masternode (0-1, default: %u)"), 0) + "\n";
@@ -470,6 +471,8 @@ std::string LicenseInfo()
            FormatParagraph(strprintf(_("Copyright (C) 2014-%i The Dash Core Developers"), COPYRIGHT_YEAR)) + "\n" +
            "\n" +
            FormatParagraph(strprintf(_("Copyright (C) 2015-%i The Sibcoin Core Developers"), COPYRIGHT_YEAR)) + "\n" +
+           "\n" +
+           FormatParagraph(strprintf(_("Copyright (C) 2018-%i The Surcoin Core Developers"), COPYRIGHT_YEAR)) + "\n" +
            "\n" +
            FormatParagraph(_("This is experimental software.")) + "\n" +
            "\n" +
@@ -560,7 +563,7 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 }
 
 /** Sanity checks
- *  Ensure that Sibcoin is running in a usable environment with all
+ *  Ensure that Surcoin is running in a usable environment with all
  *  necessary library support.
  */
 bool InitSanityCheck(void)
@@ -824,7 +827,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     fSendFreeTransactions = GetArg("-sendfreetransactions", false);
 
     std::string strWalletFile = GetArg("-wallet", "wallet.dat");
-    std::string strSibFile = GetArg("-sibstore", "sib.dat");
+    std::string strSurFile = GetArg("-sibstore", "sib.dat");
 #endif // ENABLE_WALLET
 
     fIsBareMultisigStd = GetArg("-permitbaremultisig", true) != 0;
@@ -836,7 +839,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     // Sanity check
     if (!InitSanityCheck())
-        return InitError(_("Initialization sanity check failed. Sibcoin Core is shutting down."));
+        return InitError(_("Initialization sanity check failed. Surcoin Core is shutting down."));
 
     std::string strDataDir = GetDataDir().string();
 #ifdef ENABLE_WALLET
@@ -844,7 +847,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     if (strWalletFile != boost::filesystem::basename(strWalletFile) + boost::filesystem::extension(strWalletFile))
         return InitError(strprintf(_("Wallet %s resides outside data directory %s"), strWalletFile, strDataDir));
 #endif
-    // Make sure only a single Sibcoin process is using the data directory.
+    // Make sure only a single Surcoin process is using the data directory.
     boost::filesystem::path pathLockFile = GetDataDir() / ".lock";
     FILE* file = fopen(pathLockFile.string().c_str(), "a"); // empty lock file; created if it doesn't exist.
     if (file) fclose(file);
@@ -852,7 +855,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     // Wait maximum 10 seconds if an old wallet is still running. Avoids lockup during restart
     if (!lock.timed_lock(boost::get_system_time() + boost::posix_time::seconds(10)))
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Sibcoin Core is probably already running."), strDataDir));
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Surcoin Core is probably already running."), strDataDir));
 
 #ifndef WIN32
     CreatePidFile(GetPidFile(), getpid());
@@ -860,7 +863,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("Sibcoin version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
+    LogPrintf("Surcoin version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
     LogPrintf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
 #ifdef ENABLE_WALLET
     LogPrintf("Using BerkeleyDB version %s\n", DbEnv::version(0, 0, 0));
@@ -901,7 +904,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     // ********************************************************* Step 5: Backup wallet and verify wallet database integrity
 #ifdef ENABLE_WALLET
     if (!fDisableWallet) {
-    
+
         filesystem::path backupDir = GetDataDir() / "backups";
         if (!filesystem::exists(backupDir))
         {
@@ -1306,18 +1309,18 @@ bool AppInit2(boost::thread_group& threadGroup)
                 InitWarning(msg);
             }
             else if (nLoadWalletRet == DB_TOO_NEW)
-                strErrors << _("Error loading wallet.dat: Wallet requires newer version of Sibcoin Core") << "\n";
+                strErrors << _("Error loading wallet.dat: Wallet requires newer version of Surcoin Core") << "\n";
             else if (nLoadWalletRet == DB_NEED_REWRITE)
             {
-                strErrors << _("Wallet needed to be rewritten: restart Sibcoin Core to complete") << "\n";
+                strErrors << _("Wallet needed to be rewritten: restart Surcoin Core to complete") << "\n";
                 LogPrintf("%s", strErrors.str());
                 return InitError(strErrors.str());
             }
             else
                 strErrors << _("Error loading wallet.dat") << "\n";
         }
-        
-        psibDB = new CSibDB(strSibFile, "cr+");
+
+        psibDB = new CSurDB(strSurFile, "cr+");
 
         if (GetBoolArg("-upgradewallet", fFirstRun))
         {
@@ -1448,7 +1451,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     CBudgetDB budgetdb;
     CBudgetDB::ReadResult readResult2 = budgetdb.Read(budget);
-    
+
     if (readResult2 == CBudgetDB::FileError)
         LogPrintf("Missing budget cache - budget.dat, will try to recreate\n");
     else if (readResult2 != CBudgetDB::Ok)
@@ -1469,7 +1472,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     CMasternodePaymentDB mnpayments;
     CMasternodePaymentDB::ReadResult readResult3 = mnpayments.Read(masternodePayments);
-    
+
     if (readResult3 == CMasternodePaymentDB::FileError)
         LogPrintf("Missing masternode payment cache - mnpayments.dat, will try to recreate\n");
     else if (readResult3 != CMasternodePaymentDB::Ok)
@@ -1519,7 +1522,7 @@ bool AppInit2(boost::thread_group& threadGroup)
             return InitError(_("You must specify a masternodeprivkey in the configuration. Please see documentation for help."));
         }
     }
-    
+
     //get the mode of budget voting for this masternode
     strBudgetMode = GetArg("-budgetvotemode", "auto");
 
@@ -1573,7 +1576,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     LogPrintf("fLiteMode %d\n", fLiteMode);
     LogPrintf("nInstantXDepth %d\n", nInstantXDepth);
     LogPrintf("Darksend rounds %d\n", nDarksendRounds);
-    LogPrintf("Anonymize Sibcoin Amount %d\n", nAnonymizeDarkcoinAmount);
+    LogPrintf("Anonymize Surcoin Amount %d\n", nAnonymizeDarkcoinAmount);
     LogPrintf("Budget Mode %s\n", strBudgetMode.c_str());
     LogPrintf("EnableBudgetSync %s\n", fEnableBudgetSync);
 

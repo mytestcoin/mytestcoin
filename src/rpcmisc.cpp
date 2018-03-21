@@ -314,7 +314,7 @@ CScript _createmultisig_redeemScript(const Array& params)
     {
         const std::string& ks = keys[i].get_str();
 #ifdef ENABLE_WALLET
-        // Case 1: Sibcoin address and we have full public key:
+        // Case 1: Surcoin address and we have full public key:
         CBitcoinAddress address(ks);
         if (pwalletMain && address.IsValid())
         {

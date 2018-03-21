@@ -1,11 +1,13 @@
-Sibcoin 0.11.x BETA
+Surcoin 0.11.x BETA
 ====================
 
 Copyright (c) 2009-2015 Bitcoin Developers
 
 Copyright (c) 2014-2015 Dash Developers
 
-Copyright (c) 2015 Sibcoin Developers
+Copyright (c) 2015-2018 Sibcoin Developers
+
+Copyright (c) 2018 Surcoin Developers
 
 
 Setup

@@ -5,22 +5,24 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/ui_aboutdialog.h" line="+129"/>
-        <source>About Sibcoin Core</source>
-        <translation>О программе: &quot;Сибирский Червонец&quot; (SIB)</translation>
+        <source>About Surcoin Core</source>
+        <translation>О программе: &quot;SurCoin&quot; (SIB)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>&lt;b&gt;Sibcoin Core&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Сибирский Червонец&lt;/b&gt; версия</translation>
+        <source>&lt;b&gt;Surcoin Core&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;SurCoin Core&lt;/b&gt; версия</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copyright &amp;copy; 2009-2014 The Bitcoin Core developers.
 Copyright &amp;copy; 2014-YYYY The Dash Core developers.
-Copyright &amp;copy; 2015-YYYY The Sibcoin Core developers.</source>
+Copyright &amp;copy; 2015-YYYY The Sibcoin Core developers.
+Copyright &amp;copy; 2018-YYYY The Surcoin Core developers.</source>
         <translation>Copyright &amp;copy; 2009-2014 Разработчики Bitcoin Core.
 Copyright &amp;copy; 2014-YYYY Разработчики Dash Core.
-Copyright &amp;copy; 2015-YYYY Разработчики Sibcoin Core.</translation>
+Copyright &amp;copy; 2015-YYYY Разработчики Sibcoin Core.
+Copyright &amp;copy; 2018-YYYY Разработчики Surcoin Core.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -116,13 +118,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Sibcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши адреса сети &quot;Червонца&quot; для отправки платежей. Всегда проверяйте количество и адрес получателя перед отправкой перевода.</translation>
+        <source>These are your Surcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши адреса сети &quot;SurCoin&quot; для отправки платежей. Всегда проверяйте количество и адрес получателя перед отправкой перевода.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Sibcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши адреса сети &quot;Червонца&quot; для приёма платежей. Рекомендуется использовать новый адрес получения для каждой транзакции.</translation>
+        <source>These are your Surcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши адреса сети &quot;SurCoin&quot; для приёма платежей. Рекомендуется использовать новый адрес получения для каждой транзакции.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -303,7 +305,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-57"/>
-        <source>Sibcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</source>
+        <source>Surcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your sibcoins from being stolen by malware infecting your computer.</source>
         <translation>Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего бумажника не может полностью защитить ваши червонцы от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
     </message>
     <message>
@@ -364,8 +366,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../bitcoingui.cpp" line="+111"/>
         <location line="+808"/>
-        <source>Sibcoin Core</source>
-        <translation>Сибирский Червонец (SIB)</translation>
+        <source>Surcoin Core</source>
+        <translation>SurCoin Core (SIB)</translation>
     </message>
     <message>
         <location line="-799"/>
@@ -394,7 +396,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Send coins to a Sibcoin address</source>
+        <source>Send coins to a Surcoin address</source>
         <translation>Отправить червонцы на указанный адрес</translation>
     </message>
     <message>
@@ -439,13 +441,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;About Sibcoin Core</source>
-        <translation>О &amp;кошельке &quot;Сибирского Червонца&quot; (SIB)</translation>
+        <source>&amp;About Surcoin Core</source>
+        <translation>О &amp;кошельке &quot;SurCoin&quot; (SIB)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Sibcoin Core</source>
-        <translation>Показать информацию о кошельке &quot;Сибирский Червонец&quot;</translation>
+        <source>Show information about Surcoin Core</source>
+        <translation>Показать информацию о кошельке &quot;SurCoin Core&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -465,8 +467,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Modify configuration options for Sibcoin</source>
-        <translation>Изменить параметры конфигурации &quot;Сибирского Червонца&quot;</translation>
+        <source>Modify configuration options for Surcoin</source>
+        <translation>Изменить параметры конфигурации &quot;SurCoin&quot;</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -530,8 +532,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Sign messages with your Sibcoin addresses to prove you own them</source>
-        <translation>Подписать сообщения вашими адресами &quot;Червонца&quot;, чтобы доказать, что вы ими владеете</translation>
+        <source>Sign messages with your Surcoin addresses to prove you own them</source>
+        <translation>Подписать сообщения вашими адресами &quot;SurCoin&quot;, чтобы доказать, что вы ими владеете</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -540,8 +542,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Verify messages to ensure they were signed with specified Sibcoin addresses</source>
-        <translation>Проверить сообщения, чтобы удостовериться, что они были подписаны определёнными адресами сети &quot;Червонца&quot;</translation>
+        <source>Verify messages to ensure they were signed with specified Surcoin addresses</source>
+        <translation>Проверить сообщения, чтобы удостовериться, что они были подписаны определёнными адресами сети &quot;SurCoin&quot;</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -670,8 +672,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+2"/>
-        <source>Show the Sibcoin Core help message to get a list with possible Sibcoin command-line options</source>
-        <translation>Показать помощь о кошельке &quot;Червонца&quot; со списком возможных параметров командной строки</translation>
+        <source>Show the Surcoin Core help message to get a list with possible Surcoin command-line options</source>
+        <translation>Показать помощь о кошельке &quot;SurCoin&quot; со списком возможных параметров командной строки</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -680,8 +682,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>How to use Sibcoins</source>
-        <translation>Как пользоваться Червонцами</translation>
+        <source>How to use Surcoins</source>
+        <translation>Как пользоваться SurCoin</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -710,8 +712,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+120"/>
-        <source>Sibcoin Core client</source>
-        <translation type="unfinished">Сибирский Червонец</translation>
+        <source>Surcoin Core client</source>
+        <translation type="unfinished">SurCoin Core</translation>
     </message>
     <message numerus="yes">
         <location line="+196"/>
@@ -724,11 +726,11 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message numerus="yes">
         <location line="-35"/>
-        <source>%n active connection(s) to Sibcoin network</source>
+        <source>%n active connection(s) to Surcoin network</source>
         <translation>
-            <numerusform>%n активное соединение с сетью &quot;Червонца&quot;</numerusform>
-            <numerusform>%n активных соединений с сетью &quot;Червонца&quot;</numerusform>
-            <numerusform>%n активных соединений с сетью &quot;Червонца&quot;</numerusform>
+            <numerusform>%n активное соединение с сетью &quot;SurCoin&quot;</numerusform>
+            <numerusform>%n активных соединений с сетью &quot;SurCoin&quot;</numerusform>
+            <numerusform>%n активных соединений с сетью &quot;SurCoin&quot;</numerusform>
         </translation>
     </message>
     <message>
@@ -1274,17 +1276,17 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
+        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</source>
         <translation>Анонимизация червонцев успешно установлена в режим обычной приватности (%1 и 2 раунда). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
+        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</source>
         <translation>Анонимизация червонцев успешно установлена в режим высокой приватности (%1 и 8 раундов). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Sibcoin&apos;s configuration screen.</source>
+        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Surcoin&apos;s configuration screen.</source>
         <translation>Анонимизация червонцев успешно установлена в режим максимально приватности (%1 и 16 раундов). Вы можете изменить это в любое время, используя окно настроек.</translation>
     </message>
 </context>
@@ -1337,8 +1339,8 @@ Address: %4
     </message>
     <message>
         <location line="+71"/>
-        <source>The entered address &quot;%1&quot; is not a valid Sibcoin address.</source>
-        <translation>Введённый адрес &quot;%1&quot; не является правильным адресом сети &quot;Червонца&quot;.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Surcoin address.</source>
+        <translation>Введённый адрес &quot;%1&quot; не является правильным адресом сети &quot;SurCoin&quot;.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1503,8 +1505,8 @@ Address: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+34"/>
-        <source>Sibcoin Core</source>
-        <translation>&quot;Сибирский Червонец&quot;(SIB)</translation>
+        <source>Surcoin Core</source>
+        <translation>&quot;SurCoin Core&quot;(SIB)</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1519,8 +1521,8 @@ Address: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>About Sibcoin Core</source>
-        <translation>О программе: &quot;Сибирский Червонец&quot; (SIB)</translation>
+        <source>About Surcoin Core</source>
+        <translation>О программе: &quot;SurCoin Core&quot; (SIB)</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1577,17 +1579,17 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Sibcoin Core.</source>
-        <translation>Добро пожаловать в кошелёк сети &quot;Сибирский Червонец&quot; (SIB).</translation>
+        <source>Welcome to Surcoin Core.</source>
+        <translation>Добро пожаловать в кошелёк сети &quot;SurCoin Core&quot; (SIB).</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Sibcoin Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where Surcoin Core will store its data.</source>
         <translation>Вы впервые запустили программу и можете выбрать, где она будет хранить данные.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Sibcoin Core will download and store a copy of the Sibcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>Surcoin Core will download and store a copy of the Surcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation>Кошелёк скачает и сохранит копию цепочки блоков. Как минимум %1ГБ данных будет храниться в этом каталоге и размер данных будет со временем расти. В этом же каталоге будет сохранён бумажник.</translation>
     </message>
     <message>
@@ -1602,8 +1604,8 @@ Address: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+82"/>
-        <source>Sibcoin Core</source>
-        <translation>Сибирский Червонец</translation>
+        <source>Surcoin Core</source>
+        <translation>SurCoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1668,12 +1670,12 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically start Sibcoin after logging in to the system.</source>
+        <source>Automatically start Surcoin after logging in to the system.</source>
         <translation>Автоматически запускать &quot;Червонец&quot; после входа в систему.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Sibcoin on system login</source>
+        <source>&amp;Start Surcoin on system login</source>
         <translation>&amp;Запускать &quot;Червонец&quot; при входе в систему</translation>
     </message>
     <message>
@@ -1708,7 +1710,7 @@ Address: %4
     </message>
     <message>
         <location line="+15"/>
-        <source>Amount of Sibcoin to keep anonymized</source>
+        <source>Amount of Surcoin to keep anonymized</source>
         <translation>Сумма постоянно анонимизированных червонцев</translation>
     </message>
     <message>
@@ -1743,8 +1745,8 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Sibcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть порт для клиента &quot;Червонца&quot; на роутере. Работает только в том случае, если Ваш роутер поддерживает UPnP и данная функция включена.</translation>
+        <source>Automatically open the Surcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть порт для клиента &quot;SurCoin&quot; на роутере. Работает только в том случае, если Ваш роутер поддерживает UPnP и данная функция включена.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1793,7 +1795,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Sibcoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Surcoin network through a SOCKS5 proxy.</source>
         <translation>Подключаться к сети червонца через SOCKS5 прокси.</translation>
     </message>
     <message>
@@ -1838,8 +1840,8 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Sibcoin.</source>
-        <translation>Здесь можно выбрать язык интерфейса. Настройки вступят в силу после перезапуска  кошелька &quot;Червонца&quot;.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Surcoin.</source>
+        <translation>Здесь можно выбрать язык интерфейса. Настройки вступят в силу после перезапуска  кошелька &quot;SurCoin&quot;.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1952,8 +1954,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
         <location line="+53"/>
         <location line="+1021"/>
         <location line="+77"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Sibcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Отображаемая информация может быть устаревшей. Ваш бумажник автоматически синхронизируется с сетью &quot;Червонца&quot; после подключения, но этот процесс пока не завершён.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Surcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Отображаемая информация может быть устаревшей. Ваш бумажник автоматически синхронизируется с сетью &quot;SurCoin&quot; после подключения, но этот процесс пока не завершён.</translation>
     </message>
     <message>
         <location line="-849"/>
@@ -2256,7 +2258,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <message>
         <location line="-400"/>
         <source>Cannot start sibcoin: click-to-pay handler</source>
-        <translation>Не удаётся запустить обработчик &quot;Червонца&quot; click-to-pay</translation>
+        <translation>Не удаётся запустить обработчик &quot;SurCoin&quot; click-to-pay</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -2282,7 +2284,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Sibcoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Surcoin address or malformed URI parameters.</source>
         <translation>URI не распознан! Это могло произойти из-за некорректного адреса или направильных параметров URI.</translation>
     </message>
     <message>
@@ -2390,7 +2392,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+111"/>
-        <source>Enter a Sibcoin address (e.g. %1)</source>
+        <source>Enter a Surcoin address (e.g. %1)</source>
         <translation>Введите адрес сети червонца (напр. %1)</translation>
     </message>
     <message>
@@ -2574,7 +2576,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+149"/>
-        <source>Open the Sibcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Surcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>Открыть отладочный лог файл из текущей директории кошелька. Может занять несколько секунд для больших файлов.</translation>
     </message>
     <message>
@@ -2786,8 +2788,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-35"/>
-        <source>Welcome to the Sibcoin RPC console.</source>
-        <translation>Добро пожаловать в RPC-консоль &quot;Сибирского Червонца&quot;.</translation>
+        <source>Welcome to the Surcoin RPC console.</source>
+        <translation>Добро пожаловать в RPC-консоль &quot;Сибирского SurCoin&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2866,7 +2868,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Sibcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Surcoin network.</source>
         <translation>Необязательное сообщение для добавления в запрос платежа, которое будет отображено при открытии запроса. Это сообщение не будет отправлено вместе с платежом по сети червонца.</translation>
     </message>
     <message>
@@ -2882,7 +2884,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="-14"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Sibcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Surcoin network.</source>
         <translation>Необязательное сообщение для добавления в запрос платежа, которое будет отображено при открытии запроса.&lt;br&gt;Обратите внимание: Это сообщение не будет отправлено вместе с платежом по сети червонца.</translation>
     </message>
     <message>
@@ -3455,8 +3457,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+107"/>
-        <source>Warning: Invalid Sibcoin address</source>
-        <translation>Внимание: неверный адрес сети &quot;Червонца&quot;</translation>
+        <source>Warning: Invalid Surcoin address</source>
+        <translation>Внимание: неверный адрес сети &quot;SurCoin&quot;</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3537,8 +3539,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Sibcoin network.</source>
-        <translation>К sibcoin: URI было прикреплено сообщение, которое будет сохранено вместе с транзакцией для вашего сведения. Обратите внимание: сообщение не будет отправлено через сеть &quot;Червонца&quot;.</translation>
+        <source>A message that was attached to the sibcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Surcoin network.</source>
+        <translation>К sibcoin: URI было прикреплено сообщение, которое будет сохранено вместе с транзакцией для вашего сведения. Обратите внимание: сообщение не будет отправлено через сеть &quot;SurCoin&quot;.</translation>
     </message>
     <message>
         <location line="+426"/>
@@ -3572,7 +3574,7 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+96"/>
-        <source>Sibcoin Core is shutting down...</source>
+        <source>Surcoin Core is shutting down...</source>
         <translation>&quot;Червонец&quot; выключается...</translation>
     </message>
     <message>
@@ -3642,8 +3644,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Sibcoin address</source>
-        <translation>Подписать сообщение, чтобы доказать владение этим адресом сети &quot;Червонца&quot;</translation>
+        <source>Sign the message to prove you own this Surcoin address</source>
+        <translation>Подписать сообщение, чтобы доказать владение этим адресом сети &quot;SurCoin&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3673,13 +3675,13 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The Sibcoin address the message was signed with (e.g. SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
+        <source>The Surcoin address the message was signed with (e.g. SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
         <translation>Адрес, которым было подписано сообщение (например, SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Sibcoin address</source>
-        <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом сети &quot;Червонца&quot;</translation>
+        <source>Verify the message to ensure it was signed with the specified Surcoin address</source>
+        <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом сети &quot;SurCoin&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3767,8 +3769,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>Sibcoin Core</source>
-        <translation>&quot;Сибирский Червонец&quot; (SIB)</translation>
+        <source>Surcoin Core</source>
+        <translation>&quot;SurCoin Core&quot; (SIB)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3787,8 +3789,8 @@ https://www.transifex.com/projects/p/sibcoin/</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Sibcoin Core developers</source>
-        <translation>Разработчики Sibcoin Core</translation>
+        <source>The Surcoin Core developers</source>
+        <translation>Разработчики Surcoin Core</translation>
     </message>
     <message>
         <location filename="../networkstyle.cpp" line="+19"/>
@@ -4544,8 +4546,8 @@ that paper wallet has been printed successfully!</source>
         <translation>Привязаться к указанному адресу и всегда прослушивать только его. Используйте [хост]:порт для IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Sibcoin Core is probably already running.</source>
-        <translation>Не удалось установить блокировку на каталог данных %s. Возможно, Sibcoin Core уже запущен.</translation>
+        <source>Cannot obtain a lock on data directory %s. Surcoin Core is probably already running.</source>
+        <translation>Не удалось установить блокировку на каталог данных %s. Возможно, Surcoin Core уже запущен.</translation>
     </message>
     <message>
         <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -4600,8 +4602,8 @@ that paper wallet has been printed successfully!</source>
         <translation>Это пре-релизная тестовая сборка - используйте на свой страх и риск - не используйте для добычи или торговых приложений</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Sibcoin Core is probably already running.</source>
-        <translation>Не удалось привязаться к %s на этом компьютере. Возможно, Sibcoin Core уже запущен.</translation>
+        <source>Unable to bind to %s on this computer. Surcoin Core is probably already running.</source>
+        <translation>Не удалось привязаться к %s на этом компьютере. Возможно, Surcoin Core уже запущен.</translation>
     </message>
     <message>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
@@ -4832,8 +4834,8 @@ that paper wallet has been printed successfully!</source>
         <translation>Удалить все трансакции из кошелька и при рестарте с помощью -rescan восстановить только те, которые есть в цепочке блоков</translation>
     </message>
     <message>
-        <source>Disable all Sibcoin/Dash specific functionality (Masternodes, Darksend, InstantX, Budgeting) (0-1, default: %u)</source>
-        <translation>Отключить всю функциональность, относящуюся к Sibcoin/Dash (Мастерноды, Darksend, InstantX, бюджеты) (0-1, по умолчанию: %u)</translation>
+        <source>Disable all Surcoin/Dash specific functionality (Masternodes, Darksend, InstantX, Budgeting) (0-1, default: %u)</source>
+        <translation>Отключить всю функциональность, относящуюся к Surcoin/Dash (Мастерноды, Darksend, InstantX, бюджеты) (0-1, по умолчанию: %u)</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
@@ -4937,7 +4939,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Sibcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Surcoin Alert&quot; admin@foo.com
 </source>
         <translation>Для использования sibcoind или опции -server с sibcoin-qt, вы должны установить опцию rpcpassword в конфигурационном файле:
 %s
@@ -4948,7 +4950,7 @@ rpcpassword=%s
 Имя и пароль ДОЛЖНЫ различаться.
 Если файл не существует, то создайте его и оставьте права на чтение только для владельца.
 Также рекомендуется включить alertnotify для оповещения о проблемах;
-Например: alertnotify=echo %%s | mail -s &quot;Sibcoin Alert&quot; admin@foo.com
+Например: alertnotify=echo %%s | mail -s &quot;Surcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -4964,8 +4966,8 @@ rpcpassword=%s
         <translation>Внимание: установлено очень большое значение -paytxfee! Комиссия такого размера может быть уплачена при проведении одельной транзакции.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Sibcoin Core will not work properly.</source>
-        <translation>Внимание: пожалуйста, убедитесь что дата и время на Вашем компьютере выставлены правильно! Sibcoin Core не сможет работать корректно, если часы настроены неверно.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Surcoin Core will not work properly.</source>
+        <translation>Внимание: пожалуйста, убедитесь что дата и время на Вашем компьютере выставлены правильно! Surcoin Core не сможет работать корректно, если часы настроены неверно.</translation>
     </message>
     <message>
         <source>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</source>
@@ -5022,8 +5024,8 @@ rpcpassword=%s
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Sibcoin Core Developers</source>
-        <translation>Copyright (C) 2015-%i Разработчики Sibcoin Core</translation>
+        <source>Copyright (C) 2015-%i The Surcoin Core Developers</source>
+        <translation>Copyright (C) 2015-%i Разработчики Surcoin Core</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>
@@ -5054,8 +5056,8 @@ rpcpassword=%s
         <translation>Ошибка соединения с мастернодой.</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Sibcoin Core</source>
-        <translation>Ошибка загрузки wallet.dat: кошелёк требует более новой версии Sibcoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Surcoin Core</source>
+        <translation>Ошибка загрузки wallet.dat: кошелёк требует более новой версии Surcoin Core</translation>
     </message>
     <message>
         <source>Error: A fatal internal error occured, see debug.log for details</source>
@@ -5126,8 +5128,8 @@ rpcpassword=%s
         <translation>Информация</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Sibcoin Core is shutting down.</source>
-        <translation>Проверка на непротиворечивость закончилась неудачно. Sibcoin Core выключается.</translation>
+        <source>Initialization sanity check failed. Surcoin Core is shutting down.</source>
+        <translation>Проверка на непротиворечивость закончилась неудачно. Surcoin Core выключается.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -5378,8 +5380,8 @@ rpcpassword=%s
         <translation>Использовать UPnP для проброса порта (по умолчанию: %u)</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Sibcoin Core to complete</source>
-        <translation>Необходимо перезаписать кошелёк: перезапустите Sibcoin Core для завершения операции</translation>
+        <source>Wallet needed to be rewritten: restart Surcoin Core to complete</source>
+        <translation>Необходимо перезаписать кошелёк: перезапустите Surcoin Core для завершения операции</translation>
     </message>
     <message>
         <source>Warning: Unsupported argument -benchmark ignored, use -debug=bench.</source>

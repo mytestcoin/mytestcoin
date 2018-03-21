@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2016 The Bitcoin developers
 // Copyright (c) 2014-2016 The Dash developers
 // Copyright (c) 2015-2016 The SibCoin developers
+// Copyright (c) 2018-2018 The SurCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -132,7 +133,7 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
 
     // it is for use lang specific resources
     QLocale::setDefault(QLocale(lang_territory));
-    
+
     // Load language files for configured locale:
     // - First load the translator for the base language, without territory
     // - Then load the more specific locale translator
@@ -170,7 +171,7 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 }
 #endif
 
-/** Class encapsulating Sibcoin Core startup and shutdown.
+/** Class encapsulating Surcoin Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
 class BitcoinCore: public QObject
@@ -199,7 +200,7 @@ private:
     void handleRunawayException(std::exception *e);
 };
 
-/** Main Sibcoin application object */
+/** Main Surcoin application object */
 class BitcoinApplication: public QApplication
 {
     Q_OBJECT
@@ -251,7 +252,7 @@ private:
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer;
     WalletModel *walletModel;
-    SibModel *sibModel;
+    SurModel *sibModel;
 #endif
     int returnValue;
 
@@ -480,10 +481,10 @@ void BitcoinApplication::initializeResult(int retval)
 #ifdef ENABLE_WALLET
         if(pwalletMain)
         {
-            sibModel = new SibModel(psibDB);            
+            sibModel = new SurModel(psibDB);
             walletModel = new WalletModel(pwalletMain, optionsModel);
-            
-            window->setSibModel(sibModel);
+
+            window->setSurModel(sibModel);
             window->addWallet(BitcoinGUI::DEFAULT_WALLET, walletModel);
             window->setCurrentWallet(BitcoinGUI::DEFAULT_WALLET);
 
@@ -527,7 +528,7 @@ void BitcoinApplication::shutdownResult(int retval)
 
 void BitcoinApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. Sibcoin can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. Surcoin can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(1);
 }
 
@@ -556,7 +557,7 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
-    
+
     Q_INIT_RESOURCE(sibcoin);
     Q_INIT_RESOURCE(sibcoin_locale);
 
@@ -606,14 +607,14 @@ int main(int argc, char *argv[])
     /// - Do not call GetDataDir(true) before this step finishes
     if (!boost::filesystem::is_directory(GetDataDir(false)))
     {
-        QMessageBox::critical(0, QObject::tr("Sibcoin"),
+        QMessageBox::critical(0, QObject::tr("Surcoin"),
                               QObject::tr("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
     try {
         ReadConfigFile(mapArgs, mapMultiArgs);
     } catch(std::exception &e) {
-        QMessageBox::critical(0, QObject::tr("Sibcoin"),
+        QMessageBox::critical(0, QObject::tr("Surcoin"),
                               QObject::tr("Error: Cannot parse configuration file: %1. Only use key=value syntax.").arg(e.what()));
         return false;
     }
@@ -626,7 +627,7 @@ int main(int argc, char *argv[])
 
     // Check for -testnet or -regtest parameter (Params() calls are only valid after this clause)
     if (!SelectParamsFromCommandLine()) {
-        QMessageBox::critical(0, QObject::tr("Sibcoin"), QObject::tr("Error: Invalid combination of -regtest and -testnet."));
+        QMessageBox::critical(0, QObject::tr("Surcoin"), QObject::tr("Error: Invalid combination of -regtest and -testnet."));
         return 1;
     }
 #ifdef ENABLE_WALLET
@@ -645,7 +646,7 @@ int main(int argc, char *argv[])
     /// 7a. parse masternode.conf
     string strErr;
     if(!masternodeConfig.read(strErr)) {
-        QMessageBox::critical(0, QObject::tr("Sibcoin"),
+        QMessageBox::critical(0, QObject::tr("Surcoin"),
                               QObject::tr("Error reading masternode configuration file: %1").arg(strErr.c_str()));
         return false;
     }
@@ -692,7 +693,7 @@ int main(int argc, char *argv[])
         app.createWindow(networkStyle.data());
         app.requestInitialize();
 #if defined(Q_OS_WIN) && QT_VERSION >= 0x050000
-        WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("Sibcoin Core didn't yet exit safely..."), (HWND)app.getMainWinId());
+        WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("Surcoin Core didn't yet exit safely..."), (HWND)app.getMainWinId());
 #endif
         app.exec();
         app.requestShutdown();

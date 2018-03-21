@@ -187,7 +187,7 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
 
 
   dnl enable qt support
-  AC_MSG_CHECKING(whether to build Sibcoin Core GUI)
+  AC_MSG_CHECKING(whether to build Surcoin Core GUI)
   BITCOIN_QT_CHECK([
     bitcoin_enable_qt=yes
     bitcoin_enable_qt_test=yes
@@ -418,4 +418,3 @@ AC_DEFUN([_BITCOIN_QT_FIND_LIBS_WITHOUT_PKGCONFIG],[
   CPPFLAGS="$TEMP_CPPFLAGS"
   LIBS="$TEMP_LIBS"
 ])
-

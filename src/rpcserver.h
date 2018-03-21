@@ -45,7 +45,7 @@ void StopRPCThreads();
 /** Query whether RPC is running */
 bool IsRPCRunning();
 
-/** 
+/**
  * Set the RPC warmup status.  When this is done, all RPC calls will error out
  * immediately with RPC_IN_WARMUP.
  */
@@ -93,7 +93,7 @@ public:
 };
 
 /**
- * Sibcoin RPC command dispatcher.
+ * Surcoin RPC command dispatcher.
  */
 class CRPCTable
 {

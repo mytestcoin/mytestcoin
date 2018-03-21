@@ -31,7 +31,7 @@ enum HTTPStatusCode
     HTTP_SERVICE_UNAVAILABLE   = 503,
 };
 
-// Sibcoin RPC error codes
+// Surcoin RPC error codes
 enum RPCErrorCode
 {
     //! Standard JSON-RPC 2.0 errors

@@ -1,4 +1,5 @@
 // Copyright (c) 2015 The Sibcoin developers
+// Copyright (c) 2018 The Surcoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -25,7 +26,7 @@ const QString goods_data = "sibcoin.rcc";
 const QString goods_md5 = "sibcoin.md5";
 
 
-SibModel::SibModel(CSibDB *sibdb, QObject *parent) :
+SurModel::SurModel(CSurDB *sibdb, QObject *parent) :
     QObject(parent),
     res_prefix("/dev"),
     sibDB(sibdb),
@@ -34,19 +35,19 @@ SibModel::SibModel(CSibDB *sibdb, QObject *parent) :
 	try_idx(0)
 {
     net_manager = new QNetworkAccessManager(this);
-    connect(net_manager, SIGNAL(finished(QNetworkReply*)), 
+    connect(net_manager, SIGNAL(finished(QNetworkReply*)),
             this, SLOT(replyFinished(QNetworkReply*)));
 
 //    connect(rep, SIGNAL(error(QNetworkReply::NetworkError)),
 //            this,  SLOT(onError(QNetworkReply::NetworkError)));
 }
 
-SibModel::~SibModel()
+SurModel::~SurModel()
 {
     delete net_manager;
 }
 
-bool SibModel::registerRes() {
+bool SurModel::registerRes() {
     QTemporaryFile file;
     if (!file.open()) {
         LogPrintf("Could not open %s for writing\n", file.fileName().toStdString().c_str());
@@ -63,22 +64,22 @@ bool SibModel::registerRes() {
     return true;
 }
 
-void SibModel::loadLocalResource()
-{      
-    
+void SurModel::loadLocalResource()
+{
+
     if (readResourceWithMD5()) {
         registerRes();
         emit resourceReady(res_prefix.toStdString());
     }
 }
 
-void SibModel::fetch()
+void SurModel::fetch()
 {
     loadLocalResource();
     fetch_url(0);
 }
 
-void SibModel::fetch_url(int _idx) {
+void SurModel::fetch_url(int _idx) {
 	try_idx = _idx;
 
 	if (try_idx >= MAX_GOODS_URLS)
@@ -95,7 +96,7 @@ void SibModel::fetch_url(int _idx) {
     state = ST_LOADING_RCC;
 }
 
-void SibModel::replyFinished(QNetworkReply* p_reply)
+void SurModel::replyFinished(QNetworkReply* p_reply)
 {
 	QNetworkReply::NetworkError err = p_reply->error();
 	if (err != QNetworkReply::NoError) {
@@ -110,13 +111,13 @@ void SibModel::replyFinished(QNetworkReply* p_reply)
 		net_manager->get(QNetworkRequest(QUrl(data_url + goods_md5)));
 		state = ST_LOADING_MD5;
     }
-    else if (state == ST_LOADING_MD5) {   
+    else if (state == ST_LOADING_MD5) {
         rccMD5 = QString(QCryptographicHash::hash((rccData), QCryptographicHash::Md5).toHex());
         QString remoteMD5 = p_reply->readAll();
-        
+
         LogPrintf("remoteMD5: %s;", remoteMD5.toStdString().c_str());
         LogPrintf("rccMD5: %s\n", rccMD5.toStdString().c_str());
-        
+
         if (remoteMD5 == rccMD5) {
             registerRes();
             saveResourceWithMD5();
@@ -132,22 +133,22 @@ void SibModel::replyFinished(QNetworkReply* p_reply)
 }
 
 
-bool SibModel::saveResourceWithMD5()
+bool SurModel::saveResourceWithMD5()
 {
     return sibDB->WriteName("res_dev", rccData.toBase64().constData())
         && sibDB->WriteName("res_dev_md5", rccMD5.toStdString());
 }
-    
-bool SibModel::readResourceWithMD5() 
+
+bool SurModel::readResourceWithMD5()
 {
     std::string s_rccMD5;
     std::string s_rccData;
- 
+
     bool b1 = sibDB->ReadName("res_dev", s_rccData);
     bool b2 = sibDB->ReadName("res_dev_md5", s_rccMD5);
-    
+
     LogPrintf("read md5 from DB: %s\n", s_rccMD5.c_str());
-    
+
     if (!b1 || !b2) {
         return false;
     }

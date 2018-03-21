@@ -100,15 +100,15 @@ public:
         pchMessageStart[2] = 0x6b;
         pchMessageStart[3] = 0xbd;
         vAlertPubKey = ParseHex("044a91920af82ae1f31ae1ba261623a4ba6cea763eadc0735278ab7867996d8c421ba9bbc012447dda99380ee139743a4ca9bd7b4e00e3020efabe5ab47efcb07a");
-        nDefaultPort = 17718;
-        bnProofOfWorkLimit = ~uint256(0) >> 20;  // Sibcoin starting difficulty is 1 / 2^12
+        nDefaultPort = 17786;
+        bnProofOfWorkLimit = ~uint256(0) >> 20;  // Surcoin starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 24 * 60 * 60; // Sibcoin: 1 day
-        nTargetSpacing = 2.5 * 60; // Sibcoin: 2.5 minutes
+        nTargetTimespan = 24 * 60 * 60; // Surcoin: 1 day
+        nTargetSpacing = 2.5 * 60; // Surcoin: 2.5 minutes
 
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
@@ -150,17 +150,17 @@ public:
 #if __cplusplus > 199711L
         base58Prefixes[PUBKEY_ADDRESS] = {63};                  // Sibcoin addresses start with 'S'
         base58Prefixes[SCRIPT_ADDRESS] = {40};					// Sibcoin script addresses start with 'H'
-        base58Prefixes[SECRET_KEY] =     {128};                 // Sibcoin private keys start with '5'
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04,0x88,0xB2,0x1E}; // Sibcoin BIP32 pubkeys start with 'xpub'
-        base58Prefixes[EXT_SECRET_KEY] = {0x04,0x88,0xAD,0xE4}; // Sibcoin BIP32 prvkeys start with 'xprv'
-        base58Prefixes[EXT_COIN_TYPE]  = {0x2D,0x00,0x00,0x80}; // Sibcoin BIP44 coin type is '45'
+        base58Prefixes[SECRET_KEY] =     {128};                 // Surcoin private keys start with '5'
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x04,0x88,0xB2,0x1E}; // Surcoin BIP32 pubkeys start with 'xpub'
+        base58Prefixes[EXT_SECRET_KEY] = {0x04,0x88,0xAD,0xE4}; // Surcoin BIP32 prvkeys start with 'xprv'
+        base58Prefixes[EXT_COIN_TYPE]  = {0x2D,0x00,0x00,0x80}; // Surcoin BIP44 coin type is '45'
 #else
         base58Prefixes[PUBKEY_ADDRESS] = list_of( 63);                    // Sibcoin addresses start with 'S'
         base58Prefixes[SCRIPT_ADDRESS] = list_of( 40);                    // Sibcoin script addresses start with 'H'
-        base58Prefixes[SECRET_KEY] =     list_of(128);                    // Sibcoin private keys start with '5'
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E); // Sibcoin BIP32 pubkeys start with 'xpub'
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4); // Sibcoin BIP32 prvkeys start with 'xprv'
-        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x8000002D);             // Sibcoin BIP44 coin type is '45'
+        base58Prefixes[SECRET_KEY] =     list_of(128);                    // Surcoin private keys start with '5'
+        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E); // Surcoin BIP32 pubkeys start with 'xpub'
+        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4); // Surcoin BIP32 prvkeys start with 'xprv'
+        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x8000002D);             // Surcoin BIP44 coin type is '45'
 
 #endif
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
@@ -276,8 +276,8 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Sibcoin: 1 day
-        nTargetSpacing = 2.5 * 60; // Sibcoin: 2.5 minutes
+        nTargetTimespan = 24 * 60 * 60; // Surcoin: 1 day
+        nTargetSpacing = 2.5 * 60; // Surcoin: 2.5 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1505039402;
         genesis.nBits = 0x207fffff;

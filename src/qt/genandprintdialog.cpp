@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015 The SibCoin developers
+// Copyright (c) 2018 The SurCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -129,7 +130,7 @@ void GenAndPrintDialog::accept()
 
     switch(mode)
     {
-    case Export: 
+    case Export:
         if (uri != "") {
             QDialog::accept();
             return;
@@ -148,8 +149,8 @@ void GenAndPrintDialog::textChanged()
     switch(mode)
     {
     case Export:
-        acceptable = !ui->passEdit2->text().isEmpty() 
-                && !ui->passEdit3->text().isEmpty() 
+        acceptable = !ui->passEdit2->text().isEmpty()
+                && !ui->passEdit3->text().isEmpty()
                 && ui->passEdit3->text() == ui->passEdit2->text();
         break;
     case Import:
@@ -168,7 +169,7 @@ void GenAndPrintDialog::on_importButton_clicked()
     QString label_str = ui->passEdit3->text();
     std::string secret = privkey_str.toStdString();
     std::vector<unsigned char> priv_data;
-    
+
     // test keys for bip38
     // With EC
 	// secret = "6PfLGnQs6VZnrNpmVKfjotbnQuaJK4KZoPFrAjx1JMJUa1Ft8gnf5WxfKd";
@@ -233,7 +234,7 @@ void GenAndPrintDialog::on_importButton_clicked()
             ui->importButton->setEnabled(true);
             return;
         }
-        
+
         try
         {
             importprivkey(params, false);
@@ -245,7 +246,7 @@ void GenAndPrintDialog::on_importButton_clicked()
         // To be investigate
         catch (...)
         {
-            cerr << "Import private key error!" << endl;            
+            cerr << "Import private key error!" << endl;
 //            for (json_spirit::Object::iterator it = err.begin(); it != err.end(); ++it)
 //            {
 //                cerr << it->name_ << " = " << it->value_.get_str() << endl;
@@ -253,7 +254,7 @@ void GenAndPrintDialog::on_importButton_clicked()
             QMessageBox::critical(this, tr("Error"), tr("Private key import error"));
             ui->importButton->setEnabled(true);
         }
-    }    
+    }
 }
 
 bool readHtmlTemplate(const QString &res_name, QString &htmlContent)
@@ -278,7 +279,7 @@ void GenAndPrintDialog::on_printButton_clicked()
     uri = "";
     ui->passEdit2->setText("");
     ui->passEdit3->setText("");
-    
+
     CKey secret = model->generateNewKey();
     // Test key to encrypt
     //std::string test_str = "CBF4B9F70470856BB4F40F80B87EDB90865997FFEE6DF315AB166D713AF433A5";
@@ -289,13 +290,13 @@ void GenAndPrintDialog::on_printButton_clicked()
     CPrivKey privkey = secret.GetPrivKey();
     CPubKey pubkey = secret.GetPubKey();
     CKeyID keyid = pubkey.GetID();
-    
+
     std::string secret_str = CBitcoinSecret(secret).ToString();
     std::string address = CBitcoinAddress(keyid).ToString();
-    
+
     QString qsecret = QString::fromStdString(secret_str);
     QString qaddress = QString::fromStdString(address);
-    
+
     std::vector<unsigned char> priv_data;
     for (const unsigned char *i = secret.begin(); i != secret.end(); i++ ) {
     	priv_data.push_back(*i);
@@ -311,10 +312,10 @@ void GenAndPrintDialog::on_printButton_clicked()
     QPrinter printer;
     printer.setResolution(QPrinter::HighResolution);
     printer.setPageMargins(0, 10, 0, 0, QPrinter::Millimeter);
-    
+
     QPrintDialog *dlg = new QPrintDialog(&printer, this);
     if(dlg->exec() == QDialog::Accepted) {
-        
+
         QImage img1(200, 200, QImage::Format_ARGB32);
         QImage img2(200, 200, QImage::Format_ARGB32);
         QPainter painter(&img1);
@@ -332,22 +333,22 @@ void GenAndPrintDialog::on_printButton_clicked()
         printAsQR(painter, qcrypted, 0);
         img2.invertPixels();
         bEnd = painter.end();
-        
+
         QString html;
         readHtmlTemplate(":/html/paperwallet", html);
-        
+
         html.replace("__ACCOUNT__", strAccount);
         html.replace("__ADDRESS__", qaddress);
         html.replace("__PRIVATE__", qcrypted);
-        
+
         QTextDocument *document = new QTextDocument(this);
         document->addResource(QTextDocument::ImageResource, QUrl(":qr1.png" ), img1);
         document->addResource(QTextDocument::ImageResource, QUrl(":qr2.png" ), img2);
         document->setHtml(html);
         document->setPageSize(QSizeF(printer.pageRect().size()));
         document->print(&printer);
-        
-        model->setAddressBook(keyid, strAccount.toStdString(), "send");        
+
+        model->setAddressBook(keyid, strAccount.toStdString(), "send");
         SendCoinsRecipient rcp(qaddress, strAccount, 0, "");
         uri = GUIUtil::formatBitcoinURI(rcp);
         delete document;
@@ -360,7 +361,7 @@ void GenAndPrintDialog::printAsQR(QPainter &painter, QString &vchKey, int shift)
 {
     QRcode *qr = QRcode_encodeString(vchKey.toStdString().c_str(), 1, QR_ECLEVEL_L, QR_MODE_8, 1);
     if(0!=qr) {
-        QPaintDevice *pd = painter.device(); 
+        QPaintDevice *pd = painter.device();
         const double w = pd->width();
         const double h = pd->height();
         QColor fg("white");

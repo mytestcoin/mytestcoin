@@ -31,7 +31,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent, bool about) :
     ui->setupUi(this);
     GUIUtil::restoreWindowGeometry("nHelpMessageDialogWindow", this->size(), this);
 
-    QString version = tr("Sibcoin Core") + " " + tr("version") + " " + QString::fromStdString(FormatFullVersion());
+    QString version = tr("Surcoin Core") + " " + tr("version") + " " + QString::fromStdString(FormatFullVersion());
     /* On x86 add a bit specifier to the version so that users can distinguish between
      * 32 and 64 bit builds. On other architectures, 32/64 bit may be more ambigious.
      */
@@ -43,7 +43,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent, bool about) :
 
     if (about)
     {
-        setWindowTitle(tr("About Sibcoin Core"));
+        setWindowTitle(tr("About Surcoin Core"));
 
         /// HTML-format the license message from the core
         QString licenseInfo = QString::fromStdString(LicenseInfo());
@@ -111,16 +111,16 @@ void HelpMessageDialog::on_okButton_accepted()
 
 
 /** "Help message" dialog box */
-HelpSibcoinDialog::HelpSibcoinDialog(QWidget *parent) :
+HelpSurcoinDialog::HelpSurcoinDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::HelpMessageDialog)
 {
     ui->setupUi(this);
     GUIUtil::restoreWindowGeometry("nHelpMessageDialogWindow", this->size(), this);
-    
+
     QString res_name = ":/html/sibcoindesc";
     QString htmlContent;
-    
+
     QFile  htmlFile(res_name);
     if (!htmlFile.open(QIODevice::ReadOnly | QIODevice::Text)){
         return;
@@ -129,25 +129,25 @@ HelpSibcoinDialog::HelpSibcoinDialog(QWidget *parent) :
     QTextStream in(&htmlFile);
     in.setCodec("UTF-8");
     htmlContent = in.readAll();
-    
+
     // Set help message text
     ui->helpMessageLabel->setText(htmlContent);
 }
 
-HelpSibcoinDialog::~HelpSibcoinDialog()
+HelpSurcoinDialog::~HelpSurcoinDialog()
 {
     GUIUtil::saveWindowGeometry("nHelpMessageDialogWindow", this);
     delete ui;
 }
 
-void HelpSibcoinDialog::printToConsole()
+void HelpSurcoinDialog::printToConsole()
 {
     // On other operating systems, the expected action is to print the message to the console.
     QString strUsage = header + "\n" + coreOptions + "\n" + uiOptions + "\n";
     fprintf(stdout, "%s", strUsage.toStdString().c_str());
 }
 
-void HelpSibcoinDialog::showOrPrint()
+void HelpSurcoinDialog::showOrPrint()
 {
 #if defined(WIN32)
         // On Windows, show a message box, as there is no stderr/stdout in windowed applications
@@ -158,7 +158,7 @@ void HelpSibcoinDialog::showOrPrint()
 #endif
 }
 
-void HelpSibcoinDialog::on_okButton_accepted()
+void HelpSurcoinDialog::on_okButton_accepted()
 {
     close();
 }
@@ -170,7 +170,7 @@ ShutdownWindow::ShutdownWindow(QWidget *parent, Qt::WindowFlags f):
 {
     QVBoxLayout *layout = new QVBoxLayout();
     layout->addWidget(new QLabel(
-        tr("Sibcoin Core is shutting down...") + "<br /><br />" +
+        tr("Surcoin Core is shutting down...") + "<br /><br />" +
         tr("Do not shut down the computer until this window disappears.")));
     setLayout(layout);
 }

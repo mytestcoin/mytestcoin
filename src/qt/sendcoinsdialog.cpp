@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015 The SibCoin developers
+// Copyright (c) 2018 The SurCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -60,7 +61,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
         settings.setValue("bUseDarkSend", false);
     if (!settings.contains("bUseInstantX"))
         settings.setValue("bUseInstantX", false);
-        
+
     bool useDarkSend = settings.value("bUseDarkSend").toBool();
     bool useInstantX = settings.value("bUseInstantX").toBool();
     if(fLiteMode) {
@@ -76,7 +77,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
         CoinControlDialog::coinControl->useDarkSend = useDarkSend;
         CoinControlDialog::coinControl->useInstantX = useInstantX;
     }
-    
+
     connect(ui->checkUseDarksend, SIGNAL(stateChanged ( int )), this, SLOT(updateDisplayUnit()));
     connect(ui->checkInstantX, SIGNAL(stateChanged ( int )), this, SLOT(updateInstantX()));
 
@@ -398,7 +399,7 @@ void SendCoinsDialog::send(QList<SendCoinsRecipient> recipients, QString strFee,
     questionString.append("<hr />");
     questionString.append(tr("<b>(%1 of %2 entries displayed)</b>").arg(displayedEntries).arg(messageEntries));
 
-    // Display message box    
+    // Display message box
     QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm send coins"),
         questionString.arg(formatted.join("<br />")),
         QMessageBox::Yes | QMessageBox::Cancel,
@@ -856,7 +857,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString& text)
         }
         else if (!addr.IsValid()) // Invalid address
         {
-            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Sibcoin address"));
+            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Surcoin address"));
         }
         else // Valid address
         {

@@ -18,7 +18,7 @@ class GoodsDialog;
 class SendCoinsRecipient;
 class TransactionView;
 class WalletModel;
-class SibModel;
+class SurModel;
 
 QT_BEGIN_NAMESPACE
 class QLabel;
@@ -45,8 +45,8 @@ public:
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
     */
     void setClientModel(ClientModel *clientModel);
-    
-    void setSibModel(SibModel *sibModel);
+
+    void setSurModel(SurModel *sibModel);
 
     /** Set the wallet model.
         The wallet model represents a bitcoin wallet, and offers access to the list of transactions, address book and sending
@@ -61,7 +61,7 @@ public:
 private:
     ClientModel *clientModel;
     WalletModel *walletModel;
-    SibModel *sibModel;
+    SurModel *sibModel;
 
     OverviewPage *overviewPage;
     QWidget *transactionsPage;
@@ -69,7 +69,7 @@ private:
     SendCoinsDialog *sendCoinsPage;
 
     TransactionView *transactionView;
-    
+
     GoodsDialog *goodsPage;
 
     QProgressDialog *progressDialog;
@@ -137,7 +137,7 @@ signals:
     /** Notify that a new transaction appeared */
     void incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address);
     /** Signal raised when a URI was entered or dragged to the GUI */
-    void receivedURI(const QString &uri); 
+    void receivedURI(const QString &uri);
 };
 
 #endif // BITCOIN_QT_WALLETVIEW_H

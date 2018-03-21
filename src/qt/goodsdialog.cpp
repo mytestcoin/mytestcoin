@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015 The SibCoin developers
+// Copyright (c) 2018 The SurCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -39,15 +40,15 @@ void GoodsDialog::setModel(WalletModel *model)
     this->model = model;
 }
 
-void GoodsDialog::setSibModel(SibModel *sibModel)
+void GoodsDialog::setSurModel(SurModel *sibModel)
 {
     this->sibModel = sibModel;
-    connect(sibModel, SIGNAL(resourceReady(std::string)), 
+    connect(sibModel, SIGNAL(resourceReady(std::string)),
             this, SLOT(on_resourceReady(std::string)));
     sibModel->fetch();
 }
 
-void GoodsDialog::on_resourceReady(std::string res_root) 
+void GoodsDialog::on_resourceReady(std::string res_root)
 {
     QString htmlContent;
 
@@ -62,5 +63,5 @@ void GoodsDialog::on_resourceReady(std::string res_root)
 
     QTextDocument *document = new QTextDocument();
     document->setHtml(htmlContent);
-    ui->textBrowser->setDocument(document);    
+    ui->textBrowser->setDocument(document);
 }

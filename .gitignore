@@ -80,7 +80,7 @@ src/qt/test/moc*.cpp
 *.qm
 Makefile
 sibcoin-qt
-Sibcoin-Qt.app
+Surcoin-Qt.app
 
 # Unit-tests
 Makefile.test

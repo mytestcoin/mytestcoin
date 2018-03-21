@@ -13,7 +13,7 @@ class ClientModel;
 class SendCoinsRecipient;
 class WalletModel;
 class WalletView;
-class SibModel;
+class SurModel;
 
 QT_BEGIN_NAMESPACE
 class QStackedWidget;
@@ -28,7 +28,7 @@ public:
     ~WalletFrame();
 
     void setClientModel(ClientModel *clientModel);
-    void setSibModel(SibModel *sibModel);
+    void setSurModel(SurModel *sibModel);
 
     bool addWallet(const QString& name, WalletModel *walletModel);
     bool setCurrentWallet(const QString& name);
@@ -43,7 +43,7 @@ private:
     QStackedWidget *walletStack;
     BitcoinGUI *gui;
     ClientModel *clientModel;
-    SibModel *sibModel;
+    SurModel *sibModel;
     QMap<QString, WalletView*> mapWalletViews;
 
     bool bOutOfSync;

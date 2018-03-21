@@ -1,4 +1,5 @@
 // Copyright (c) 2015 The Sibcoin developers
+// Copyright (c) 2018 The SurCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,17 +11,16 @@
 #include <string>
 
 /** Access to the wallet database (sib.dat) */
-class CSibDB : public CDB
+class CSurDB : public CDB
 {
 public:
-    CSibDB(const std::string& strFilename, const char* pszMode = "cr+") : CDB(strFilename, pszMode)
+    CSurDB(const std::string& strFilename, const char* pszMode = "cr+") : CDB(strFilename, pszMode)
     {
     }
 
     bool WriteName(const std::string& key, const std::string &arr);
     bool ReadName(const std::string& key,  std::string &arr);
     bool EraseName(const std::string& key);
-    
+
 };
 #endif	/* SIBDB_H */
-

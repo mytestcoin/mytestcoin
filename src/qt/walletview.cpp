@@ -129,11 +129,11 @@ void WalletView::setClientModel(ClientModel *clientModel)
     sendCoinsPage->setClientModel(clientModel);
 }
 
-void WalletView::setSibModel(SibModel *sibModel)
+void WalletView::setSurModel(SurModel *sibModel)
 {
     this->sibModel = sibModel;
 
-    goodsPage->setSibModel(sibModel);
+    goodsPage->setSurModel(sibModel);
 }
 
 void WalletView::setWalletModel(WalletModel *walletModel)
@@ -336,7 +336,7 @@ void WalletView::genAndPrintAddresses()
 {
     if(!walletModel)
         return;
-    
+
     GenAndPrintDialog dlg(GenAndPrintDialog::Export, this);
     dlg.setModel(walletModel);
     if (dlg.exec())
@@ -354,7 +354,7 @@ void WalletView::loadFromPaper()
 {
     if(!walletModel)
         return;
-    
+
     GenAndPrintDialog dlg(GenAndPrintDialog::Import, this);
     dlg.setModel(walletModel);
     dlg.exec();

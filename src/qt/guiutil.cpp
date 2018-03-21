@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015 The Sibcoin developers
+// Copyright (c) 2018 The Surcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -108,7 +109,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Sibcoin address (e.g. %1)").arg("SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg"));
+    widget->setPlaceholderText(QObject::tr("Enter a Surcoin address (e.g. %1)").arg("SwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg"));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
@@ -591,12 +592,12 @@ TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* t
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Sibcoin.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "Surcoin.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Sibcoin.lnk
+    // check for Surcoin.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -714,7 +715,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         // Write a sibcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Sibcoin\n";
+        optionFile << "Name=Surcoin\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -815,18 +816,18 @@ QString loadStyleSheet()
     QString theme = settings.value("theme", "").toString();
 
     if(!theme.isEmpty()){
-        cssName = QString(":/css/") + theme; 
+        cssName = QString(":/css/") + theme;
     }
     else {
-        cssName = QString(":/css/trad");  
+        cssName = QString(":/css/trad");
         settings.setValue("theme", "trad");
     }
-    
-    QFile qFile(cssName);      
+
+    QFile qFile(cssName);
     if (qFile.open(QFile::ReadOnly)) {
         styleSheet = QLatin1String(qFile.readAll());
     }
-        
+
     return styleSheet;
 }
 
