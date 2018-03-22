@@ -308,16 +308,16 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
 #endif
     tabGroup->addAction(historyAction);
 
-//    goodsAction = new QAction(QIcon(":/icons/shopping_cart"), tr("&Goods&&&Services"), this);
-//    goodsAction->setStatusTip(tr("Show links to services that accept surcoins"));
-//    goodsAction->setToolTip(goodsAction->statusTip());
-//    goodsAction->setCheckable(true);
-//#ifdef Q_OS_MAC
-//    goodsAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_5));
-//#else
-//    historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
-//#endif
-//    tabGroup->addAction(goodsAction);
+    goodsAction = new QAction(QIcon(":/icons/shopping_cart"), tr("&Goods&&&Services"), this);
+    goodsAction->setStatusTip(tr("Show links to services that accept surcoins"));
+    goodsAction->setToolTip(goodsAction->statusTip());
+    goodsAction->setCheckable(true);
+#ifdef Q_OS_MAC
+    goodsAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_5));
+#else
+    historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
+#endif
+    tabGroup->addAction(goodsAction);
 
 #ifdef ENABLE_WALLET
     // These showNormalIfMinimized are needed because Send Coins and Receive Coins

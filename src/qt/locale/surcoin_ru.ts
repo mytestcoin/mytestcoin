@@ -290,7 +290,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SURCOINS&lt;/b&gt;!</source>
-        <translation>Внимание: если Вы зашифруете бумажник и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ ЧЕРВОНЦЫ&lt;/b&gt;!</translation>
+        <translation>Внимание: если Вы зашифруете бумажник и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ SurCoin&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1671,12 +1671,12 @@ Address: %4
     <message>
         <location line="+6"/>
         <source>Automatically start Surcoin after logging in to the system.</source>
-        <translation>Автоматически запускать &quot;Червонец&quot; после входа в систему.</translation>
+        <translation>Автоматически запускать &quot;SurCoin&quot; после входа в систему.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Start Surcoin on system login</source>
-        <translation>&amp;Запускать &quot;Червонец&quot; при входе в систему</translation>
+        <translation>&amp;Запускать &quot;SurCoin&quot; при входе в систему</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -2153,7 +2153,7 @@ https://www.transifex.com/projects/p/surcoin/</translation>
         <location line="-211"/>
         <location line="+6"/>
         <source>No inputs detected</source>
-        <translation>Червонцы не найдены</translation>
+        <translation>SurCoin не найдены</translation>
     </message>
     <message numerus="yes">
         <location line="-2"/>
@@ -3575,7 +3575,7 @@ https://www.transifex.com/projects/p/surcoin/</translation>
     <message>
         <location filename="../utilitydialog.cpp" line="+96"/>
         <source>Surcoin Core is shutting down...</source>
-        <translation>&quot;Червонец&quot; выключается...</translation>
+        <translation>&quot;SurCoin&quot; выключается...</translation>
     </message>
     <message>
         <location line="+1"/>
