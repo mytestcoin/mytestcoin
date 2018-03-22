@@ -85,7 +85,7 @@ BitcoinGUI::BitcoinGUI(const NetworkStyle *networkStyle, QWidget *parent) :
     usedReceivingAddressesAction(0),
     signMessageAction(0),
     verifyMessageAction(0),
-//    goodsAction(0),
+    goodsAction(0),
     aboutAction(0),
     receiveCoinsAction(0),
     optionsAction(0),
@@ -308,16 +308,16 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
 #endif
     tabGroup->addAction(historyAction);
 
-//    goodsAction = new QAction(QIcon(":/icons/shopping_cart"), tr("&Goods&&&Services"), this);
-//    goodsAction->setStatusTip(tr("Show links to services that accept surcoins"));
-//    goodsAction->setToolTip(goodsAction->statusTip());
-//    goodsAction->setCheckable(true);
-//#ifdef Q_OS_MAC
-//    goodsAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_5));
-//#else
-//    historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
-//#endif
-//    tabGroup->addAction(goodsAction);
+    goodsAction = new QAction(QIcon(":/icons/shopping_cart"), tr("&Goods&&&Services"), this);
+    goodsAction->setStatusTip(tr("Show links to services that accept surcoins"));
+    goodsAction->setToolTip(goodsAction->statusTip());
+    goodsAction->setCheckable(true);
+#ifdef Q_OS_MAC
+    goodsAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_5));
+#else
+    historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
+#endif
+    tabGroup->addAction(goodsAction);
 
 #ifdef ENABLE_WALLET
     // These showNormalIfMinimized are needed because Send Coins and Receive Coins
@@ -330,8 +330,8 @@ void BitcoinGUI::createActions(const NetworkStyle *networkStyle)
     connect(receiveCoinsAction, SIGNAL(triggered()), this, SLOT(gotoReceiveCoinsPage()));
     connect(historyAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(historyAction, SIGNAL(triggered()), this, SLOT(gotoHistoryPage()));
-//    connect(goodsAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
-//    connect(goodsAction, SIGNAL(triggered()), this, SLOT(gotoGoodsPage()));
+    connect(goodsAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
+    connect(goodsAction, SIGNAL(triggered()), this, SLOT(gotoGoodsPage()));
 #endif // ENABLE_WALLET
 
     quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
@@ -600,7 +600,7 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled)
     sendCoinsAction->setEnabled(enabled);
     receiveCoinsAction->setEnabled(enabled);
     historyAction->setEnabled(enabled);
-//    goodsAction->setEnabled(enabled);
+    goodsAction->setEnabled(enabled);
     encryptWalletAction->setEnabled(enabled);
     backupWalletAction->setEnabled(enabled);
     changePassphraseAction->setEnabled(enabled);
@@ -736,11 +736,11 @@ void BitcoinGUI::gotoHistoryPage()
     if (walletFrame) walletFrame->gotoHistoryPage();
 }
 
-//void BitcoinGUI::gotoGoodsPage()
-//{
-//    goodsAction->setChecked(true);
-//    if (walletFrame) walletFrame->gotoGoodsPage();
-//}
+void BitcoinGUI::gotoGoodsPage()
+{
+    goodsAction->setChecked(true);
+    if (walletFrame) walletFrame->gotoGoodsPage();
+}
 
 void BitcoinGUI::gotoReceiveCoinsPage()
 {
