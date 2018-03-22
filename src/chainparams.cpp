@@ -148,15 +148,15 @@ public:
         vSeeds.push_back(CDNSSeedData("darknode3", "dnsseed3.darknode.ru"));
 */
 #if __cplusplus > 199711L
-        base58Prefixes[PUBKEY_ADDRESS] = {23};                  // Sibcoin addresses start with 'A'
-        base58Prefixes[SCRIPT_ADDRESS] = {38};					// Sibcoin script addresses start with 'G'
+        base58Prefixes[PUBKEY_ADDRESS] = {23};                  // Surcoin addresses start with 'A'
+        base58Prefixes[SCRIPT_ADDRESS] = {38};					// Surcoin script addresses start with 'G'
         base58Prefixes[SECRET_KEY] =     {128};                 // Surcoin private keys start with '5'
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04,0x88,0xB2,0x1E}; // Surcoin BIP32 pubkeys start with 'xpub'
         base58Prefixes[EXT_SECRET_KEY] = {0x04,0x88,0xAD,0xE4}; // Surcoin BIP32 prvkeys start with 'xprv'
         base58Prefixes[EXT_COIN_TYPE]  = {0x2D,0x00,0x00,0x80}; // Surcoin BIP44 coin type is '45'
 #else
-        base58Prefixes[PUBKEY_ADDRESS] = list_of( 23);                    // Sibcoin addresses start with 'A'
-        base58Prefixes[SCRIPT_ADDRESS] = list_of( 38);                    // Sibcoin script addresses start with 'G'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of( 23);                    // Surcoin addresses start with 'A'
+        base58Prefixes[SCRIPT_ADDRESS] = list_of( 38);                    // Surcoin script addresses start with 'G'
         base58Prefixes[SECRET_KEY] =     list_of(128);                    // Surcoin private keys start with '5'
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E); // Surcoin BIP32 pubkeys start with 'xpub'
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4); // Surcoin BIP32 prvkeys start with 'xprv'
@@ -222,19 +222,19 @@ public:
         vSeeds.push_back(CDNSSeedData("dash.qa", "testnet-seed.dash.qa"));
         */
 #if __cplusplus > 199711L
-        base58Prefixes[PUBKEY_ADDRESS] = {83};                     // Testnet sibcoin addresses start with 'a'
-        base58Prefixes[SCRIPT_ADDRESS] = {98};						// Testnet sibcoin script addresses start with 'g'
+        base58Prefixes[PUBKEY_ADDRESS] = {83};                     // Testnet Surcoin addresses start with 'a'
+        base58Prefixes[SCRIPT_ADDRESS] = {98};						// Testnet Surcoin script addresses start with 'g'
         base58Prefixes[SECRET_KEY]     = {239};						// Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04,0x35,0x87,0xCF};		// Testnet sibcoin BIP32 pubkeys start with 'tpub'
-        base58Prefixes[EXT_SECRET_KEY] = {0x04,0x35,0x83,0x94};		// Testnet sibcoin BIP32 prvkeys start with 'tprv'
-        base58Prefixes[EXT_COIN_TYPE]  = {0x01,0x00,0x00,0x80};		// Testnet sibcoin BIP44 coin type is '1' (All coin's testnet default)
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x04,0x35,0x87,0xCF};		// Testnet Surcoin BIP32 pubkeys start with 'tpub'
+        base58Prefixes[EXT_SECRET_KEY] = {0x04,0x35,0x83,0x94};		// Testnet Surcoin BIP32 prvkeys start with 'tprv'
+        base58Prefixes[EXT_COIN_TYPE]  = {0x01,0x00,0x00,0x80};		// Testnet Surcoin BIP44 coin type is '1' (All coin's testnet default)
 #else
-        base58Prefixes[PUBKEY_ADDRESS] = list_of( 83);                    // Testnet sibcoin addresses start with 'a'
-        base58Prefixes[SCRIPT_ADDRESS] = list_of( 98);                    // Testnet sibcoin script addresses start with 'g'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of( 83);                    // Testnet Surcoin addresses start with 'a'
+        base58Prefixes[SCRIPT_ADDRESS] = list_of( 98);                    // Testnet Surcoin script addresses start with 'g'
         base58Prefixes[SECRET_KEY]     = list_of(239);                    // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x35)(0x87)(0xCF); // Testnet sibcoin BIP32 pubkeys start with 'tpub'
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x35)(0x83)(0x94); // Testnet sibcoin BIP32 prvkeys start with 'tprv'
-        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000001);             // Testnet sibcoin BIP44 coin type is '1' (All coin's testnet default)
+        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x35)(0x87)(0xCF); // Testnet Surcoin BIP32 pubkeys start with 'tpub'
+        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x35)(0x83)(0x94); // Testnet Surcoin BIP32 prvkeys start with 'tprv'
+        base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000001);             // Testnet Surcoin BIP44 coin type is '1' (All coin's testnet default)
 #endif
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
 
