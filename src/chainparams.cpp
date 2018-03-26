@@ -53,7 +53,7 @@ static void convertSeed6(std::vector<CAddress> &vSeedsOut, const SeedSpec6 *data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (  0, uint256("0x00000fe7342ee193f07bef99631b5f4e023c3513c3fba11da43e6a8b3fa991d1"))
+    (  0, uint256("0x00000fe7342ee193f07bef99631b5f4e023c3513c3fba11da43e6a8b3fa991d1")) //genesis hash
     ;
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -65,7 +65,7 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-    ( 0, uint256("0x000009c7fcb6abbfb079f21624695dd20961fb69b6033d6c60c47850c854d216"))
+    ( 0, uint256("0x000009c7fcb6abbfb079f21624695dd20961fb69b6033d6c60c47850c854d216")) //genesis hash test
     ;
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
@@ -76,7 +76,7 @@ static const Checkpoints::CCheckpointData dataTestnet = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
-    ( 0, uint256("0x6c08da56edfd5c19285831205a7ee3bf5eb5c049ca6f754b46e34c2827ff45f1"))
+    ( 0, uint256("0x6c08da56edfd5c19285831205a7ee3bf5eb5c049ca6f754b46e34c2827ff45f1")) //genesis hash regtest
     ;
 static const Checkpoints::CCheckpointData dataRegtest = {
         &mapCheckpointsRegtest,
@@ -178,7 +178,7 @@ public:
         strSporkKey = "04c877948d5354afc8ab4e3cf1b8d12ad575d36616455f85db39e4ebd05afdff80ec733627821b9d2454b146cac45bdac1c04b17e96b122999c8a427918b61de79";
         strMasternodePaymentsPubKey = "04c877948d5354afc8ab4e3cf1b8d12ad575d36616455f85db39e4ebd05afdff80ec733627821b9d2454b146cac45bdac1c04b17e96b122999c8a427918b61de79";
         strDarksendPoolDummyAddress = "SXs9PLTEbFhCh4efZ7VkuEgiw7ca7V7FNx";
-        nStartMasternodePayments = 1505039400; //Sun, 09 Aug 2015 00:00:00 GMT
+        nStartMasternodePayments = 1505039400; //Sun, 09 Aug 2015 00:00:00 GMT // in 3 months
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
