@@ -279,7 +279,7 @@ public:
         nTargetTimespan = 24 * 60 * 60; // Surcoin: 1 day
         nTargetSpacing = 2.5 * 60; // Surcoin: 2.5 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1522144802;
+        genesis.nTime = 1522159202;
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 0;
         hashGenesisBlock = genesis.GetHash();
