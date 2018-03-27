@@ -7,7 +7,7 @@ Copyright (c) 2014-2016 Dash Core Developers
 
 Copyright (c) 2014-2016 Sibcoin Core Developers
 
-Copyright (c) 2018-2018 Surcoin Core Developers
+Copyright (c) 2018-2018 SurCoin Core Developers
 
 
 What is Surcoin?
