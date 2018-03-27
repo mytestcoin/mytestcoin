@@ -509,7 +509,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
     if (!streamConfig.good()){
         // Create empty surcoin.conf if it does not exist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
-        if (configFile != NULL)
+        if (configFile != NULL) //addnode 109.x.x.x
             fclose(configFile);
         return; // Nothing to read, so just return
     }
