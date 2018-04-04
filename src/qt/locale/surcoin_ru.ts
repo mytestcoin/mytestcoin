@@ -2789,7 +2789,7 @@ https://www.transifex.com/projects/p/surcoin/</translation>
     <message>
         <location line="-35"/>
         <source>Welcome to the Surcoin RPC console.</source>
-        <translation>Добро пожаловать в RPC-консоль &quot;Сибирского SurCoin&quot;.</translation>
+        <translation>Добро пожаловать в RPC-консоль &quot;SurCoin&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
